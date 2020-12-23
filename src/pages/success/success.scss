@@ -1,0 +1,38 @@
+page-success {
+
+    .succ_content{
+        background: rgba(0,0,0,0.6);
+    }
+
+    .Card_clas{
+        border-radius: 12px;
+        padding: 5px;
+        margin-top: 45%;
+    }
+
+    .imagefs{
+        width: 80px;
+        height: 80px;
+        margin: 50px auto 30px;
+        display: table;
+    }
+
+    .Thanku{
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+        padding: 10px 0px 20px;
+    }
+
+    .Ok_btn{
+        margin: 10px auto 20px;
+        display: table;
+        box-shadow: none;
+        background: #027902;
+        color: #ffffff;
+        font-size: 18px !important;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+}
+

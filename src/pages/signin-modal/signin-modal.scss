@@ -1,0 +1,69 @@
+page-signin-modal {
+    .label-md{margin: 0px;}
+    .item-md.item-block .item-inner{padding: 0px;}
+    .item-md{padding: 0px;}
+    .label-ios{margin: 0px;}
+    .item-ios.item-block .item-inner{padding: 0px;}
+    .item-ios{padding: 0px;}
+    .col{padding: 0px;}
+    .close_imag{
+    position: absolute;
+    top: 31px;
+    right: 28px;
+    width: 11%;
+    z-index: 111;
+    opacity: 0.6;
+    }
+    .SaveUp_div{
+        font-size: 21px;
+        font-weight: 600;
+        text-align: center;
+        padding: 10px 0px;
+    }
+    .Second_item{ padding: 0px 20px !important; }
+    .Pinimg_icon{width: 68%; margin: auto;display: table;}
+    .Flashimg_icon{width:55%; margin: auto;display: table;}
+    .Lineing_div{
+        margin: auto;
+        display: table;
+        color: #f7aa28;
+        font-weight: 800 !important;
+        font-size: 25px;
+    }
+    .Padding_10_row{padding: 5px 0px;}
+    .icon_detail{font-size: 14px; font-weight: 500; color: #4d4d4d;}
+    .last_offer{font-size: 18px; font-weight: 600; text-align: center;padding: 15px 0px;}
+    .Sign_btn{
+        margin: auto;
+        display: table;
+        color: #fff;
+        background: #5371df;
+        padding: 5px 30px !important;
+        height: 38px !important;
+    }
+    .homeowners_div{font-size: 15px; font-weight: 500; color: #4d4d4d;text-align: center; padding: 12px 0 0 0;}
+    .LogSign_div{padding: 15px 25px 0px;}
+    .Login_btn{
+        margin: auto;
+        display: table;
+        color: #fff;
+        background: #5371df;
+        padding: 10px 30px !important;
+        text-transform: none;
+        font-size: 15px !important;
+        height: 38px !important;
+        border-radius: 50px;
+    }
+    .siupbottm_btn{
+        margin: auto;
+        display: table;
+        color: #5371df;
+        border: 1px solid #5371df;
+        background: #ffffff;
+        padding: 10px 30px !important;
+        text-transform: none;
+        font-size: 15px !important;
+        height: 38px !important;
+        border-radius: 50px;
+    }
+}

@@ -1,0 +1,46 @@
+page-choose-language {
+    .item-md{padding: 0px;}
+    .item-md.item-block .item-inner{padding: 0px;}
+    .label-md{margin: 0px;}
+    .item-ios{padding: 0px;}
+    .item-ios.item-block .item-inner{padding: 0px;}
+    .label-ios{margin: 0px;}
+    .First_slide{
+        background-image: url("../assets/imgs/slide4.jpg") !important;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .Button_div{
+        position: absolute;
+        bottom: 12%;
+        width: 100%;
+        padding: 0 15px;
+        z-index: 99999;
+    }
+    .select-md, .select-ios{
+        padding: 13px 12px 13px 10px;
+        background: #606c81;
+        font-size: 15px;
+        color: #ffffff;
+    }
+    ion-select{
+        max-width: 100%;
+        width: 100%;
+    }
+    .select-md .select-icon .select-icon-inner, .select-ios .select-icon .select-icon-inner{
+        color: #ffffff;
+        border-top: 8px solid;
+        border-right: 6px solid transparent;
+        border-left: 6px solid transparent;
+        top: 45%;
+    }
+    .Next_btn_div{
+        padding: 0 5px;
+        margin-top: 10px;
+    }
+    .next_btn{
+        height: 40px !important;
+        background: #0fc7ff;
+    }
+}

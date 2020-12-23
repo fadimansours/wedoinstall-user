@@ -1,0 +1,219 @@
+page-available-view {
+    .toolbar-title-md{color: #fff;}
+    .toolbar-title-ios{color: #fff;}
+    .chatboxes_icon{color: #fff;}
+
+    .label-md{margin: 0px;}
+    .item-md.item-block .item-inner{padding: 0px;}
+    .item-md{padding: 0px;}
+    .label-ios{margin: 0px;}
+    .item-ios.item-block .item-inner{padding: 0px;}
+    .item-ios{padding: 0px;}
+    .Cover_back{
+        background: #606c81;
+        padding: 70px;
+    }
+    .Covar_white{
+        padding: 25px;
+    }    
+    .Prifile_card{
+        border-radius: 8px;
+        box-shadow: none;
+        border: 1px solid #dadada;
+        padding: 20px 20px 8px;
+        position: absolute;
+        bottom: 0px;
+        margin: 10px 35px 0px 35px;
+        width: calc(100% - 70px);
+    }
+    .YourPoint_div{
+        color: #3b3b3b;
+        font-size: 16px;
+        text-align: center;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+    }
+    .Pont_row_div{
+        padding: 25px 50px 0;
+    }
+    .Ponit_logo{
+        padding: 5px 10px 20px 10px;
+        float: right;
+    }
+    .Total_point{
+        color: #6c41c1;
+        font-size: 40px;
+        // text-align: center;
+    }
+    .redeemPoint_div{
+        color: #3b3b3b;
+        font-size: 16px;
+        text-align: center;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+        padding: 15px 0;
+    }
+    .Redeem_card{
+        padding: 0 20px 20px 20px;
+        margin: 10px 20px 10px 20px;
+        width: calc(100% - 40px);        
+        border-radius: 8px;
+        box-shadow: 0px 3px 4px 0px (#b1b1b1);
+        border: 1px solid #dadada;
+    }
+    .Point_img{
+        padding: 0 8px;
+    }
+    .Redeem_div{
+        color: #6c41c1;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .Ponit_count{
+        color: #6c41c1;
+        font-size: 13px;
+        font-weight: 400;
+    }
+    .Redeem_btn{
+        margin: 0px;
+        border: 1px solid #b1b1b1;
+        color: #b1b1b1;
+        padding: 0 8px;
+        float: right;
+        height: 30px !important;
+    }
+    .range_item{background: transparent; padding: 15px 0 5px;}
+    .range_item.item-block{
+        min-height: 2.4rem;
+    }
+.range-md{padding: 0px;}
+.range-ioa{padding: 0px;}
+.range-md .range-bar, .range-ios .range-bar{
+    left: 0;
+    top: 5px;
+    position: absolute;
+    height: 5px;
+    border-radius: 30px;
+    background: #cecece;
+    pointer-events: none
+}
+.range-md .range-bar-active, .range-ios .range-bar-active{
+    background: linear-gradient(90deg, #2b26a9 40%, #a361cb 80%);
+  }
+.range-md .range-knob{display: none;}
+.range-ios .range-knob{display: none;}
+.range-md .range-knob-handle{height: 0px; width: 0px;margin: 0px;}
+.range-ios .range-knob-handle{height: 0px; width: 0px;margin: 0px;}
+.range-md .range-slider{height: 0px;}
+.range-ios .range-slider{height: 0px;}
+.Learn_point{
+    color: #268fa9;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 16px;
+}
+
+.Points_div{
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    padding: 20px 0;
+    text-align: center;
+}
+div.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.position_div{
+    position: relative;
+}
+.ion_crd{
+    border-radius: 0px;
+    width: 200px;
+    margin: 0 0px 20px 20px;
+}
+.menuslide_image{
+    width: 100%;
+    height: 135px
+}
+.slide_detail_div{
+    font-size: 16px;
+}
+.recipe_name{
+    font-weight: 500;
+    text-align: center;
+    padding: 11px 10px;
+    font-size: 14px;
+}
+.Upto_div{
+    font-size: 10px;
+    border: 3px solid #d3d3d3;
+    border-radius: 50%;
+    text-align: center;
+    padding: 2px 4px;
+    color: #6d40bf;
+    height: 41px;
+    width: 41px;
+}
+.Upto_span{
+    font-size: 13px;
+}
+.Ends_div{
+    color: #000;
+    font-size: 12px;
+    padding: 2px 0 0 0;
+}
+.Ends_span{
+    color: #6d40bf;
+    font-size: 13px;
+    padding: 2px 0 0 0;
+}
+.ImgeWithDiv{
+    color: #fff;
+    background: #6c41c1;
+    position: absolute;
+    top: 45%;
+    padding: 3px 5px;
+    border-radius: 50px;
+    left: 15%;
+}
+.Home_name_div{
+    color: #fff;
+    padding: 4px 0 0 8px;
+}
+.EarnPoint_div{
+    color: #3b3b3b;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    padding: 25px 0;
+    border-bottom: 2px solid #d4d4d4;
+}
+.Invite_row{
+    padding: 8px 0 0;
+}
+.Invite_div{
+    font-size: 15px;
+    vertical-align: middle;
+    padding: 3px 0 0 0 ;
+}
+.Invite_Points{
+    font-size: 16px;
+    background: #eee6fe;
+    border-radius: 50px;
+    text-align: center;
+    padding: 7px 0;
+}
+.First_Points{
+    color: #9c56c8;
+    font-size: 16px;
+    padding: 6px 0 0 0;
+}
+.FirstDate_span{
+    color: #b1b1b1;
+    font-size: 14px;
+    padding: 0 0 0 10px;
+}
+
+}

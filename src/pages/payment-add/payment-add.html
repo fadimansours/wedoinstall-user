@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Add Payment</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="main_cntaint">
+
+  <div class="Main_div">
+    <div text-wrap class="Payment_ditail">Before we can continue, we need a credit card on file. Your credit card is not
+      charged until the job is completed and your payment is protected by Tradesglobe's 100% Satisfaction Guarantee.
+    </div>
+    <ion-row class="Secure_row">
+      <ion-col col-2 class="vertical_centr padd_0_r">
+        <div class="Shilde_back Protec_paddi"><img src="assets/imgs/shield.png"></div>
+      </ion-col>
+      <ion-col col-4 no-padding>
+        <div text-wrap class="Processing_div">Secure Payment Processing</div>
+      </ion-col>
+      <ion-col col-2 class="vertical_centr padd_0_r">
+        <div class="Shilde_back"><img src="assets/imgs/correct.png"></div>
+      </ion-col>
+      <ion-col col-4 no-padding>
+        <div text-wrap class="Processing_div">100% Satisfaction Guaranteed</div>
+      </ion-col>
+    </ion-row>
+
+    <div class="Credit_Number_sdiv">
+      <div class="Credit_Number">
+        <ion-icon name="md-lock" class="Lock_icon"></ion-icon>CREDIT CARD NUMBER
+      </div>
+      <input placeholder="xxxx xxxx xxxx xxxx" class="number_input" [(ngModel)]="Card_Number">
+    </div>
+    <div class="Credit_Number_sdiv">
+      <ion-row>
+        <ion-col col-4 no-padding>
+          <div class="Credit_Number">
+            <ion-icon name="md-lock" class="Lock_icon"></ion-icon>EXPIRY
+          </div>
+          <input placeholder="mm / yy" class="number_input" [(ngModel)]="Card_Expiry">
+        </ion-col>
+        <ion-col col-1></ion-col>
+        <ion-col col-4 no-padding>
+          <div class="Credit_Number">
+            <ion-icon name="md-lock" class="Lock_icon"></ion-icon>CVV / CVC
+          </div>
+          <input placeholder="xxx" class="number_input" [(ngModel)]="Card_Cvvcvc">
+        </ion-col>
+        <ion-col col-3></ion-col>
+      </ion-row>
+    </div>
+  </div>
+
+  <ion-footer no-border>
+    <button ion-button class="Save_btn" (click)="SaveCard()">SAVE</button>
+  </ion-footer>
+</ion-content>

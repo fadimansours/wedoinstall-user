@@ -1,0 +1,260 @@
+page-confirm-jobdetail {
+    .toolbar-title-md {
+        color: #ffffff;
+    }
+    .toolbar-title-ios {
+        color: #ffffff;
+    }
+    .chatboxes_icon {
+        color: #ffffff;
+    }
+    .label-md {
+        margin: 0px;
+    }
+    .item-md.item-block .item-inner {
+        padding: 0px;
+    }
+    .item-md {
+        padding: 0px;
+    }
+    .label-ios {
+        margin: 0px;
+    }
+    .item-ios.item-block .item-inner {
+        padding: 0px;
+    }
+    .item-ios {
+        padding: 0px;
+    }
+    .col {
+        padding: 0px;
+    }
+    .item-block {
+        min-height: 1.4rem;
+    }
+    .Config_detail {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 10px 0;
+        margin-top: 10px;
+        background: #dadadabd;
+    }
+    .strike-through {
+        text-decoration: line-through;
+        text-decoration-color: red;
+    }
+    .list_paddin {
+        padding: 5px 20px;
+    }
+    .Pddin_item {
+        padding: 15px 0 10px;
+    }
+    .Logo_image {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: #e6e4e4;
+        border: 1px solid #e6e4e4;
+        padding: 3px;
+    }
+    .Service_name {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 0 6px;
+    }
+    .free_quote {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .Price_quote {
+        font-size: 14px;
+        color: #000000;
+        padding: 2px 0;
+    }
+    .CurrentPrice {
+        padding: 0 5px;
+        float: right;
+    }
+    .Paddings_div {
+        padding: 10px 30px;
+    }
+    .Requested_div {
+        font-size: 13px;
+        font-weight: 600;
+        padding: 15px 0 10px 0 !important;
+        letter-spacing: 0.6px;
+    }
+    .Row_paddin {
+        padding: 0 0 15px 0;
+    }
+    .date_div {
+        font-size: 13px;
+        padding: 2px 0;
+    }
+    .Calenea_icon {
+        padding: 0 5px;
+    }
+    .Time_div {
+        font-size: 13px;
+        padding: 2px 0;
+    }
+    .Footer_padd {
+        padding: 10px 15px;
+    }
+    .Request_btn {
+        color: #ffffff;
+        font-size: 13px;
+        text-transform: none;
+        border-radius: 50px;
+        background: #4b68dd;
+        height: 35px !important;
+    }
+    .Detail_div {
+        font-size: 13px;
+        padding: 0px 5px;
+    }
+    .Name_div {
+        padding: 5px 0 0;
+    }
+    .calenter_icon {
+        zoom: 0.8;
+    }
+    .Requst_time {
+        font-size: 12px;
+        padding: 0 0 0 8px;
+    }
+    .Upload_medea {
+        margin: 8px 0 0 0;
+        height: 160px;
+        width: 160px;
+        border-radius: 15px;
+        object-fit: cover;
+    }
+    .items_container {
+        margin-bottom: 15px;
+        h2 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+            padding: 0px 15px 15px 15px;
+        }
+        .items_row {
+            width: 100%;
+            white-space: nowrap;
+            overflow-x: auto;
+            padding: 0px 0 10px 0;
+            .item {
+                display: inline-block;
+                margin: 0 6px;
+                overflow: hidden;
+                width: 147px;
+                .item_img {
+                    position: relative;
+                    width: 147px;
+                    height: 147px;
+                    border-radius: 8px;
+                    .percentage-badge {
+                        background: red;
+                        --background: var(--transparent);
+                        --color: var(--white);
+                        --padding-bottom: 0;
+                        --padding-end: 0;
+                        --padding-start: 0;
+                        --padding-top: 0;
+                        border-radius: 50px;
+                        font-weight: 500;
+                        font-size: 0.9rem;
+                        min-width: 41px;
+                        height: 18px;
+                        line-height: 18px;
+                        position: absolute;
+                        bottom: px;
+                        right: 5px;
+                    }
+                    ion-badge {
+                        background: var(--secondary);
+                        --background: var(--transparent);
+                        --color: var(--white);
+                        --padding-bottom: 0;
+                        --padding-end: 0;
+                        --padding-start: 0;
+                        --padding-top: 0;
+                        border-radius: 50px;
+                        font-weight: 400;
+                        font-size: 0.7rem;
+                        min-width: 41px;
+                        height: 18px;
+                        line-height: 18px;
+                        position: absolute;
+                        bottom: 5px;
+                        right: 5px;
+                        ion-icon {
+                            font-size: 0.6rem;
+                            position: relative;
+                            top: 1px;
+                        }
+                    }
+                }
+                .item_details {
+                    padding-top: 12px;
+                    width: 100%;
+                    overflow: hidden;
+                    h3 {
+                        margin: 0;
+                        color: var(--text-dark-primary);
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                        padding-bottom: 3px;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                    h4 {
+                        margin: 0;
+                        color: var(--text-light);
+                        font-weight: 400;
+                        font-size: 0.7rem;
+                        padding-bottom: 8px;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                    h5 {
+                        margin: 0;
+                        font-size: 1.1rem;
+                        color: var(--text-black);
+                        ion-badge {
+                            background: var(--secondary);
+                            --background: var(--transparent);
+                            --color: var(--white);
+                            --padding-bottom: 0;
+                            --padding-end: 0;
+                            --padding-start: 0;
+                            --padding-top: 0;
+                            border-radius: 50px;
+                            font-weight: 400;
+                            font-size: 0.7rem;
+                            min-width: 41px;
+                            height: 18px;
+                            line-height: 18px;
+                            ion-icon {
+                                font-size: 0.6rem;
+                                position: relative;
+                                top: 1px;
+                            }
+                        }
+                    }
+                }
+                &:first-child {
+                    margin-left: 14px;
+                }
+                &:last-child {
+                    margin-right: 14px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,138 @@
+<ion-content class="Rescld_content">
+    <ion-card class="Resedul_card" *ngIf="JobType == 'Res'">
+        <!--   <div *ngIf="ResedulInfo == '0'">
+            <div class="Close_div">
+                <ion-icon name="md-close" (click)="CloseModel()"></ion-icon>
+            </div>
+            <div text-wrap class="Reason_div">
+                What is the reason for <br /> rescheduling this job?
+            </div>
+            <div class="reason_div">
+                <ion-textarea style="background: #e9e9e9" rows="6" cols="10" [(ngModel)]="reason" placeholder="Let us know about the reason rescheduling this job"></ion-textarea>
+            </div>
+           <button ion-button clear full class="Reason_btn" (click)="ClientRequested(0)">Client requested</button>
+      <button ion-button clear full class="Reason_btn" (click)="ClientRequested(1)">Poor weather</button>
+      <button ion-button clear full class="Reason_btn" (click)="ClientRequested(2)">Materials needed</button>
+            <button ion-button color="primary" full class="Reason_btn" (click)="ClientRequested()">
+        Continue
+      </button>
+        </div> -->
+
+        <!--  <div *ngIf="ResedulInfo == '1' && JobType=='Res'">
+            <div class="Close_div">
+                <ion-icon name="md-close" (click)="CloseModel()"></ion-icon>
+                                 <ion-icon name="md-arrow-back" style="float: left" (click)="BackClinet('0')"></ion-icon>
+
+            </div>
+            <div text-wrap class="Reason_div">
+                Does your provider know that<br />you are rescheduling for that
+                <br />reason?
+            </div>
+            <div class="Empty_div"></div>
+            <button ion-button full class="Reason_btn2" (click)="Reschedul()">
+        Yes, confirm to reschedule
+      </button>
+              <button ion-button full class="Reason_btn2" (click)="sendMessage()">
+        no, please send a message to the provider
+      </button>
+        </div> -->
+
+        <div>
+            <div class="Close_div">
+                <ion-icon name="md-close" (click)="CloseModel()"></ion-icon>
+                <ion-icon name="md-arrow-back" style="float: left" (click)="BackClinet('1')"></ion-icon>
+            </div>
+            <div text-wrap class="Reason_div">Enter new date and time.</div>
+            <div class="Date_lable">DATE</div>
+            <ion-item>
+                <ion-input type="date" class="Input_calss" [(ngModel)]="DateNew"></ion-input>
+            </ion-item>
+            <div class="Date_lable">TIME</div>
+            <ion-item>
+                <ion-input type="text" readonly="true" class="Input_calss" [(ngModel)]="TimeNew" (click)="SelectTime()">
+                </ion-input>
+            </ion-item>
+
+            <ion-item *ngIf="ShowTime == '1'">
+                <ion-row>
+                    <ion-col col-4>
+                        <div (click)="TimeSelect('Morning')" [ngClass]="(TimeHor == 'Morning') ? 'Select_Time_Div' : 'Time_Div'">
+                            Morning
+                        </div>
+                    </ion-col>
+                    <ion-col col-4>
+                        <div (click)="TimeSelect('Afternoon')" [ngClass]="(TimeHor == 'Afternoon') ? 'Select_Time_Div' : 'Time_Div'">
+                            Afternoon
+                        </div>
+                    </ion-col>
+                    <ion-col col-4>
+                        <div (click)="TimeSelect('Evening')" [ngClass]="(TimeHor == 'Evening') ? 'Select_Time_Div' : 'Time_Div'">
+                            Evening
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-item>
+            <button ion-button full class="Reason_btn Margin_top" (click)="ContinueRes()">
+        Continue
+      </button>
+        </div>
+    </ion-card>
+
+    <ion-card class="Resedul_card" *ngIf="JobType == 'Pay'">
+        <!-- <div *ngIf="PaymentOp == '0'">
+      <div class="Close_div">
+        <ion-icon name="md-close" (click)="CloseModel()"></ion-icon>
+      </div>
+      <div text-wrap class="Reason_div">Payment Option</div>
+      <button ion-button clear full class="Reason_btn" (click)="PaymentOption('1')">Cash Payment</button>
+      <button ion-button clear full class="Reason_btn" (click)="PaymentOption('2')">Cheque Payment</button>
+      <button ion-button clear full class="Reason_btn" (click)="PaymentOption('3')">Stripe Payment</button>
+    </div> -->
+
+        <div *ngIf="PaymentOp == '0'">
+            <div class="Close_div">
+                <ion-icon name="md-close" (click)="CloseModel()"></ion-icon>
+                <!-- <ion-icon name="md-arrow-back" style="float: left;" (click)="BackPayment('0')"></ion-icon> -->
+            </div>
+            <div text-wrap class="Reason_div">Stripe Payment</div>
+
+            <ion-row>
+                <ion-col col-12 class="padding_right_col">
+                    <div class="username_divPa">test</div>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-8 class="padding_right_col">
+                    <!-- <div class="Enter_card_div">Enter Card Number</div> -->
+                    <input type="tel" class="Input_fild" placeholder="4242 4242 4242 4242" [(ngModel)]="card_number" />
+                </ion-col>
+
+                <ion-col col-4 class="padding_left_col">
+                    <!-- <div class="Enter_card_div">Enter CVC</div> -->
+                    <input type="tel" class="Input_fild" placeholder="CVC" [(ngModel)]="card_cvc" />
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-3 class="padding_right_col">
+                    <!-- <div class="Enter_card_div">Expiry Month</div> -->
+                    <input type="tel" class="Input_fild" placeholder="MM" [(ngModel)]="card_month" />
+                </ion-col>
+
+                <ion-col col-4 class="padding_left_col">
+                    <!-- <div class="Enter_card_div">Expiry Year</div> -->
+                    <input type="tel" class="Input_fild" placeholder="YYYY" [(ngModel)]="card_year" />
+                </ion-col>
+
+                <ion-col col-5 class="padding_left_col">
+                    <!-- <div class="Enter_card_div">Expiry Year</div> -->
+                    <input type="tel" class="Input_fild" placeholder="Zip Cope" [(ngModel)]="zipcode" />
+                </ion-col>
+            </ion-row>
+            <button ion-button clear full class="Reason_btn margi12" (click)="StripePay()">
+        Continue
+      </button>
+        </div>
+    </ion-card>
+</ion-content>

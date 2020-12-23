@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Add Address</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="main_cntaint">
+    <div class="Main_div">
+        <div text-wrap class="Addreass_ditail">
+            Save your address to make booking a job more convenient and to receive Tradesglobe Flash offer in your area!
+        </div>
+        <div class="Input_div">
+            <input placeholder="Unit/Suite" class="Add_input" [(ngModel)]="StreetAddress" />
+            <input placeholder="Street Address" class="Add_input" [(ngModel)]="autocompleteFrom.input" (input)="updateSearchResultsFrom()" />
+        </div>
+        <ion-list *ngIf="!search_results" class="search_list" [hidden]="autocompleteItemsFrom.length == 0">
+            <ion-item class="List_items" *ngFor="let item of autocompleteItemsFrom" (click)="selectSearchResultFrom(item)">
+                <ion-icon name="ios-navigate-outline"></ion-icon> {{ item.description }}
+            </ion-item>
+        </ion-list>
+    </div>
+
+    <div class="Main_div">
+        <ion-item no-lines class="Item_bg item_padding">
+            <ion-label text-wrap>This Address Set Default Address.</ion-label>
+            <ion-checkbox [(ngModel)]="DefaultSet" [disabled]="this.firstTimeLogin"></ion-checkbox>
+        </ion-item>
+    </div>
+</ion-content>
+
+<ion-footer no-border>
+    <button ion-button class="Save_btn" *ngIf="!EditData" (click)="SaveAddres()">
+    SAVE
+  </button>
+    <button ion-button class="Save_btn" *ngIf="EditData" (click)="UpdateAddres()">
+    UPDATE
+  </button>
+</ion-footer>

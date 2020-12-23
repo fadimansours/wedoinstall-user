@@ -1,0 +1,35 @@
+<ion-content class="main_cntaint">
+    <ion-list class="Padding_list">
+        <ion-item class="Item_bg" no-lines>
+            <ion-icon name="ios-close-circle" class="Close_icon" (click)="Close()"></ion-icon>
+        </ion-item>
+        <ion-item class="Item_bg" no-lines>
+            <div class="Heder_title">Tradesglobe</div>
+            <div class="Sub_header">{{'Log in to Tradesglobe!' }}</div>
+        </ion-item>
+        <ion-item class="Item_bg">
+            <ion-label floating>{{'Email' }}</ion-label>
+            <ion-input class="no-border" type="email" [(ngModel)]="email"></ion-input>
+        </ion-item>
+        <ion-item class="Item_bg">
+            <ion-label floating>{{'Password' }}</ion-label>
+            <ion-input class="no-border" [type]="passwordType" [(ngModel)]="password"></ion-input>
+            <ion-icon item-end [name]="passwordIcon" class="Eye_icon" (click)="HideShowPass()"></ion-icon>
+        </ion-item>
+
+        <ion-item class="Item_bg" no-lines>
+            <button ion-button full class="Login_btn" (click)="Login()">
+        {{ 'login' }}
+      </button>
+            <div class="Forgot_div">
+                {{'Forgot your login detail?' }}
+                <span (click)="TermCondition()" class="Gethelp_span">{{'Get help signing in' }}</span
+        >
+      </div>
+      <div class="Forgot_div">{{'Dont have an account?' }}</div>
+      <button ion-button full clear class="Create_btn" (click)="Signup()">
+        {{'Create an account' }}
+      </button>
+    </ion-item>
+  </ion-list>
+</ion-content>

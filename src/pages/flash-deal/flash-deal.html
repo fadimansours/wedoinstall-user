@@ -1,0 +1,109 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Flash Deals</ion-title>
+        <ion-buttons right>
+            <button ion-button icon-only (click)="Chat()">
+        <ion-icon name="md-chatboxes" class="chatboxes_icon"></ion-icon>
+      </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="main_cntaint">
+    <ion-list>
+        <ion-item no-lines class="mapimage_item">
+            <div #map id="map"></div>
+            <!-- <img src="assets/imgs/mapimag.jpg" class="mapimag_imag"> -->
+
+            <ion-row class="Address_row">
+                <ion-col col-2 class="Addres_col add_Padd">
+                    <ion-icon name="md-navigate" class="navogation_icon"></ion-icon>
+                </ion-col>
+                <ion-col col-8 class="Addres_col vertical_centrC">
+                    <div class="addres_input dotdot">{{UserAddress}}</div>
+                </ion-col>
+                <ion-col col-2 class="Addres_col add_Padd" (click)="ChangeAddrs()">
+                    <ion-icon name="md-create" style="color: #9a99a1"></ion-icon>
+                </ion-col>
+            </ion-row>
+        </ion-item>
+        <ion-item no-lines>
+            <div class="Subscribe_div">
+                <ion-row class="Subscribe_row">
+                    <ion-col col-2 text-center>
+                        <ion-icon name="md-notifications"></ion-icon>
+                    </ion-col>
+                    <ion-col col-10>
+                        <div>Subscribe to more services!</div>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <div class="available_div" *ngFor="let flas of FlashDealis; let i = index">
+            <ion-card (click)="RequestJob(flas)">
+                <ion-row>
+                    <ion-col col-3 class="colpadd">
+                        <img src="{{config.imgs}}{{flas.image}}" class="Main_side_img" />
+                    </ion-col>
+                    <ion-col col-9 class="colpadd">
+                        <ion-row class="handy_name_row">
+                            <ion-col col-2>
+                                <img src="{{config.imgs}}{{flas.icon}}" class="Icon_imge" />
+                            </ion-col>
+                            <ion-col col-10 no-padding>
+                                <div class="handy_name_div">{{flas.title}}</div>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row class="handy_name_row">
+                            <ion-col col-6>
+                                <div class="km_aaway_div">
+                                    <ion-icon name="md-pin" class="pin_icon"></ion-icon>0.8 km away
+                                </div>
+                            </ion-col>
+                            <ion-col col-6>
+                                <div class="Svae_div">SAVE {{flas.discount_percentage}}%</div>
+                            </ion-col>
+                        </ion-row>
+                    </ion-col>
+                </ion-row>
+                <div>
+                    <ion-row *ngIf="!ComplatShow" class="AvailableFlash_row" (click)="Showhide('1')">
+                        <ion-col col-11>
+                            <div>Available Flash Deals</div>
+                        </ion-col>
+                        <ion-col col-1>
+                            <ion-icon name="ios-arrow-down"></ion-icon>
+                        </ion-col>
+                    </ion-row>
+
+                    <ion-row *ngIf="ComplatShow" class="AvailableFlash_row" (click)="Showhide('0')">
+                        <ion-col col-11>
+                            <div>Available Flash Deals</div>
+                        </ion-col>
+                        <ion-col col-1>
+                            <ion-icon name="ios-arrow-up"></ion-icon>
+                        </ion-col>
+                    </ion-row>
+                </div>
+
+                <div *ngIf="ComplatShow" class="Div_elec">
+                    <ion-row class="Row_electric">
+                        <ion-col col-1 no-padding>
+                            <img src="assets/imgs/electric.png" class="fla_logo" />
+                        </ion-col>
+                        <ion-col col-11 no-padding>
+                            <div class="Available_date">Thu, Jan 23, 2020</div>
+                        </ion-col>
+                    </ion-row>
+                    <div class="chooseandth">Choose Another Date</div>
+                </div>
+            </ion-card>
+        </div>
+    </ion-list>
+    <ion-fab bottom end>
+        <button ion-fab mini (click)="AdminChat()">
+      <img src="assets/imgs/fablogo.png" />
+    </button>
+    </ion-fab>
+</ion-content>

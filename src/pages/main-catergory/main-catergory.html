@@ -1,0 +1,56 @@
+<!--
+  Generated template for the MainCatergoryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="Header_home">
+  <ion-navbar>
+    <div class="search_div">
+      <ion-row class="Search_row">
+        <ion-col col-2>
+          <img src="assets/imgs/magnifying-glass.png" class="search_imgs" />
+        </ion-col>
+        <ion-col col-10 (click)="onSearchClick()">
+          <div class="Search_input">Hi,click here</div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="main_cntaint">
+  <ion-list no-lines>
+    <ion-item class="no-padding-item">
+      <div class="cover_div">
+        <img
+          src="{{config.imgs}}{{catergoryImage}}"
+          width="100%"
+          height="150px"
+        />
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header class="header">CUSTOM JOB</ion-list-header>
+    <button ion-item (click)="onClickCustomJob()">custom job</button>
+  </ion-list>
+
+  <ion-list *ngFor="let cat of subCatergories">
+    <ion-list-header class="header" *ngIf="cat.data.length>0"
+      >{{cat.label}}</ion-list-header
+    >
+    <button
+      class="service-name"
+      ion-item
+      *ngFor="let item of cat.data"
+      (click)="onClickSub(item)"
+    >
+      <ion-avatar class="avatar" item-start>
+        <img class="img" src="{{config.imgs}}{{item.icon}}" />
+      </ion-avatar>
+      {{item.name}}
+    </button>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Myorder</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list no-lines>
+    <ion-item class="Item_class" *ngFor="let Order of OrderList; let i = index">
+      <ion-card class="Card_class" (click)="OrderDetail(i)">
+        <ion-row>
+          <ion-col col-5>
+            <div class="heading_div">Price:</div>
+          </ion-col>
+          <ion-col col-7>
+            <div class="Ans_div">${{Order.price}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-5>
+            <div class="heading_div">Adderss:</div>
+          </ion-col>
+          <ion-col col-7>
+            <div text-wrap class="Ans_div">{{Order.address}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-5>
+            <div class="heading_div">Payment Type:</div>
+          </ion-col>
+          <ion-col col-7>
+            <div class="Ans_div" *ngIf="Order.payment_type == '1'">Cash On Delivery</div>
+            <div class="Ans_div" *ngIf="Order.payment_type == '2'">Card On Delivery</div>
+            <div class="Ans_div" *ngIf="Order.payment_type == '3'">Paypal</div>
+            <div class="Ans_div" *ngIf="Order.payment_type == '4'">Credit & Debit Cards</div>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

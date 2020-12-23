@@ -1,0 +1,75 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title></ion-title>
+        <ion-buttons top right>
+            <button ion-button icon-only top (click)="Cart()">
+        <ion-icon name="md-cart" class="chatboxes_icon"></ion-icon>
+        <ion-badge>{{cartItemCount | async}}</ion-badge>
+      </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list no-lines>
+        <div>
+            <ion-slides pager autoplay="2000" loop="true" speed="1000">
+                <ion-slide>
+                    <img src="{{config.imgs}}{{ProductImage}}" class="Image_show" />
+                </ion-slide>
+                <ion-slide *ngIf=" ProductImage2 != ''">
+                    <img src="{{config.imgs}}{{ProductImage2}}" class="Image_show" />
+                </ion-slide>
+                <ion-slide *ngIf=" ProductImage3 != ''">
+                    <img src="{{config.imgs}}{{ProductImage3}}" class="Image_show" />
+                </ion-slide>
+            </ion-slides>
+        </div>
+
+        <ion-item class="Image_item">
+            <div class="Heart_div vertical_centr">
+                <ion-icon name="md-heart-outline"></ion-icon>
+            </div>
+        </ion-item>
+
+        <ion-item class="Product_item">
+            <div text-wrap class="Product_name">{{productName}}</div>
+            <div text-wrap class="detail_div">{{ProductDescri}}</div>
+            <div class="Product_price">${{totalPrice * quantity}}</div>
+        </ion-item>
+        <ion-item class="Product_item">
+            <ion-label class="Product_price">PROFESSIONAL INSTALLATION</ion-label>
+            <ion-checkbox [(ngModel)]="withInstallation" (ionChange)="calCost()"></ion-checkbox>
+        </ion-item>
+        <ion-item class="Product_item">
+            <ion-label class="Product_price">DELIVERY</ion-label>
+            <ion-checkbox [(ngModel)]="withDelivery" (ionChange)="calCost()"></ion-checkbox>
+        </ion-item>
+        <ion-item class="Product_item">
+            <ion-label class="Product_price">DISPOSAL</ion-label>
+            <ion-checkbox [(ngModel)]="withDisposal" (ionChange)="calCost()"></ion-checkbox>
+        </ion-item>
+        <ion-item class="Product_item">
+            <ion-row class="Catr_row">
+                <ion-col col-2 class="vertical_centr Col_border" (click)="removeProduct()" *ngIf="this.product.quantity>1">
+                    <ion-icon name="md-remove" class="remove_add"></ion-icon>
+                </ion-col>
+                <ion-col col-2 class="vertical_centr Col_border">
+                    <div>{{product.quantity}}</div>
+                </ion-col>
+                <ion-col col-2 class="vertical_centr Col_border" (click)="addProduct()">
+                    <ion-icon name="md-add" class="remove_add"></ion-icon>
+                </ion-col>
+                <ion-col col-6 class="CartCol_btn">
+                    <button ion-button full class="AddToCart" (click)="addToCart()">
+            Add to Cart
+          </button>
+                </ion-col>
+            </ion-row>
+
+            <div class="Offered_name">OFFERED AT: {{vendorName}}</div>
+            <div><img src="{{config.imgs}}{{productLogo}}" class="Image_logo" /></div>
+            <div class="Offered_name">LINK AT: <a>{{productLink}}</a></div>
+        </ion-item>
+    </ion-list>
+</ion-content>

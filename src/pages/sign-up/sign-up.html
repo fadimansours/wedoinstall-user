@@ -1,0 +1,33 @@
+<ion-content class="main_cntaint">
+  <ion-list no-lines class="Padding_list">
+    <ion-item class="Item_bg">
+      <ion-icon name="ios-close-circle" class="Close_icon" (click)="Close()"></ion-icon>
+    </ion-item>
+    <ion-item class="Item_bg">
+      <div class="Heder_title">Tradesglobe</div>
+      <div class="Sub_header">{{'Sign Up with Tradesglobe!' | translate}}</div>
+    </ion-item>
+    <ion-item class="Item_bg">
+      <input type="text" placeholder="{{'First Name' | translate}}" [(ngModel)]="firstname" class="Input_name"><br>
+      <input type="text" placeholder="{{'Last Name' | translate}}" [(ngModel)]="lastname" class="Input_name"><br>
+      <input type="email" placeholder="{{'Email' | translate}}" [(ngModel)]="email" class="Input_name"><br>
+      <input type="tel" placeholder="{{'Phone Number' | translate}}" [(ngModel)]="contact" class="Input_name"><br>
+      <input type="password" placeholder="{{'Password' | translate}}" [(ngModel)]="password" class="Input_name"><br>
+      <input type="password" placeholder="{{'Confirm Password' | translate}}" [(ngModel)]="conpasswor" class="Input_name"><br>
+      <input type="text" placeholder="{{'How did you hear about us?' | translate}}" [(ngModel)]="howdid" class="Input_name"><br>
+      <input type="text" placeholder="{{'Referral code' | translate}}" [(ngModel)]="referalcode" class="Input_name"><br>
+    </ion-item>
+    <ion-item class="Item_bg item_padding">
+      <ion-label text-wrap>{{'like to receive' | translate}}</ion-label>
+      <ion-checkbox [(ngModel)]="receivemail"></ion-checkbox>
+    </ion-item>
+    <ion-item class="Item_bg">
+      <div text-wrap class="consent_div">{{'consent to receiving' | translate}}</div><br>
+      <div text-wrap class="consent_div">{{'By creating an'| translate}}</div>
+      <button ion-button full class="Create_btn" (click)="SignUp()">{{'Create Account' | translate}}</button>
+      <div class="Alredy_div">{{'Alredy have an account?' | translate}}</div>
+      <button ion-button clear full clear class="Login_btn" (click)="CreateAcc()">{{ 'login' | translate}}</button>
+    </ion-item>
+  </ion-list>
+  <br><br><br><br><br>
+</ion-content>

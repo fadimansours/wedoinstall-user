@@ -1,0 +1,70 @@
+page-address-add {
+    .toolbar-title-md{color: #fff;}
+    .toolbar-title-ios{color: #fff;}
+    .Main_div{
+        padding: 20px;
+    }
+    .Addreass_ditail{
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: center;
+        color: #a0a0a0;
+    }
+    .Input_div{
+        margin-top: 25px;
+    }
+    .Add_input{
+        padding: 12px 5px;
+        font-size: 15px;
+        border: 0px;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .Save_btn{
+        margin: auto;
+        display: table;
+        background: #5371df;
+        color: #fff;
+        border-radius: 50px;
+        width: 70%;
+        height: 45px !important;
+        margin-bottom: 30px;
+    }
+    .item_padding{
+        padding: 0px 5px;
+    }
+    .item.item-md .checkbox-md{
+        margin: 9px 7px 9px 0;
+    }
+    .item.item-ios .checkbox-ios{
+        margin: 9px 7px 9px 0;
+    }
+    .checkbox-md + .item-inner ion-label{
+        color: #a3a3a3;
+        font-size: 14px;
+    }
+    .checkbox-ios + .item-inner ion-label{
+        color: #a3a3a3;
+        font-size: 14px;
+    }
+    .checkbox-md .checkbox-icon{
+        border-color: #a3a3a3;
+        background-color:transparent;
+    }
+    .checkbox-ios .checkbox-icon{
+        border-color: #a3a3a3;
+        background-color:transparent;
+    }
+    .checkbox-md .checkbox-checked .checkbox-inner{border-color:#a3a3a3 !important}
+    .checkbox-ios .checkbox-checked .checkbox-inner{border-color:#a3a3a3 !important}
+
+    .search_list{       
+        margin: 6px 0 0;
+        z-index: -1;
+    }
+
+    .List_items{
+        padding: 0px 15px !important;
+    }
+
+}

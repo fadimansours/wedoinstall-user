@@ -1,0 +1,461 @@
+<ion-header class="Header_home">
+    <ion-navbar>
+        <ion-buttons top right>
+            <button ion-button icon-only top (click)="Cart()">
+        <ion-icon name="md-cart" class="chatboxes_icon"></ion-icon>
+      </button>
+            <button ion-button icon-only top (click)="Chat()">
+        <ion-icon name="md-chatboxes" class="chatboxes_icon"></ion-icon>
+      </button>
+        </ion-buttons>
+        <ion-title class="Heder_center">Tradesglobe</ion-title>
+    </ion-navbar>
+    <div class="search_div">
+        <ion-row class="Search_row">
+            <ion-col col-2>
+                <img src="assets/imgs/magnifying-glass.png" class="search_imgs" />
+            </ion-col>
+            <ion-col col-10 (click)="SearchOpen()">
+                <div class="Search_input">Hi, try "air conditioning"</div>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-header>
+
+<ion-content class="main_cntaint">
+    <div class="First_div" *ngIf="!config.loginId">
+        <ion-card class="First_card">
+            <img src="assets/imgs/homeservice.png" class="HomeSrvc_img" />
+            <div text-wrap class="experience_div">
+                Get the full experience of Tradesglobe
+            </div>
+            <div text-wrap class="instantly_div">
+                Tradesglobe instantly connects homeoweners with amazing Pros. Sign up or Login to access all features!
+            </div>
+            <ion-row class="row_padd">
+                <ion-col col-6>
+                    <button ion-button class="Sign_btn" (click)="SignUp()">
+            Sign Up
+          </button>
+                </ion-col>
+                <ion-col col-6>
+                    <button ion-button class="Sign_btn" (click)="Login()">Log In</button>
+                </ion-col>
+            </ion-row>
+        </ion-card>
+
+        <ion-card class="First_card margin_t_25">
+            <img src="assets/imgs/homemap.png" class="HomeSrvc_img" />
+            <div text-wrap class="experience_div">
+                See how you can save 25% with Tradesglobe Flash
+            </div>
+            <div text-wrap class="instantly_div">
+                Powered by your neighborhood, get discounts when you look a service that's happening in your area.
+            </div>
+            <ion-row class="row_padd">
+                <ion-col col-12>
+                    <button ion-button class="Sign_btn" (click)="Check()">
+            Check it out
+          </button>
+                </ion-col>
+            </ion-row>
+        </ion-card>
+
+        <div class="seasonal_main">
+            <ion-row>
+                <ion-col col-9 no-padding>
+                    <div class="seasonal_div">SEASONAL SERVICES</div>
+                </ion-col>
+                <ion-col col-3 no-padding>
+                    <button ion-button class="viewall_btn">VIEW ALL</button>
+                </ion-col>
+            </ion-row>
+        </div>
+
+        <div class="seasonal_main">
+            <ion-card class="Popular_card">
+                <ion-row>
+                    <ion-col col-10 no-padding>
+                        <div class="Popular_div">POPULAR TRADESGLOBE SERVICES</div>
+                    </ion-col>
+                    <ion-col col-2 no-padding>
+                        <button ion-button class="viewall_btn">MORE</button>
+                    </ion-col>
+                </ion-row>
+            </ion-card>
+        </div>
+    </div>
+
+    <div class="Seconds_div" *ngIf="config.loginId">
+        <div>
+            <ion-row class="Pont_row">
+                <ion-col col-6>
+                    <button ion-button full class="Point_btn" (click)="PointView()">
+            Points <ion-icon name="logo-codepen" class="Point_logo"></ion-icon>
+            <span class="Paint_span"> {{this.creditService.getPoints()}}</span>
+          </button>
+                </ion-col>
+                <ion-col col-6>
+                    <button ion-button full class="Point_btn" (click)="CreditView()">
+            Credit <ion-icon name="logo-usd" class="Credit_logo"></ion-icon>
+            <span class="Credit_span"> {{this.creditService.getCredit()}}</span>
+          </button>
+                </ion-col>
+            </ion-row>
+        </div>
+
+        <div class="flashdeal_main">
+            <ion-row>
+                <ion-col col-10 no-padding>
+                    <div class="seasonal_div">{{FlashkeyName}}</div>
+                </ion-col>
+                <ion-col col-2 no-padding>
+                    <button ion-button class="viewall_btn" (click)="FlashMore()">
+            More
+          </button>
+                </ion-col>
+            </ion-row>
+        </div>
+        <ion-item no-lines class="mapimage_item">
+            <div #map id="map"></div>
+            <!-- <img src="assets/imgs/mapimag.jpg" class="mapimag_imag"> -->
+
+            <ion-row class="Address_row">
+                <ion-col col-2 class="Addres_col add_Padd">
+                    <ion-icon name="md-navigate" class="navogation_icon"></ion-icon>
+                </ion-col>
+                <ion-col col-8 class="Addres_col vertical_centrC">
+                    <div class="addres_input dotdot" *ngIf="UserAddress">
+                        {{UserAddress}}
+                    </div>
+                    <div class="addres_input dotdot" (click)="ChangeAddrs()" *ngIf="!UserAddress">
+                        {{"Add/Select Address"}}
+                    </div>
+                </ion-col>
+                <ion-col col-2 class="Addres_col add_Padd" (click)="ChangeAddrs()">
+                    <ion-icon name="md-create" style="color: #9a99a1"></ion-icon>
+                </ion-col>
+            </ion-row>
+        </ion-item>
+
+        <ion-item no-lines class="flash_item flash_bordere">
+            <div class="scrollmenu">
+                <table>
+                    <td class="position_div_streak" *ngFor="let flas of FlashDealis; let i = index ">
+                        <ion-card class="ion_crd" (click)="FlashdeJob(flas)">
+                            <img src="{{config.imgs}}{{flas.image}}" class="Sub_service_map" />
+                            <div class="save_div">
+                                SAVE <br />{{flas.discount_percentage}}%
+                            </div>
+
+                            <img src="assets/imgs/electric.png" class="flash_logo" />
+                            <ion-row class="Handyman_row">
+                                <ion-col col-2>
+                                    <img src="{{config.imgs}}{{flas.icon}}" class="Handyman_logo" />
+                                </ion-col>
+                                <ion-col no-padding class="deal_name"><span class="title">{{flas.serviceName}}</span>
+                                </ion-col>
+                            </ion-row>
+                            <div class="exp_div">
+                                <div class="exp_head">EXP DATE</div>
+                                <div class="exp_foot">{{flas.end_date}}</div>
+                            </div>
+                            <!-- <ion-row class="end_date">
+                                <ion-col col-6>Valid Before</ion-col>
+                                <ion-col col-6 class="col_date"> {{flas.end_date}} </ion-col>
+                            </ion-row> -->
+                        </ion-card>
+                    </td>
+                </table>
+            </div>
+        </ion-item>
+
+        <div class="Available_streaks" *ngIf="StreakList">
+            <ion-row>
+                <ion-col col-9 no-padding>
+                    <div class="seasonal_div">{{LocalKeyname}}</div>
+                </ion-col>
+                <ion-col col-3 no-padding>
+                    <button ion-button class="viewall_btn" (click)="AvailableView()">
+            VIEW ALL
+          </button>
+                </ion-col>
+            </ion-row>
+        </div>
+
+        <div class="scrollmenu" *ngIf="StreakList">
+            <table>
+                <tr>
+                    <td *ngFor="let strk of StreakList; let i = index">
+                        <div class="position_div">
+                            <ion-card class="ion_crd" (click)="RescueStreak(strk)">
+                                <img src="{{config.imgs}}{{strk.image}}" class="menuslide_image" />
+                                <div class="save_div">
+                                    SAVE <br />{{strk.discount_percentage}}%
+                                </div>
+                                <!-- <div class="selling_limit">
+                                    SELLING <br />LIMIT {{strk.selling_limit}}
+                                </div> -->
+                                <div class="exp_div">
+                                    <div class="exp_head">EXP DATE</div>
+                                    <div class="exp_foot">{{strk.end_date}}</div>
+                                </div>
+
+                                <div class="slide_detail_div">
+                                    <div class="SatrkName_div">{{strk.serviceName}}</div>
+                                    <!--  <ion-row class="end_date">
+                                        <ion-col col-6>Ends On</ion-col>
+                                        <ion-col col-6 class="col_date">
+                                            {{strk.end_date}}
+                                        </ion-col>
+                                    </ion-row> -->
+                                </div>
+                            </ion-card>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="Available_streaks" *ngIf="customPackages">
+            <ion-row>
+                <ion-col col-9 no-padding>
+                    <div class="seasonal_div">Custom Packages</div>
+                </ion-col>
+                <ion-col col-3 no-padding>
+                    <button ion-button class="viewall_btn">VIEW ALL</button>
+                </ion-col>
+            </ion-row>
+        </div>
+
+        <div class="scrollmenu" *ngIf="customPackages">
+            <table>
+                <tr>
+                    <td *ngFor="let item of customPackages; let i = index">
+                        <div class="position_div">
+                            <ion-card class="ion_crd" (click)="clickPackage(item)">
+                                <img *ngIf="item.image" src="{{config.imgs}}{{item.image}}" class="menuslide_image" />
+                                <img *ngIf="!item.image" src="../assets/imgs/banner1.jpg" class="menuslide_image" />
+
+                                <div class="exp_div">
+                                    <div class="exp_head">EXP DATE</div>
+                                    <div class="exp_foot">{{item.date}}</div>
+                                </div>
+
+                                <div class="slide_detail_div">
+                                    <div class="SatrkName_div">{{item.packageName}}</div>
+                                    <!--  <ion-row class="end_date">
+                                        <ion-col col-6>Ends On</ion-col>
+                                        <ion-col col-6 class="col_date">
+                                            {{strk.end_date}}
+                                        </ion-col>
+                                    </ion-row> -->
+                                </div>
+                            </ion-card>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="Popular_main" *ngIf="this.ProductList">
+            <ion-card class="Popular_card">
+                <ion-row class="Popular_Row">
+                    <ion-col col-10 no-padding>
+                        <div class="Popular_div">{{ProductServiname}}</div>
+                    </ion-col>
+                    <ion-col col-2 no-padding>
+                        <button ion-button class="viewall_btn" (click)="Product('0')">
+              MORE
+            </button>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row class="More_item_row">
+                    <ion-col col-6 class="Popula_col" *ngFor="let produc of ProductList;let i = index">
+                        <div *ngIf="i < 4">
+                            <img src="{{config.imgs}}{{produc.image}}" class="Popular_image" (click)="ProductDetail(i)" />
+                            <div>
+                                <ion-row class="Popular_more_row">
+                                    <ion-col col-2 no-padding class="vertical_centrC">
+                                        <img src="{{config.imgs}}{{produc.logo}}" class="PopularHandyman_logo" />
+                                    </ion-col>
+                                    <ion-col col-12 no-padding class="vertical_centr">
+                                        <div text-wrap class="Popular_sernm">{{produc.name}}</div>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-col>
+                    <!-- <ion-col col-6 class="Popula_col" *ngIf="category2">
+            <img src="assets/imgs/handyman.jpg" (click)="Seasonam('1')">
+            <div>
+              <ion-row class="Popular_more_row">
+                <ion-col col-2 no-padding class="vertical_centrC">
+                  <img src="{{config.imgs}}{{categoryimg2}}" class="PopularHandyman_logo">
+                </ion-col>
+                <ion-col col-10 no-padding class="vertical_centr">
+                  <div text-wrap class="Popular_sernm">{{category2}}</div>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="More_item_row">
+          <ion-col col-6 class="Popula_col" *ngIf="category3">
+            <img src="assets/imgs/handyman.jpg" (click)="Seasonam('2')">
+            <div>
+              <ion-row class="Popular_more_row">
+                <ion-col col-2 no-padding class="vertical_centrC">
+                  <img src="{{config.imgs}}{{categoryimg3}}" class="PopularHandyman_logo">
+                </ion-col>
+                <ion-col col-10 no-padding class="vertical_centr">
+                  <div text-wrap class="Popular_sernm">{{category3}}</div>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-col>
+          <ion-col col-6 class="Popula_col" *ngIf="category4">
+            <img src="assets/imgs/handyman.jpg" (click)="Seasonam('3')">
+            <div>
+              <ion-row class="Popular_more_row">
+                <ion-col col-2 no-padding>
+                  <img src="{{config.imgs}}{{categoryimg4}}" class="PopularHandyman_logo">
+                </ion-col>
+                <ion-col col-10 no-padding>
+                  <div text-wrap class="Popular_sernm">{{category4}}</div>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-col> -->
+                </ion-row>
+            </ion-card>
+        </div>
+
+        <div class="Available_streaks" *ngIf="SeasonalList">
+            <ion-row>
+                <ion-col col-9 no-padding>
+                    <div class="seasonal_div">{{SEsonkeyName}}</div>
+                </ion-col>
+                <ion-col col-3 no-padding>
+                    <button ion-button class="viewall_btn" (click)="SeasonalView()">
+            VIEW ALL
+          </button>
+                </ion-col>
+            </ion-row>
+        </div>
+
+        <div class="scrollmenu">
+            <table>
+                <tr>
+                    <td *ngFor="let seasonal of SeasonalList; let i = index">
+                        <div class="position_div">
+                            <ion-card class="ion_crd_seasonal">
+                                <img src="{{config.imgs}}{{seasonal.picture}}" class="seasonal_image" />
+                                <div class="slide_detail_div">
+                                    <div class="recipe_name dotdot">{{seasonal.name}}</div>
+                                    <br />
+                                    <button ion-button clear class="booknow_btn" (click)="BookSeason(seasonal)">
+                    Book Now
+                  </button>
+                                </div>
+                            </ion-card>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="Popular_main">
+            <ion-card class="Popular_card">
+                <ion-row class="Popular_Row">
+                    <ion-col col-10 no-padding>
+                        <div class="Popular_div">{{PopulaKeyname}}</div>
+                    </ion-col>
+                    <ion-col col-2 no-padding>
+                        <button ion-button class="viewall_btn" (click)="PopularMore()">
+              MORE
+            </button>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row class="More_item_row">
+                    <ion-col col-6 class="Popula_col" *ngIf="category1">
+                        <img src="{{config.imgs}}{{categoryimg1}}" class="Product_image" (click)="popularClick('0')" />
+                        <div>
+                            <ion-row class="Popular_more_row">
+                                <ion-col col-2 no-padding class="vertical_centrC">
+                                    <img src="{{config.imgs}}{{categoryicon1}}" class="PopularHandyman_logo" />
+                                </ion-col>
+                                <ion-col col-10 no-padding class="vertical_centr">
+                                    <div text-wrap class="Popular_sernm">{{category1}}</div>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </ion-col>
+                    <ion-col col-6 class="Popula_col" *ngIf="category2">
+                        <img src="{{config.imgs}}{{categoryimg2}}" class="Product_image" (click)="popularClick('1')" />
+                        <div>
+                            <ion-row class="Popular_more_row">
+                                <ion-col col-2 no-padding class="vertical_centrC">
+                                    <img src="{{config.imgs}}{{categoryicon2}}" class="PopularHandyman_logo" />
+                                </ion-col>
+                                <ion-col col-10 no-padding class="vertical_centr">
+                                    <div text-wrap class="Popular_sernm">{{category2}}</div>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <ion-row class="More_item_row">
+                    <ion-col col-6 class="Popula_col" *ngIf="category3">
+                        <img src="{{config.imgs}}{{categoryimg3}}" class="Product_image" (click)="popularClick('2')" />
+                        <div>
+                            <ion-row class="Popular_more_row">
+                                <ion-col col-2 no-padding class="vertical_centrC">
+                                    <img src="{{config.imgs}}{{categoryicon3}}" class="PopularHandyman_logo" />
+                                </ion-col>
+                                <ion-col col-10 no-padding class="vertical_centr">
+                                    <div text-wrap class="Popular_sernm">{{category3}}</div>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </ion-col>
+                    <ion-col col-6 class="Popula_col" *ngIf="category4">
+                        <img src="{{config.imgs}}{{categoryimg4}}" class="Product_image" (click)="popularClick('3')" />
+                        <div>
+                            <ion-row class="Popular_more_row">
+                                <ion-col col-2 no-padding>
+                                    <img src="{{config.imgs}}{{categoryicon4}}" class="PopularHandyman_logo" />
+                                </ion-col>
+                                <ion-col col-10 no-padding class="vertical_centr">
+                                    <div text-wrap class="Popular_sernm">{{category4}}</div>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-card>
+        </div>
+
+        <div class="BestOffer_div">
+            <ion-card class="BestOffer_card">
+                <div class="emailoffer_div">
+                    <img src="assets/imgs/emailoffer.png" class="emailoffer_imge" />
+                </div>
+                <div class="referring_div">
+                    Give $25, Get $25 by referring family & friends!
+                </div>
+                <button ion-button clear full class="Share_btn" (click)="ShareRefer()">
+          Share
+        </button>
+            </ion-card>
+        </div>
+    </div>
+
+    <ion-fab bottom end>
+        <button ion-fab mini (click)="AdminChat()">
+      <img src="assets/imgs/fablogo.png" />
+    </button>
+    </ion-fab>
+</ion-content>

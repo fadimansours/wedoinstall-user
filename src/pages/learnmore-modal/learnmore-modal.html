@@ -1,0 +1,69 @@
+<ion-content class="Rescue_content vertical_centr">
+  <ion-card class="Main_card">
+    <ion-slides>
+
+      <ion-slide class="Slide_padd">
+        <div class="close_div">
+          <ion-row>
+            <ion-col col-8></ion-col>
+            <ion-col col-2>
+              <div class="Page_1_of">1/3</div>
+            </ion-col>
+            <ion-col col-2 style="text-align: right;">
+              <ion-icon name="md-close" class="close_icon" (click)="CloseBtn()"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </div>
+        <div class="Title_div">Introducing Tradesglobe Points</div>
+        <div text-wrap class="Detail_div">For every dollar you spend an a Tradesglobe service, you earn points. Visit
+          the
+          points screen to see different ways you collect</div>
+        <img src="assets/imgs/learn1.png" class="Learn_img">
+        <button ion-button full class="WhatCan_btn" (click)="SlideNext()">What can I do with points?</button>
+      </ion-slide>
+
+      <ion-slide class="Slide_padd">
+        <div class="close_div">
+          <ion-row>
+            <ion-col col-2 style="text-align: left;">
+              <ion-icon name="md-arrow-back" class="close_icon" (click)="SlidePrev()"></ion-icon>
+            </ion-col>
+            <ion-col col-6></ion-col>
+            <ion-col col-2>
+              <div class="Page_1_of">2/3</div>
+            </ion-col>
+            <ion-col col-2 style="text-align: right;">
+              <ion-icon name="md-close" class="close_icon" (click)="CloseBtn()"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </div>
+        <div class="Title_div">Redeem Points for Tradesglobe Credit</div>
+        <div text-wrap class="Detail_div">Redeem points for Tradesglobe Credit on your upcoming jobs. Your home will be in tip top shape without breaking the back!</div>
+        <img src="assets/imgs/learn2.png" class="Learn_img margin_T_15">
+        <button ion-button full class="WhatCan_btn" (click)="SlideNext()">How do I earn Points faster?</button>
+      </ion-slide>
+
+      <ion-slide class="Slide_padd">
+        <div class="close_div">
+          <ion-row>
+            <ion-col col-2 style="text-align: left;">
+              <ion-icon name="md-arrow-back" class="close_icon" (click)="SlidePrev()"></ion-icon>
+            </ion-col>
+            <ion-col col-6></ion-col>
+            <ion-col col-2>
+              <div class="Page_1_of">3/3</div>
+            </ion-col>
+            <ion-col col-2 style="text-align: right;">
+              <ion-icon name="md-close" class="close_icon" (click)="CloseBtn()"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </div>
+        <div class="Title_div">Start a Streak</div>
+        <div text-wrap class="Detail_div margin_T_10">When you book multiple jobs within the same Streak, your Points Multiplier increases with each completed job.</div>
+        <img src="assets/imgs/learn3.png" class="Learn_img margin_T_15">
+        <button ion-button full class="WhatCan_btn">See your Points and Streaks</button>
+      </ion-slide>
+    </ion-slides>
+
+  </ion-card>
+</ion-content>

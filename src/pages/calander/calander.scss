@@ -1,0 +1,202 @@
+page-calander {
+    .back-button.show-back-button {
+        display: none !important;
+    }
+    .header_color {
+        background: #ffffff !important;
+    }
+    .toolbar-background {
+        background-color: #ffffff !important;
+    }
+    .Conte_padd {
+        padding: 0px 15px;
+    }
+    .toolbar-md {
+        padding: 0px;
+        min-height: 25px;
+    }
+    [col-1] {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 8.33333%;
+        -ms-flex: 0 0 8.33333%;
+        flex: 0 0 14.285714285714286%;
+        width: 14.285714285714286%;
+        max-width: 14.285714285714286%;
+    }
+    .col {
+        text-align: center;
+        padding: 10px;
+    }
+    .close_col {
+        padding: 5px 0px 0px !important;
+        zoom: 1.4;
+    }
+    .last-month,
+    .next-month {
+        color: #999999;
+        font-size: 90%;
+    }
+    .currentDate,
+    .otherDate,
+    .oldDate {
+        padding: 5px;
+    }
+    .currentDate {
+        background-color: #537bd5;
+        color: #ffffff;
+        border-radius: 50%;
+        font-size: 13px;
+        font-weight: 300;
+    }
+    .oldDate {
+        background-color: #f7be03;
+        color: #ffffff;
+        border-radius: 50%;
+        font-size: 13px;
+        font-weight: 300;
+    }
+    .calendar-header {
+        // background-color: #1a732d;
+        color: #000000;
+        font-weight: 500;
+        font-size: 15px;
+    }
+    .event-bullet {
+        margin: 2px auto;
+        height: 5px;
+        width: 5px;
+        // background-color: #008000;
+        border-radius: 30px;
+    }
+    .selected-date {
+        width: 20px;
+        height: 2px;
+        background-color: #537bd5;
+    }
+    .unselected-date {
+        border: none;
+    }
+    .calendar-body {
+        .grid {
+            padding: 0;
+        }
+        .col:last-child {
+            border-right: none;
+        }
+        .calendar-weekday,
+        .calendar-date {
+            text-align: center;
+            margin: 0;
+        }
+        .calendar-weekday {
+            font-weight: 500;
+        }
+        .calendar-date {
+            border-top: solid 1px #e7e7e7;
+            border-bottom: solid 1px #e7e7e7;
+            padding: 10px 0 30px;
+        }
+    }
+    .Red_col {
+        color: #eb3b3b;
+    }
+    .Time_Div {
+        text-align: center;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        padding: 5px 0;
+        border: 1px solid #587cf5;
+        color: #587cf5;
+        border-radius: 2px;
+    }
+    .Select_Time_Div {
+        text-align: center;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        padding: 5px 0;
+        border: 1px solid #587cf5;
+        color: #ffffff;
+        background: #587cf5;
+        border-radius: 2px;
+    }
+    .col_evening {
+        position: relative;
+    }
+    .Time_Div_evening {
+        text-align: center;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        padding: 5px 0;
+        border: 1px solid #d3442b;
+        color: #f4f5f7;
+        border-radius: 2px;
+        background: #d3442b;
+    }
+    .Select_Time_Div_evening {
+        text-align: center;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        padding: 5px 0;
+        border: 1px solid #587cf5;
+        color: #ffffff;
+        background: #587cf5;
+        border-radius: 2px;
+    }
+    .evening_warning {
+        position: absolute;
+        background: #d3442b;
+        border-radius: 50%;
+        color: white;
+        padding: 5px;
+        border: 2px solid white;
+        text-align: center;
+        top: 0;
+        right: -10px;
+        font-size: 12px;
+    }
+    .Name_div {
+        padding: 30px 0 0;
+    }
+    .calenter_icon {
+        zoom: 1;
+    }
+    .Requst_time {
+        font-size: 13px;
+        padding: 0 0 0 8px;
+        font-weight: 500;
+        letter-spacing: 0.8px;
+    }
+    .constraints_di {
+        font-size: 11px;
+        text-align: center;
+        color: #d1d1d3;
+    }
+    .Continue_btn {
+        background: #587cf5;
+        color: #ffffff;
+        font-size: 13px !important;
+    }
+    .Footer_btn {
+        margin-top: 15px;
+        background: #fcfbfb;
+        box-shadow: 0px -5px #f8f8f8;
+        .warn_col {
+            padding: 0;
+            .red_warn {
+                color: white;
+                font-weight: 500;
+                background: #d3442b;
+                padding: 0px;
+                .text_warn {
+                    color: grey;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+    .warn_btn {
+        margin: 10px;
+    }
+}

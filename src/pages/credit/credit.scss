@@ -1,0 +1,209 @@
+page-credit {
+    .toolbar-title-md{color: #fff;}
+    .toolbar-title-ios{color: #fff;}
+    .chatboxes_icon{color: #fff;}
+
+    .label-md{margin: 0px;}
+    .item-md.item-block .item-inner{padding: 0px;}
+    .item-md{padding: 0px;}
+    .label-ios{margin: 0px;}
+    .item-ios.item-block .item-inner{padding: 0px;}
+    .item-ios{padding: 0px;}
+    .Cover_back{
+        background: #606c81;
+        padding: 78px;
+    }
+    .Covar_white{
+        padding: 25px;
+    }    
+    .Prifile_card{
+        border-radius: 8px;
+        box-shadow: none;
+        border: 1px solid #dadada;
+        padding: 20px 20px 8px;
+        position: absolute;
+        bottom: 0px;
+        margin: 10px 35px 0px 35px;
+        width: calc(100% - 70px);
+    }
+    .YourPoint_div{
+        color: #3b3b3b;
+        font-size: 14px;
+        text-align: center;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+    }
+    .Pont_row_div{
+        padding: 25px 50px 0;
+    }
+    .Padin_row_div{
+        padding: 0px 50px 0;
+    }
+    .Ponit_logo{
+        padding: 5px 10px 20px 10px;
+        float: right;
+    }
+    .Total_point{
+        color: #f7aa28;
+        font-size: 40px;
+        text-align: center;
+    }
+    .redeemPoint_div{
+        color: #3b3b3b;
+        font-size: 16px;
+        text-align: center;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+        padding: 15px 0;
+    }
+    .Redeem_card{
+        padding: 0 20px 20px 20px;
+        margin: 10px 20px 10px 20px;
+        width: calc(100% - 40px);        
+        border-radius: 8px;
+        box-shadow: 0px 3px 4px 0px (#b1b1b1);
+        border: 1px solid #dadada;
+    }
+    .Point_img{
+        padding: 0 8px;
+    }
+    .Redeem_div{
+        color: #6c41c1;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .Ponit_count{
+        color: #6c41c1;
+        font-size: 13px;
+        font-weight: 400;
+    }
+    .Redeem_btn{
+        margin: 0px;
+        border: 1px solid #b1b1b1;
+        color: #b1b1b1;
+        padding: 0 8px;
+        float: right;
+        height: 30px !important;
+    }
+    .range_item{background: transparent; padding: 15px 0 5px;}
+    .range_item.item-block{
+        min-height: 2.4rem;
+    }
+.range-md{padding: 0px;}
+.range-ios{padding: 0px;}
+.range-md .range-bar, .range-ios .range-bar{
+    left: 0;
+    top: 5px;
+    position: absolute;
+    height: 5px;
+    border-radius: 30px;
+    background: #cecece;
+    pointer-events: none
+}
+.range-md .range-bar-active, .range-ios .range-bar-active{
+  background: linear-gradient(90deg, #2b26a9 40%, #a361cb 80%);
+}
+.range-md .range-knob{display: none;}
+.range-ios .range-knob{display: none;}
+.range-md .range-knob-handle{height: 0px; width: 0px;margin: 0px;}
+.range-ios .range-knob-handle{height: 0px; width: 0px;margin: 0px;}
+.range-md .range-slider{height: 0px;}
+.range-ios .range-slider{height: 0px;}
+.Learn_point{
+    color: #268fa9;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 16px;
+}
+.Coupons_div{
+    font-size: 15px;
+    // padding: 0 0 0 5px;
+}
+.Coupons_Span{
+    color: #f7aa28;
+    font-size: 16px;
+}
+
+.Coupon_card{
+    margin: 10px 20px 10px 20px;
+    width: calc(100% - 40px);        
+    border-radius: 8px;
+    box-shadow: 0px 3px 4px 0px (#b1b1b1);
+    border: 1px solid #dadada;
+}
+.CuPon_row{
+    border: 1px solid #cecece;
+    padding: 0px 0 0px 5px;
+    border-radius: 5px;
+}
+.coupon_img{
+    padding: 5px 2px;
+}
+.Coupon_cod_d{
+    padding: 25px;
+}
+.Code_input{
+    border: 0px;
+    width: 100%;
+    font-size: 16px;
+    padding: 5px 10px ;
+}
+.add_div{
+    background: #268fa9;
+    color: #fff;
+    font-size: 16px;
+    padding: 6px 0;
+    text-align: center;
+    border-radius: 0 5px 5px 0;
+}
+.Discount_div{
+    font-size: 14px;
+    color: #b1b1b1;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.EarnPoint_div{
+    color: #3b3b3b;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 20px 0;
+    border-bottom: 2px solid #d4d4d4;
+}
+.Ticket_back{
+    background: #cacaca;
+    border-radius: 50%;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+}
+.Ticket_intro{
+    color: #b1b1b1;
+    font-size: 15px;
+}
+.Fmansour_div{
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 25px 0px 20px;
+}
+.Share_btn{
+    border: 1px solid #4a43fb;
+    color: #4a43fb;
+    font-size: 17px !important;
+    border-radius: 3px;
+    padding: 20px;
+    margin: auto;
+    display: table;
+    text-transform: none;
+}
+.Share_detail_div{
+    color: #b1b1b1;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+}

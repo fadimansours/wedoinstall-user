@@ -1,0 +1,26 @@
+<ion-content class="Cancel_Content">
+
+  <ion-card class="card_class">
+    <ion-row class="Top_row">
+      <ion-col col-1></ion-col>
+      <ion-col col-10 class="vertical_centr">
+        <div class="Cancel_this">CANCEL THIS JOB</div>
+      </ion-col>
+      <ion-col col-1 class="vertical_centr" (click)="ColseModel()">
+        <ion-icon name="close"></ion-icon>
+      </ion-col>
+    </ion-row>
+
+    <div class="mainPadd_div">
+      <div class="Reson_below">Want to cancel your job? Tell us why by selecting one of the reasons below.</div>
+
+      <div (click)="ResonSelect('1')" [ngClass]="(ReasonS == '1') ? 'Reasoun_Selectd' : 'Reasoun_btn'">Job no longer needed</div>
+      <div (click)="ResonSelect('2')" [ngClass]="(ReasonS == '2') ? 'Reasoun_Selectd' : 'Reasoun_btn'">Price</div>
+      <div (click)="ResonSelect('3')" [ngClass]="(ReasonS == '3') ? 'Reasoun_Selectd' : 'Reasoun_btn'">Date/time no longer work</div>
+      <div (click)="ResonSelect('4')" [ngClass]="(ReasonS == '4') ? 'Reasoun_Selectd' : 'Reasoun_btn'">Issue with Pro</div>
+
+      <button ion-button clear full class="Confirm_btn" (click)="Confirm()">Confirm</button>
+    </div>
+  </ion-card>
+
+</ion-content>

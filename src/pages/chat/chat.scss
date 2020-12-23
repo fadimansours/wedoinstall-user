@@ -1,0 +1,171 @@
+page-chat {
+    .toolbar-title-md {
+        color: #fff;
+    }
+    .toolbar-title-ios {
+        color: #fff;
+    }
+    .back-button.show-back-button {
+        display: none !important;
+    }
+    .title-img {
+        background-color: transparent !important;
+        border-color: rgba(0, 0, 0, 0);
+        background-color: rgba(0, 0, 0, 0);
+        margin: 0px;
+        color: white;
+        ion-avatar {
+            margin: 2px 15px !important;
+            img {
+                width: 50px;
+                height: 50px;
+                border: 0.5px solid rgb(44, 44, 44) !important;
+            }
+        }
+        ion-label {
+            font-size: 25px;
+            font-weight: 400;
+            font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif !important;
+        }
+    }
+    .msgInput {
+        height: 100%;
+        width: 100%;
+        background: #ffffff;
+        border: 0 solid rgba(91, 91, 91, 0.2);
+        box-shadow: none !important;
+        font-size: 16px;
+        color: #000000;
+        text-align: left;
+        padding-left: 10px;
+        padding-top: 8px;
+    }
+    .bg {
+        background-image: linear-gradient(-135deg, #656d78 0%, #2f3640 100%);
+    }
+    .bubble {
+        background-color: #cce1ef;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px #999;
+        display: inline-block;
+        padding: 10px 18px;
+        position: relative;
+        vertical-align: top;
+    }
+    .you::before {
+        background-color: #cce1ef;
+        content: "\00a0";
+        display: block;
+        height: 16px;
+        position: absolute;
+        bottom: -2px;
+        transform: rotate(29deg) skew(-35deg);
+        -moz-transform: rotate(29deg) skew(-35deg);
+        -ms-transform: rotate(29deg) skew(-35deg);
+        -o-transform: rotate(29deg) skew(-35deg);
+        -webkit-transform: rotate(55deg) skew(55deg);
+        width: 18px;
+        height: 11px;
+    }
+    .me::before {
+        background-color: #f2f2f2;
+        content: "\00a0";
+        display: block;
+        height: 11px;
+        position: absolute;
+        bottom: 0px;
+        transform: rotate(29deg) skew(-35deg);
+        -moz-transform: rotate(29deg) skew(-35deg);
+        -ms-transform: rotate(29deg) skew(-35deg);
+        -o-transform: rotate(29deg) skew(-35deg);
+        -webkit-transform: rotate(-55deg) skew(-55deg);
+        width: 18px;
+    }
+    .me {
+        float: left;
+        margin: 10px 50px 10px 20px;
+        background-color: #ffffff;
+        margin-left: 0px;
+        width: 250px;
+        text-align: left;
+        color: #000000;
+    }
+    .me::before {
+        box-shadow: -2px 2px 2px 0 rgba(178, 178, 178, 0.4);
+        left: -4px;
+        background-color: #ffffff;
+    }
+    .you {
+        float: right;
+        margin: 10px 0px 10px 45px;
+        width: 250px;
+        color: #000000;
+        text-align: right;
+    }
+    .you::before {
+        right: -5px;
+    }
+    .chat_type_bar {
+        position: initial !important;
+        width: 100% !important;
+    }
+    .msg_time_l {
+        /*         margin-left: 10px;
+ */
+        position: absolute;
+        float: left;
+        color: #646464;
+        font-size: 13px;
+        margin-top: -53px;
+        padding-left: 98px;
+        bottom: 0;
+    }
+    .msg_time_r {
+        /*         margin-right: 10px;
+ */
+        position: absolute;
+        top: 1px;
+        left: 2px;
+        float: right;
+        color: #504f4f;
+        font-size: 13px;
+        /*         margin-top: -53px;
+ */
+        padding: 5px;
+    }
+    .sendBtn {
+        line-height: 50px;
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 30px;
+        color: #092d4b;
+        background-color: #fff;
+        border-left: 1px solid #999;
+    }
+    .othername {
+        color: #092d4b;
+        font-weight: 500;
+        margin: 5px 0px;
+    }
+    .scol_85 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 85%;
+        -moz-box-flex: 0;
+        -moz-flex: 0 0 85%;
+        -ms-flex: 0 0 85%;
+        flex: 0 0 85%;
+        max-width: 85%;
+    }
+    .ht_50 {
+        height: 50px !important;
+    }
+    .Attech_btn {
+        font-size: 20px;
+    }
+    .Media_imgs {
+        width: 214px !important;
+        height: 214px !important;
+        border-radius: 15px;
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Tradesglobe Admin</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding #content>
+
+  <div *ngFor="let chat of UserChat">
+
+    <div *ngIf="chat.user !== userName">
+      <div class="bubble me">
+        <!-- <div class="othername">{{chat.user}}</div> -->
+        <div *ngIf="chat.type == 'text'">{{chat.message}}</div>
+        <img *ngIf="chat.type == 'image'" src="{{config.url}}{{chat.message}}" class="Media_imgs" #myImage
+          (click)="presentImage(myImage)">
+        <video *ngIf="chat.type == 'video'" controls="controls" preload="metadata"
+          webkit-playsinline="webkit-playsinline" class="Media_imgs">
+          <source src="{{config.url}}{{chat.message}}" type="video/mp4" />
+        </video>
+      </div>
+      <div class="msg_time_l">{{chat.sendDate | date:'short'}}</div>
+    </div>
+
+    <div *ngIf="chat.user === userName">
+      <div class="bubble you">
+        <!-- <div class="othername">Me</div> -->
+        <div *ngIf="chat.type == 'text'">{{chat.message}}</div>
+        <img *ngIf="chat.type == 'image' " src="{{config.url}}{{chat.message}}" class="Media_imgs" #myImage
+          (click)="presentImage(myImage)">
+        <video *ngIf="chat.type == 'video'" controls="controls" preload="metadata"
+          webkit-playsinline="webkit-playsinline" class="Media_imgs">
+          <source src="{{config.url}}{{chat.message}}" type="video/mp4" />
+        </video>
+      </div>
+      <div class="msg_time_r">{{chat.sendDate | date:'short'}}</div>
+    </div>
+
+  </div>
+
+  <!-- <div class="vertical_centr">
+          <div text-wrap class="Hry_div">Hey! You don't have any conversation just yet.</div>
+        </div> -->
+
+</ion-content>
+
+<ion-footer>
+  <ion-row>
+    <ion-col col-9>
+      <div class="padding_0">
+        <input class="msgInput" placeholder="Type message" type="text" [(ngModel)]="Chat_Data.message">
+      </div>
+    </ion-col>
+    <ion-col col-1 class="vertical_centr">
+      <div class="vertical_centr Attech_btn" (click)="AttechMent()">
+        <ion-icon name="attach"></ion-icon>
+      </div>
+    </ion-col>
+    <ion-col col-2>
+      <div class="scol_15 padding_0 vertical_centr sendBtn" (click)="send()">
+        <ion-icon name="md-send"></ion-icon>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-footer>

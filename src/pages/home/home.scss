@@ -1,0 +1,521 @@
+page-home {
+    .Header_home {
+        background-color: #606c81;
+    }
+    .toolbar-title-md {
+        color: #fff;
+        text-align: center;
+        font-size: 25px;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+    }
+    .toolbar-title-ios {
+        color: #fff;
+        font-size: 25px;
+        font-weight: 800;
+    }
+    .chatboxes_icon {
+        color: #fff;
+    }
+    .Header_title {
+        text-align: center;
+        font-size: 25px;
+        font-weight: 800;
+        color: #fff;
+        letter-spacing: 0.5px;
+        padding: 5px 0px;
+        // font-family: cursive;
+    }
+    .search_div {
+        padding: 0 20px;
+    }
+    .search_imgs {
+        margin: auto;
+        display: table;
+    }
+    .Search_input {
+        font-size: 17px;
+        color: #06a7f7;
+        padding: 2px 0 0 0;
+    }
+    .Search_row {
+        background: #fff;
+        border-radius: 50px;
+        padding: 5px 0;
+        margin: 5px 0px;
+    }
+    .First_card {
+        margin: 10px 0 0 0;
+        width: 100%;
+        border: 1px solid #d6d6d6d3;
+        border-radius: 0 0 10px 10px;
+    }
+    .HomeSrvc_img {
+        width: 100%;
+    }
+    .experience_div {
+        padding: 10px 5px;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+    }
+    .instantly_div {
+        padding: 0px 5px;
+        font-size: 16px;
+        text-align: center;
+        line-height: 1.4;
+        font-weight: 400;
+    }
+    .row_padd {
+        padding: 20px 0px;
+    }
+    .Sign_btn {
+        margin: auto;
+        display: table;
+        color: #fff;
+        background: #5371df;
+        padding: 5px 30px !important;
+        height: 3.6rem !important;
+        border-radius: 0px;
+    }
+    .margin_t_25 {
+        margin-top: 25px;
+    }
+    .seasonal_main {
+        padding: 40px 0 0 0;
+    }
+    .seasonal_div {
+        letter-spacing: 1px;
+        font-size: 15px;
+        font-weight: 500;
+        vertical-align: middle;
+        padding: 7px 0 0 0;
+        // text-transform: uppercase;
+    }
+    .viewall_btn {
+        float: right;
+        color: #fff;
+        background: #5371df;
+        padding: 5px 10px !important;
+        height: 30px;
+        line-height: 1px !important;
+        margin: 0px;
+        font-size: 11px !important;
+        letter-spacing: 0.5px;
+        border-radius: 0px;
+    }
+    .Popular_card {
+        margin: 0px;
+        width: 100%;
+        padding: 20px 0px;
+    }
+    .Popular_div {
+        letter-spacing: 1px;
+        font-size: 15px;
+        font-weight: 500;
+        vertical-align: middle;
+        padding: 7px 0 0 0;
+        // text-transform: uppercase;
+    }
+    .SatrkName_div {
+        background: rgba(0, 0, 0, 0.6);
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: 500;
+        text-align: center;
+        padding: 8px 0;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+    }
+    .Seconds_div {
+        padding: 0px 0px;
+    }
+    .Pont_row {
+        padding: 0px 10px;
+        border-bottom: 1px solid #e6e4e4;
+    }
+    .Point_btn {
+        border-radius: 50px;
+        height: 45px !important;
+        background: #fff;
+        color: #000;
+        box-shadow: 0px 0px 4px 2px (#d3d3d3);
+        letter-spacing: 0.8px;
+    }
+    .Point_logo {
+        color: #3b29b0;
+        padding: 0 6px;
+        zoom: 1.4;
+    }
+    .Paint_span {
+        color: #3b29b0;
+        font-size: 18px !important;
+    }
+    .Credit_logo {
+        color: #ff8410;
+        padding: 0 6px;
+        zoom: 1.2;
+    }
+    .Credit_span {
+        color: #ff8410;
+        font-size: 18px !important;
+    }
+    .flashdeal_main {
+        padding: 25px 20px 10px;
+    }
+    #map {
+        width: 100%;
+        height: 175px;
+    }
+    .mapimag_imag {
+        width: 100%;
+        height: 160px;
+        margin-top: 10px;
+    }
+    .mapimage_item {
+        padding: 0px;
+        padding-bottom: 15px;
+    }
+    .flash_item {
+        padding: 0px;
+        padding-bottom: 10px;
+    }
+    .navogation_icon {
+        transform: rotate(35deg);
+        color: #5371df;
+    }
+    .flash_bordere {
+        border-bottom: 1px solid #bebebe !important;
+        box-shadow: 0px 3px 6px -1px (#bebebe);
+    }
+    .mapimage_item.item-md.item-block .item-inner {
+        padding: 0px;
+    }
+    .mapimage_item .label-md {
+        margin: 0px;
+    }
+    .mapimage_item.item-ios.item-block .item-inner {
+        padding: 0px;
+    }
+    .mapimage_item .label-ios {
+        margin: 0px;
+    }
+    .Address_row {
+        padding: 10px 40px 0;
+        width: 100%;
+        position: absolute;
+        bottom: 6px;
+        z-index: 99999;
+    }
+    .addres_input {
+        width: 100%;
+        border: 0px;
+        color: #5371df;
+        font-size: 13px;
+    }
+    .Addres_col {
+        background: #fff;
+        box-shadow: 1px 2px 2px 0px (#bebebe);
+        padding: 5px 0;
+    }
+    .add_Padd {
+        text-align: center;
+    }
+    div.scrollmenu {
+        overflow: auto;
+        white-space: nowrap;
+    }
+    .position_div_streak {
+        position: relative;
+        overflow: hidden;
+    }
+    .position_div {
+        position: relative;
+    }
+    .Second_position {
+        margin: 0 15px 0 15px;
+        width: 100%;
+    }
+    // .Blank_div{
+    //     width: 100%;
+    //     padding:0 120px;
+    // }
+    .Sub_service_map {
+        width: 200px;
+        height: 150px;
+        opacity: 0.7;
+    }
+    .Handyman_row {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        .deal_name {
+            overflow: hidden;
+            position: relative;
+            .title {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+            }
+            color: white;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+    .margin_l10 {
+        margin: 0 0 0 10px;
+    }
+    .Handy_card {
+        // margin: 0px;
+        margin: 0px -10px 0 10px;
+        width: 100%;
+    }
+    .Handyman_logo {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: #e6e4e4;
+        padding: 3px;
+    }
+    .HandyMan_div {
+        color: #ffffff;
+        padding-top: 3px;
+        text-align: center;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+    .save_div {
+        position: absolute;
+        top: 40px;
+        right: 0px;
+        text-align: center;
+        background: #fa6362;
+        border-radius: 50%;
+        padding: 9px 8px;
+        color: #fff;
+        letter-spacing: 0.3px;
+        font-size: 11px;
+    }
+    .flash_logo {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 10px;
+        right: 8px;
+    }
+    .selling_limit {
+        position: absolute;
+        top: 70px;
+        left: 5px;
+        text-align: center;
+        background: #288deb;
+        border-radius: 50%;
+        padding: 9px 8px;
+        color: #fff;
+        letter-spacing: 0.3px;
+        font-size: 11px;
+    }
+    .exp_div {
+        position: absolute;
+        border: 1px solid rgb(34, 34, 34);
+        top: 5px;
+        left: 5px;
+        background: white;
+        height: 50px;
+        width: auto;
+        width: 100px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .exp_head {
+        text-align: center;
+        background: grey;
+        color: white;
+        font-weight: 500;
+        font-size: 12px;
+        padding: 3px;
+    }
+    .exp_foot {
+        text-align: center;
+        background: white;
+        color: black;
+        padding: 5px;
+        background: rgb(221, 60, 32) (243, 11, 11);
+    }
+    .end_date {
+        position: absolute;
+        top: 0px;
+        text-align: center;
+        color: rgb(209, 34, 22);
+        background: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        font-weight: 700;
+        .col_date {
+            color: white;
+        }
+    }
+    .Available_streaks {
+        padding: 40px 20px 20px;
+    }
+    .Multi_image {
+        width: 200px;
+        height: 140px;
+        margin: 0 0px;
+    }
+    .Multi_img_row {
+        box-shadow: 0 3px 2px 0px #c0c0c0;
+        margin: 0px 10px;
+        width: 100%;
+    }
+    .Upto_div {
+        font-size: 10px;
+        border: 3px solid #d3d3d3;
+        border-radius: 50%;
+        text-align: center;
+        padding: 2px 4px;
+        color: #6d40bf;
+        height: 41px;
+        width: 41px;
+    }
+    .Upto_span {
+        font-size: 13px;
+    }
+    .Ends_div {
+        color: #000;
+        font-size: 12px;
+        padding: 2px 0 0 0;
+    }
+    .Ends_span {
+        color: #6d40bf;
+        font-size: 13px;
+        padding: 2px 0 0 0;
+    }
+    .ion_crd {
+        border-radius: 0px;
+        width: 200px;
+        margin: 0 0px 20px 20px;
+        position: relative;
+    }
+    .menuslide_image {
+        width: 100%;
+        height: 140px;
+    }
+    .slide_detail_div {
+        font-size: 16px;
+    }
+    .recipe_name {
+        font-weight: 500;
+        text-align: center;
+        padding: 11px 10px;
+        font-size: 13px;
+    }
+    .ion_crd_seasonal {
+        border-radius: 0px;
+        width: 135px;
+        margin: 0 0px 20px 20px;
+        padding: 6px 6px 0px;
+    }
+    .dotdot {
+        white-space: nowrap;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+    }
+    .seasonal_image {
+        width: 100%;
+        /*height: 120px*/
+    }
+    .booknow_btn {
+        border: 1px solid #3b29b0;
+        color: #3b29b0;
+        border-radius: 7px;
+        margin: auto;
+        display: table;
+        margin-bottom: 10px;
+        font-size: 12px !important;
+        padding: 0 8px;
+        height: 30px !important;
+    }
+    .Popular_main {
+        padding: 0px;
+    }
+    .Popular_Row {
+        padding: 0 20px;
+    }
+    .More_item_row {
+        padding: 0 10px;
+    }
+    .Popula_col {
+        padding: 10px;
+    }
+    .Popular_more_row {
+        position: absolute;
+        bottom: 10px;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 5px 5px;
+        width: 89%;
+    }
+    .Popular_sernm {
+        width: 100%;
+        color: #fff;
+        padding: 0 5px 0px;
+        text-align: right;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+    .PopularHandyman_logo {
+        width: 100%;
+        /*height: 24px;*/
+        border-radius: 50%;
+        background: #e6e4e4;
+        padding: 3px;
+        margin: auto;
+        display: table;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+    }
+    .Popular_image {
+        width: 100%;
+    }
+    .Product_image {
+        width: 100%;
+        height: 100px;
+    }
+    .BestOffer_div {
+        padding: 20px;
+    }
+    .BestOffer_card {
+        margin: 0px;
+        width: 100%;
+    }
+    .emailoffer_div {
+        background: #06a7f7;
+        text-align: center;
+        padding: 20px 50px;
+    }
+    .emailoffer_imge {
+        width: 35%;
+        margin: auto;
+        display: table;
+    }
+    .referring_div {
+        font-size: 17px;
+        font-weight: 500;
+        text-align: center;
+        padding: 15px 30px;
+    }
+    .Share_btn {
+        width: 90%;
+        border: 1px solid #3b29b0;
+        color: #3b29b0;
+        text-transform: none;
+        margin: auto;
+        display: table;
+        margin-bottom: 20px;
+        border-radius: 50px;
+    }
+}

@@ -1,0 +1,172 @@
+::-webkit-scrollbar{
+    display: none;
+}
+
+.toolbar-background {
+    background-color: #606c81;
+}
+
+.First_div{
+    padding: 10px 20px;
+}
+.fab[mini]{
+    padding: 0px;
+}
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default{color: #fff}
+.bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default{color: #ffffff;}
+.main_cntaint{
+    background: #e7e7e7;
+}
+.back_trnspnt{
+    background: transparent !important;
+}
+
+// .tab-nav {
+//     margin-bottom: constant(safe-area-inset-bottom);
+// }
+
+.header-ios{
+    padding-top: 5px;
+    // height: 65px !important;
+    // margin-top: 20px; /* Status bar height on iOS 10 */
+    // margin-top: constant(safe-area-inset-top); /* Status bar height on iOS 11.0 */
+    // margin-top: env(safe-area-inset-top);
+    background-color: #606c81;
+}
+
+.tabs-ios .tab-button-icon{
+    min-width: 2.4rem;
+    font-size: 2.4rem;
+}
+
+
+
+.dotdot{
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+.vertical_centr{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex !important;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.vertical_centrC{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex !important;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    // -webkit-justify-content: center;
+    // justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.margin_T_10{
+    margin-top: 10px;
+}
+.margin_T_15{
+    margin-top: 15px;
+}
+
+
+    ion-icon {
+        &[class*="custom-"] {
+            margin: 0 5px 0 0;
+            vertical-align: middle;
+            $sz: 23px;
+            width: $sz;
+            height: $sz;
+        } // custom icons
+    
+        &[class*="homes"] {
+            background: url("../assets/imgs/homeblac.png") no-repeat 50% 50%;
+            background-size: contain;
+            margin: 0px auto;
+    
+        } &[class*="jobs"] {
+            background: url("../assets/imgs/jobblac.png") no-repeat 50% 50%;
+            background-size: contain;
+            margin: 0px auto;
+    
+        } &[class*="servics"] {
+            background: url("../assets/imgs/searchblu.png") no-repeat 50% 50%;
+            background-size: contain;
+            margin: 0px auto;
+            // width: 30px;
+            // height: 30px;
+    
+        } &[class*="flashs"] {
+            background: url("../assets/imgs/flashblac.png") no-repeat 50% 50%;
+            background-size: contain;
+            margin: 0px auto;
+        }
+        &[class*="profiles"] {
+            background: url("../assets/imgs/profileblac.png") no-repeat 50% 50%;
+            background-size: contain;
+            margin: 0px auto;
+        }
+
+
+        &[class*="homes"][ng-reflect-is-active="true"] {
+            background: url("../assets/imgs/homeblu.png") no-repeat 50% 50%;
+            background-size: contain;
+            margin: 0px auto;
+        }
+        &[class*="jobs"][ng-reflect-is-active="true"] {
+            background: url("../assets/imgs/jobblu.png") no-repeat 50% 50%;
+            background-size: contain;
+            margin: 0px auto;
+        }
+        &[class*="servics"][ng-reflect-is-active="true"] {
+            background: url("../assets/imgs/searchblu.png") no-repeat 50% 50%;
+            background-size: contain;
+            margin: 0px auto;
+        }
+        &[class*="flashs"][ng-reflect-is-active="true"] {
+            background: url("../assets/imgs/flashblu.png") no-repeat 50% 50%;
+            background-size: contain;
+            margin: 0px auto;
+        }
+        &[class*="profiles"][ng-reflect-is-active="true"] {
+            background: url("../assets/imgs/profileblu.png") no-repeat 50% 50%;
+            background-size: contain;
+            margin: 0px auto;
+        }
+
+.margin_t_5{margin-top: 5px !important}
+.margin_t_10{margin-top: 10px !important}
+.margin_t_15{margin-top: 15px !important}
+.margin_t_20{margin-top: 20px !important}
+.margin_t_30{margin-top: 30px !important}
+.margin_t_35{margin-top: 35px !important}
+.margin_t_40{margin-top: 40px !important}
+.margin_t_50{margin-top: 50px !important}
+
+}
+
+.Heder_center{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 70%;
+    text-align: center;
+}

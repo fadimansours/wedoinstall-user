@@ -1,0 +1,124 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Credit</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="main_cntaint">
+    <ion-list no-lines>
+        <ion-item style="background: transparent">
+            <div class="Cover_back"></div>
+            <div class="Covar_white"></div>
+            <ion-card class="Prifile_card">
+                <div class="YourPoint_div">AVAILABLE TRADESGLOBE CREDIT</div>
+                <div class="Pont_row_div">
+                    <ion-row>
+                        <ion-col col-1></ion-col>
+                        <ion-col col-5>
+                            <img src="assets/imgs/dollar.png" class="Ponit_logo" />
+                        </ion-col>
+                        <ion-col col-6>
+                            <div class="Total_point">{{this.creditService.getCredit()}}</div>
+                        </ion-col>
+                    </ion-row>
+                </div>
+                <div class="Padin_row_div">
+                    <ion-row>
+                        <ion-col col-2></ion-col>
+                        <ion-col col-2>
+                            <img src="assets/imgs/tickets.png" />
+                        </ion-col>
+                        <ion-col col-8>
+                            <div class="Coupons_div">
+                                Coupons: <span class="Coupons_Span">0</span>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-card>
+        </ion-item>
+
+        <ion-item style="background: transparent">
+            <ion-card class="Coupon_card">
+                <div class="Coupon_cod_d">
+                    <ion-row class="CuPon_row">
+                        <ion-col col-1 no-padding>
+                            <img src="assets/imgs/tickets.png" class="coupon_img" />
+                        </ion-col>
+                        <ion-col col-9 no-padding>
+                            <input placeholder="Enter a promo code" class="Code_input" [(ngModel)]="Couponcode" />
+                        </ion-col>
+                        <ion-col col-2 no-padding>
+                            <div class="add_div" (click)="coupon()">ADD</div>
+                        </ion-col>
+                    </ion-row>
+                </div>
+                <div class="Discount_div">
+                    *Only one coupon is valid per job.<br />Discount is not applied unitl the job has been booked
+                </div>
+            </ion-card>
+        </ion-item>
+
+        <ion-item style="background: transparent">
+            <ion-card class="Redeem_card">
+                <div class="redeemPoint_div">REDEEM POINTS</div>
+                <div>
+                    <ion-row>
+                        <ion-col col-2 no-padding>
+                            <img src="assets/imgs/pointlogo.png" class="Point_img" />
+                        </ion-col>
+                        <ion-col col-6 no-padding>
+                            <div class="Redeem_div dotdot">Redeem 300 points for..</div>
+                            <div class="Ponit_count">{{CreditPoint}}/300 pts</div>
+                        </ion-col>
+                        <ion-col col-4 no-padding>
+                            <button ion-button clear class="Redeem_btn">Redeem</button>
+                        </ion-col>
+                    </ion-row>
+                </div>
+                <ion-item no-lines class="range_item">
+                    <ion-range min="0" max="300" [(ngModel)]="CreditPoint" readonly="true" color="secondary">
+                    </ion-range>
+                </ion-item>
+                <div class="Learn_point" (click)="LearnMore()">
+                    Learn more about points
+                </div>
+            </ion-card>
+        </ion-item>
+
+        <ion-item style="background: transparent">
+            <ion-card class="Redeem_card">
+                <div class="EarnPoint_div">COUPONS</div>
+                <ion-row>
+                    <ion-col col-2 class="vertical_centr">
+                        <div class="Ticket_back">
+                            <img src="assets/imgs/ticketss.png" />
+                        </div>
+                    </ion-col>
+                    <ion-col col-10>
+                        <div class="Ticket_intro dotdot">
+                            There are not coupons available at the
+                        </div>
+                        <br />
+                        <div class="Ticket_intro dotdot">Have a promo code?</div>
+                        <br />
+                        <div class="Ticket_intro dotdot">Enter your promo code above!</div>
+                    </ion-col>
+                </ion-row>
+            </ion-card>
+        </ion-item>
+
+        <ion-item style="background: transparent">
+            <ion-card class="Redeem_card">
+                <div class="EarnPoint_div">SHARE YOUR REFERRAL CODE!</div>
+                <div class="Fmansour_div">{{ReferRal}}</div>
+                <button ion-button clear class="Share_btn" (click)="ShareRefer()">
+          Share
+        </button>
+                <div text-wrap class="Share_detail_div">
+                    Share the code with family and friends so we can apply a $25 credit to their account.You will also receive a $25 credit when they complete their first Tradesglobe service. Credit is subject to a maximum of $200 earned from referrals.
+                </div>
+            </ion-card>
+        </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,11 @@
+var firebaseConfig = {
+  apiKey: "AIzaSyAXY9QJK6MKZ85Lj4rmRBCUIOLWbtUt0aM",
+  authDomain: "tradesglobe.firebaseapp.com",
+  databaseURL: "https://tradesglobe.firebaseio.com",
+  projectId: "tradesglobe",
+  storageBucket: "tradesglobe.appspot.com",
+  messagingSenderId: "632875040825",
+  appId: "1:632875040825:web:1303aec0839fccb866cde8",
+  measurementId: "G-SKVL4NDBXH",
+};
+firebase.initializeApp(firebaseConfig);

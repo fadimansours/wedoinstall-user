@@ -1,0 +1,54 @@
+page-discount-offers {
+    .toolbar-title-md{color: #fff;}
+    .toolbar-title-ios{color: #fff;}
+    .chatboxes_icon{color: #fff;}
+
+    .label-md{margin: 0px;}
+    .item-md.item-block .item-inner{padding: 0px;}
+    .item-md{padding: 0px;}
+    .label-ios{margin: 0px;}
+    .item-ios.item-block .item-inner{padding: 0px;}
+    .item-ios{padding: 0px;}
+    .col{padding: 0px;}
+    .item-block{min-height: 1.4rem;}
+
+    .List_class{
+        padding: 15px 15px 0;
+        margin: 0px;
+    }
+    .Boder_div{
+        border: 1px solid #cacaca;
+        padding: 10px 15px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 2px 1px #cacaca;
+    }
+    .Detail_div{
+        font-size: 14px;
+    }
+    .Book_Service{
+        font-size: 14px;
+        padding: 10px 0 0 0;
+    }
+    .Name_span{
+        font-weight: 500;
+        color: #ca333a;
+    }
+    .Address_span{
+        font-weight: 500;
+        color: #0c0581;
+    }
+    .Book_btn{
+        height: 36px !important;
+        font-size: 14px !important;
+        font-weight: 300;
+        letter-spacing: 1.2px;
+        margin: 15px 0 0 0 ;
+        width: 50%;
+        border-radius: 5px;
+    }
+    .margin_item{
+        margin: 12px 0 0 0 !important;
+    }
+
+
+}

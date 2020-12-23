@@ -1,0 +1,141 @@
+page-flash-deal {
+
+    .toolbar-title-md{color: #fff;}
+    .toolbar-title-ios{color: #fff;}
+    .chatboxes_icon{color: #fff;}
+    #map {
+        width: 100%;
+        height: 180px;
+      }
+    .mapimag_imag{
+        width: 100%;
+        height: 190px;
+    }
+    .mapimage_item{
+        padding: 0px;
+        padding-bottom: 15px;
+    }
+    .flash_bordere{
+        border-bottom: 1px solid #bebebe !important;
+        box-shadow: 0px 3px 6px -1px (#bebebe);
+    }
+    .mapimage_item.item-md.item-block .item-inner{
+        padding: 0px;
+    }
+    .mapimage_item .label-md{
+        margin: 0px;
+    }
+    .mapimage_item.item-ios.item-block .item-inner{
+        padding: 0px;
+    }
+    .mapimage_item .label-ios{
+        margin: 0px;
+    }
+    .Address_row{
+        padding: 10px 40px 0;
+        width: 100%;
+        position: absolute;
+        bottom: 3px;
+        z-index: 99999;
+    }
+    .addres_input{
+        width: 100%;
+        border: 0px;
+        color: #5371df;
+        font-size: 13px;
+    }
+    .Addres_col{
+        background: #fff;
+        box-shadow: 1px 2px 2px 0px (#bebebe);
+        padding: 5px 0;
+    }
+    .navogation_icon{
+        transform: rotate(35deg);
+        color:#5371df;
+    }
+    .add_Padd{
+        text-align: center;
+    }
+    .Subscribe_div{
+        padding: 0px 4px 5px;
+    }
+    .Subscribe_row{
+        background: #fea726;
+        color: #fff;
+        padding: 5px 0px;
+    }
+    .available_div{
+        padding: 10px 20px;
+    }
+    .colpadd{
+        padding: 0px;
+    }
+    .Main_side_img{
+        height: 90px;
+    }
+    .handy_name_div{
+        font-weight: 400;
+        font-size: 13px;
+        padding: 11px 0 0 0 ;
+    }
+    .km_aaway_div{
+        font-weight: 500;
+        color: #bebebe;
+        font-size: 12px;
+    }
+    .pin_icon{
+        padding: 0 8px 0 0;
+        color: #000;
+    }
+    .handy_name_row{
+        padding: 5px 0 0 5px;
+    }
+    .Svae_div{
+        color: #ff0000;
+        text-align: right;
+        padding-right: 5px;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        font-weight: 300;
+        letter-spacing: 0.9px;
+    }
+    .AvailableFlash_row{
+        background: #2a3350;
+        color: #fff;
+        padding: 5px 5px;
+        font-size: 13px;
+        font-weight: 300;
+        letter-spacing: 0.4px;
+    }
+    .fla_logo{
+        width: 12px;
+    }
+    .Available_date{
+        font-size: 11px;
+        font-weight: 400;
+        letter-spacing: 0.4px;
+    }
+    .Row_electric{
+        border-bottom: 1px solid #bebebe;
+        padding: 8px 0;
+    }
+    .Div_elec{
+        padding: 5px 15px 0;
+    }
+    .chooseandth{
+        color: #5371df;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.4px;
+        padding: 12px 0;
+    }
+    .Icon_imge{
+        width: 26px;
+        height: 26px;
+        padding: 3px;
+        border-radius: 50%;
+        background: #e6e4e4;
+    }
+
+
+}

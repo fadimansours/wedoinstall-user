@@ -1,0 +1,1171 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Job Detail</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!-- <div #map id="map"></div>
+
+    <ion-row class="Arrow_back_row">
+      <ion-col col-2 (click)="BackTo()">
+          <ion-icon name="md-arrow-back" class="Arrow_icon"></ion-icon>
+      </ion-col>
+      <ion-col col-8 class="vertical_centrC">
+          <div class="Header_div dotdot">
+          <ion-icon name="md-pin" class="Toronto_pin_icon"></ion-icon>{{Address}}
+        </div>
+        </ion-col>
+      <ion-col col-2></ion-col>
+    </ion-row> -->
+
+  <ion-list class="List_padding">
+    <!-- progress bar  start-->
+    <ion-item no-lines *ngIf="providerId == 0">
+      <div class="Main_line_div">
+        <div class="vertical_centr">
+          <img src="assets/imgs/modelmail.png" class="logo_imames" />
+          <span class="Lineclss"></span>
+          <img src="assets/imgs/modelhand.png" class="logo_imames_hand" />
+          <span class="Lineclss"></span>
+          <img src="assets/imgs/modeldestin.png" class="logo_imames_hand" />
+          <span class="Lineclss"></span>
+          <img src="assets/imgs/modeltimer.png" class="logo_imames_hand" />
+          <span class="Lineclss"></span>
+          <img src="assets/imgs/modelcorrec.png" class="logo_imames_hand" />
+        </div>
+
+        <div class="vertical_centr">
+          <span class="Requested_span"
+            >Requested
+            <br />
+            <span *ngIf="this.requestedTimeStamp"
+              >{{this.requestedTimeStamp[0]}}</span
+            >
+            <br />
+            <span *ngIf="this.requestedTimeStamp"
+              >{{this.requestedTimeStamp[1]}}</span
+            >
+          </span>
+          <span class="spaceclss"></span>
+          <span class="Accepted_span">Accepted</span>
+          <span class="spaceclss"></span>
+          <span class="Accepted_span">En Route</span>
+          <span class="spaceclss"></span>
+          <span class="Accepted_span">In progress</span>
+          <span class="spaceclss"></span>
+          <span class="Accepted_span">Completed</span>
+        </div>
+      </div>
+    </ion-item>
+
+    <ion-item no-lines *ngIf="providerId != '0'">
+      <div class="Main_line_div" *ngIf="WorkStatus == 0">
+        <div class="vertical_centr">
+          <img src="assets/imgs/modelmail.png" class="logo_imames" />
+          <span class="LineclssSel"></span>
+          <img src="assets/imgs/modelhand.png" class="logo_imames" />
+          <span class="Lineclss"></span>
+          <img src="assets/imgs/modeldestin.png" class="logo_imames_hand" />
+          <span class="Lineclss"></span>
+          <img src="assets/imgs/modeltimer.png" class="logo_imames_hand" />
+          <span class="Lineclss"></span>
+          <img src="assets/imgs/modelcorrec.png" class="logo_imames_hand" />
+        </div>
+
+        <div class="vertical_centr">
+          <span class="Requested_span"
+            >Requested
+            <br />
+            <span *ngIf="this.requestedTimeStamp"
+              >{{this.requestedTimeStamp[0]}}</span
+            >
+            <br />
+            <span *ngIf="this.requestedTimeStamp"
+              >{{this.requestedTimeStamp[1]}}</span
+            >
+          </span>
+          <span class="spaceclss"></span>
+          <span class="Requested_span"
+            >Accepted
+            <br />
+            <span *ngIf="this.acceptedTimeStamp"
+              >{{this.acceptedTimeStamp[0]}}</span
+            >
+            <br />
+            <span *ngIf="this.acceptedTimeStamp"
+              >{{this.acceptedTimeStamp[1]}}</span
+            >
+          </span>
+          <span class="spaceclss"></span>
+          <span class="Accepted_span">En Route</span>
+          <span class="spaceclss"></span>
+          <span class="Accepted_span">In progress</span>
+          <span class="spaceclss"></span>
+          <span class="Accepted_span">Completed</span>
+        </div>
+      </div>
+
+      <div class="Main_line_div" *ngIf="WorkStatus == 1">
+        <div class="vertical_centr">
+          <img src="assets/imgs/modelmail.png" class="logo_imames" />
+          <span class="LineclssSel"></span>
+          <img src="assets/imgs/modelhand.png" class="logo_imames" />
+          <span class="LineclssSel"></span>
+          <img src="assets/imgs/modeldestin.png" class="logo_imames" />
+          <span class="Lineclss"></span>
+          <img src="assets/imgs/modeltimer.png" class="logo_imames_hand" />
+          <span class="Lineclss"></span>
+          <img src="assets/imgs/modelcorrec.png" class="logo_imames_hand" />
+        </div>
+
+        <div class="vertical_centr">
+          <span class="Requested_span"
+            >Requested
+            <br />
+            <span *ngIf="this.requestedTimeStamp"
+              >{{this.requestedTimeStamp[0]}}</span
+            >
+            <br />
+            <span *ngIf="this.requestedTimeStamp"
+              >{{this.requestedTimeStamp[1]}}</span
+            >
+          </span>
+          <span class="spaceclss"></span>
+          <span class="Requested_span"
+            >Accepted
+            <br />
+            <span *ngIf="this.acceptedTimeStamp"
+              >{{this.acceptedTimeStamp[0]}}</span
+            >
+            <br />
+            <span *ngIf="this.acceptedTimeStamp"
+              >{{this.acceptedTimeStamp[1]}}</span
+            >
+          </span>
+          <span class="spaceclss"></span>
+          <span class="Requested_span"
+            >En Route
+            <br />
+            <span *ngIf="this.enRouteTimeStamp"
+              >{{this.enRouteTimeStamp[0]}}</span
+            >
+            <br />
+            <span *ngIf="this.enRouteTimeStamp"
+              >{{this.enRouteTimeStamp[1]}}</span
+            >
+          </span>
+          <span class="spaceclss"></span>
+          <span class="Accepted_span">In progress</span>
+          <span class="spaceclss"></span>
+          <span class="Accepted_span">Completed</span>
+        </div>
+      </div>
+
+      <div class="Main_line_div" *ngIf="WorkStatus == 2">
+        <div class="vertical_centr">
+          <img src="assets/imgs/modelmail.png" class="logo_imames" />
+          <span class="LineclssSel"></span>
+          <img src="assets/imgs/modelhand.png" class="logo_imames" />
+          <span class="LineclssSel"></span>
+          <img src="assets/imgs/modeldestin.png" class="logo_imames" />
+          <span class="LineclssSel"></span>
+          <img src="assets/imgs/modeltimer.png" class="logo_imames" />
+          <span class="Lineclss"></span>
+          <img src="assets/imgs/modelcorrec.png" class="logo_imames_hand" />
+        </div>
+
+        <div class="vertical_centr">
+          <span class="Requested_span"
+            >Requested
+            <br />
+            <span *ngIf="this.requestedTimeStamp"
+              >{{this.requestedTimeStamp[0]}}</span
+            >
+            <br />
+            <span *ngIf="this.requestedTimeStamp"
+              >{{this.requestedTimeStamp[1]}}</span
+            >
+          </span>
+          <span class="spaceclss"></span>
+          <span class="Requested_span"
+            >Accepted
+            <br />
+            <span *ngIf="this.acceptedTimeStamp"
+              >{{this.acceptedTimeStamp[0]}}</span
+            >
+            <br />
+            <span *ngIf="this.acceptedTimeStamp"
+              >{{this.acceptedTimeStamp[1]}}</span
+            >
+          </span>
+          <span class="spaceclss"></span>
+          <span class="Requested_span"
+            >En Route
+            <br />
+            <span *ngIf="this.enRouteTimeStamp"
+              >{{this.enRouteTimeStamp[0]}}</span
+            >
+            <br />
+            <span *ngIf="this.enRouteTimeStamp"
+              >{{this.enRouteTimeStamp[1]}}</span
+            >
+          </span>
+          <span class="spaceclss"></span>
+          <span class="Requested_span"
+            >In progress
+            <br />
+            <span *ngIf="this.progressTimeStamp"
+              >{{this.progressTimeStamp[0]}}</span
+            >
+            <br />
+            <span *ngIf="this.progressTimeStamp"
+              >{{this.progressTimeStamp[1]}}</span
+            >
+          </span>
+          <span class="spaceclss"></span>
+          <span class="Accepted_span">Completed</span>
+        </div>
+      </div>
+
+      <div class="Main_line_div" *ngIf="WorkStatus == 3">
+        <div class="vertical_centr">
+          <img src="assets/imgs/modelmail.png" class="logo_imames" />
+          <span class="LineclssSel"></span>
+          <img src="assets/imgs/modelhand.png" class="logo_imames" />
+          <span class="LineclssSel"></span>
+          <img src="assets/imgs/modeldestin.png" class="logo_imames" />
+          <span class="LineclssSel"></span>
+          <img src="assets/imgs/modeltimer.png" class="logo_imames" />
+          <span class="LineclssSel"></span>
+          <img
+            src="assets/imgs/modelcorrec.png"
+            class="logo_inames_completed"
+          />
+        </div>
+
+        <div class="vertical_centr">
+          <span class="Requested_span"
+            >Requested
+            <br />
+            <span *ngIf="this.requestedTimeStamp"
+              >{{this.requestedTimeStamp[0]}}</span
+            >
+            <br />
+            <span *ngIf="this.requestedTimeStamp"
+              >{{this.requestedTimeStamp[1]}}</span
+            >
+          </span>
+          <span class="spaceclss"></span>
+          <span class="Requested_span"
+            >Accepted
+            <br />
+            <span *ngIf="this.acceptedTimeStamp"
+              >{{this.acceptedTimeStamp[0]}}</span
+            >
+            <br />
+            <span *ngIf="this.acceptedTimeStamp"
+              >{{this.acceptedTimeStamp[1]}}</span
+            >
+          </span>
+          <span class="spaceclss"></span>
+          <span class="Requested_span"
+            >En Route
+            <br />
+            <span *ngIf="this.enRouteTimeStamp"
+              >{{this.enRouteTimeStamp[0]}}</span
+            >
+            <br />
+            <span *ngIf="this.enRouteTimeStamp"
+              >{{this.enRouteTimeStamp[1]}}</span
+            >
+          </span>
+          <span class="spaceclss"></span>
+          <span class="Requested_span"
+            >In progress
+            <br />
+            <span *ngIf="this.progressTimeStamp"
+              >{{this.progressTimeStamp[0]}}</span
+            >
+            <br />
+            <span *ngIf="this.progressTimeStamp"
+              >{{this.progressTimeStamp[1]}}</span
+            >
+          </span>
+          <span class="spaceclss"></span>
+          <span class="Requested_span"
+            >Completed
+            <br />
+            <span *ngIf="this.completedTimeStamp"
+              >{{this.completedTimeStamp[0]}}</span
+            >
+            <br />
+            <span *ngIf="this.completedTimeStamp"
+              >{{this.completedTimeStamp[1]}}</span
+            >
+          </span>
+        </div>
+      </div>
+    </ion-item>
+    <!-- progress bar end -->
+
+    <ion-card *ngIf="WorkStatus == 0 && workType == 1 && !accepted_date">
+      <ion-item>
+        <div class="Detail_divBack">Notifying Proiders</div>
+      </ion-item>
+      <ion-row>
+        <ion-col col-12 class="vertical_centr">
+          <p>We will notify the near by provider about this job</p>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+    <!-- before accepted details -->
+
+    <ion-card *ngIf=" workType ==1 && accepted_date">
+      <div class="padd_card_div">
+        <ion-row>
+          <ion-col col-12 class="vertical_centr">
+            <h2 class="job_accepted">JOB ACCEPTED</h2>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <ion-row>
+        <ion-col col-12 class="vertical_centr">
+          <h4 class="arrival_time">Arrival Time</h4>
+        </ion-col>
+        <ion-col col-12 class="vertical_centr">
+          <h3 class="estimate_arrival">{{estimateArrival}}</h3>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12 class="vertical_centr">
+          <h2 class="accepted_date">{{accepted_date}}</h2>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card *ngIf=" workType ==2 && accepted_date1">
+      <div class="padd_card_div">
+        <ion-row>
+          <ion-col col-12 class="vertical_centr">
+            <h2 class="job_accepted">CUSTOM JOB ACCEPTED</h2>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <ion-row>
+        <ion-col col-12 class="vertical_centr">
+          <h4 class="arrival_time">Arrival Time</h4>
+        </ion-col>
+        <ion-col col-12 class="vertical_centr">
+          <h3 class="estimate_arrival">{{estimateArrival}}</h3>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12 class="vertical_centr">
+          <h2 class="accepted_date">{{accepted_date1}}</h2>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+    <!-- accepted details -->
+
+    <ion-card
+      *ngIf="(WorkStatus === 0 && ServiceType == '2')&& QuoteDataList.length==0"
+    >
+      <ion-item>
+        <div class="Detail_divBack">Waiting for Quote</div>
+      </ion-item>
+      <div class="free_quote color_black" style="font-size: 15px !important">
+        You,ve been matched Your provider will now give you a quote you can
+        either accept or decline
+      </div>
+    </ion-card>
+    <!-- before quote provided -->
+
+    <ion-card
+      *ngIf="(WorkStatus === 0 && ServiceType == '2')&& QuoteDataList.length!==0"
+    >
+      <ion-item>
+        <div class="Detail_divBack">Quote Recieved</div>
+      </ion-item>
+      <div class="free_quote color_black" style="font-size: 16px !important">
+        You,ve been provided some quotes you can either accept or decline
+      </div>
+
+      <ion-row>
+        <ion-col col-12 class="vertical_centr">
+          <button ion-button round (click)="viewQuotes()">
+            view quotes
+          </button></ion-col
+        >
+      </ion-row>
+    </ion-card>
+
+    <ion-card
+      *ngIf="(WorkStatus == 0||1||2 && workType == 2)&& QuoteDataList.length!==0"
+    >
+      <div *ngFor="let quote of QuoteDataList">
+        <div class="padd_card_div" *ngIf="quote.status ==='1'">
+          <ion-row class="border_row">
+            <ion-col col-12 class="vertical_centr">
+              <div text-wrap class="fild_name">ACCEPTED QUOTE DETAIL</div>
+            </ion-col>
+          </ion-row>
+        </div>
+        <div class="Row_div" *ngIf="quote.status ==='1'">
+          <!--   <ion-row class="Row_borders">
+                      <ion-col col-3 class="vertical_centr">
+                            <img src="assets/imgs/profile.jpg" class="Profile_img" />
+                      </ion-col>
+                      <ion-col col-9>
+                            <div class="ServiceUsNm_div">{{quote.providername}}</div>
+                        </ion-col>
+
+                    </ion-row> -->
+
+          <ion-item class="Pddin_item">
+            <div class="vertical_centr">
+              <!-- <img src="{{config.imgs}}{{Srvicon}}" class="Logo_image"> -->
+              <span class="Service_name">{{ServiceName}}</span>
+            </div>
+            <div class="free_quote_head">FREE QUOTE</div>
+          </ion-item>
+          <ion-row class="Row_borders">
+            <ion-col col-5 class="vertical_centr">
+              <img
+                *ngIf="this.Acceptdata.is_assigned=='0' && !providerImage && !this.assignedTecImage"
+                src="assets/imgs/profile.jpg"
+                class="Profile_img"
+              />
+              <img
+                *ngIf="this.Acceptdata.is_assigned=='0' && providerImage && !this.assignedTecImage"
+                #proImage
+                src="{{config.url}}{{providerImage}}"
+                class="Profile_img"
+                (click)="presentImage(proImage)"
+              />
+              <img
+                *ngIf="this.Acceptdata.is_assigned=='1' && this.assignedTecImage"
+                #tecImage
+                src="{{config.url}}{{assignedTecImage}}"
+                class="Profile_img"
+                (click)="presentImage(tecImage)"
+              />
+            </ion-col>
+            <ion-col col-7>
+              <div class="ServiceUsNm_div">{{quote.providername}}</div>
+
+              <div class="ServiceUsNm_div">
+                {{CompleteJb}} <span class="Job_Completed">Job Completed</span>
+              </div>
+              <div>
+                <ion-item class="pw_star" no-lines>
+                  <span class="total_rating">{{myRating}}</span>
+                  <ion-icon *ngIf="myRating>=1" name="star"></ion-icon>
+                  <ion-icon *ngIf="myRating>=2" name="star"></ion-icon>
+                  <ion-icon *ngIf="myRating>=3" name="star"></ion-icon>
+                  <ion-icon *ngIf="myRating>=4" name="star"></ion-icon>
+                  <ion-icon *ngIf="myRating>=5" name="star"></ion-icon>
+                  <ion-icon *ngIf="myRating%1!=0" name="star-half"></ion-icon>
+                  <ion-icon *ngIf="myRating==0" name="star-outline"></ion-icon>
+                  <ion-icon *ngIf="myRating<=1" name="star-outline"></ion-icon>
+                  <ion-icon *ngIf="myRating<=2" name="star-outline"></ion-icon>
+                  <ion-icon *ngIf="myRating<=3" name="star-outline"></ion-icon>
+                  <ion-icon *ngIf="myRating<=4" name="star-outline"></ion-icon>
+                </ion-item>
+              </div>
+            </ion-col>
+          </ion-row>
+
+          <ion-item class="item_quote">
+            <div class="Requested_div">PROVIDER NAME</div>
+            <ion-row class="Row_paddin">
+              <ion-col col-1 class="vertical_centrC">
+                <ion-icon name="person"></ion-icon>
+              </ion-col>
+              <ion-col col-11>
+                <div text-wrap class="Detail_div">{{quote.providername}}</div>
+              </ion-col>
+            </ion-row>
+          </ion-item>
+
+          <ion-item class="item_quote">
+            <div class="Requested_div">DATE AND TIME</div>
+            <ion-row class="Row_paddin">
+              <ion-col col-12>
+                <div class="date_div">
+                  <ion-icon name="md-calendar" class="Calenea_icon"></ion-icon>
+                  {{quote.datetime}}
+                </div>
+              </ion-col>
+              <ion-col col-12>
+                <div class="date_div">
+                  <ion-icon name="md-time" class="Calenea_icon"></ion-icon>
+                  {{quote.estimateArrival}}
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-item>
+
+          <ion-item class="item_quote">
+            <div class="Requested_div">TOTAL RATE</div>
+            <ion-row class="Row_paddin">
+              <ion-col col-1 class="vertical_centrC">
+                <ion-icon name="logo-usd"></ion-icon>
+              </ion-col>
+              <ion-col col-11>
+                <div text-wrap class="Detail_div">{{quote.amount}}</div>
+              </ion-col>
+            </ion-row>
+          </ion-item>
+
+          <ion-item class="item_quote">
+            <div class="Requested_div">NOTE</div>
+            <ion-row class="Row_paddin">
+              <ion-col col-1 class="vertical_centrC">
+                <ion-icon name="md-paper"></ion-icon>
+              </ion-col>
+              <ion-col col-11>
+                <div text-wrap class="Detail_div">{{quote.note}}</div>
+              </ion-col>
+            </ion-row>
+          </ion-item>
+
+          <!--  <ion-row>
+              <ion-col col-1>
+                  <ion-icon name="logo-usd" class="calenter_icon"></ion-icon>
+                </ion-col>
+              <ion-col col-4>amount:</ion-col>
+              <ion-col>{{quote.amount|currency:'USD'}}</ion-col>
+              </ion-row>
+
+              <ion-row>
+              <ion-col col-1>
+                <ion-icon name="md-calendar" class="calenter_icon"></ion-icon>
+                </ion-col>
+
+                <ion-col col-4>Date:</ion-col>
+                <ion-col>{{quote.datetime}}</ion-col>
+              </ion-row>
+            <ion-row>
+              <ion-col col-1>
+                  <ion-icon name="md-document" class="calenter_icon"></ion-icon>
+              </ion-col>
+              <ion-col col-4>Note:</ion-col>
+                <ion-col>{{quote.note}}</ion-col>
+            </ion-row> -->
+        </div>
+        <ion-row *ngIf="quote.status ==='1' && (quote.jstatus!=='3')">
+          <ion-col col-6 *ngIf="WorkStatus === 1||2">
+            <button
+              color="theme_color"
+              ion-button
+              full
+              (click)="MessageClient('',0)"
+            >
+              <img
+                src="assets/imgs/message.png"
+                class="Message_YourImage"
+              />Message
+            </button>
+          </ion-col>
+          <ion-col col-6 *ngIf="WorkStatus === 1||2">
+            <button
+              color="theme_color"
+              ion-button
+              full
+              (click)="PhoneCall()"
+              *ngIf="WorkStatus === 1||2"
+            >
+              <ion-icon name="md-call" class="call_YourImage"></ion-icon>Call
+            </button>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <!--  <ion-row>
+                  <ion-col col-12 class="vertical_centr">
+                      <button ion-button medium full round (click)="AcceptQuote()">
+                Accept
+            </button>
+                  </ion-col>
+                </ion-row> -->
+    </ion-card>
+    <!-- after providing quote -->
+
+    <ion-card *ngIf="WorkStatus == 3">
+      <ion-row>
+        <ion-col text-center>
+          <div class="ion-text-center">
+            <ion-avatar>
+              <img
+                *ngIf="!providerImage"
+                src="assets/imgs/profile.jpg"
+                class="Profile_img_top"
+              />
+              <img
+                *ngIf="providerImage"
+                src="{{config.url}}{{providerImage}}"
+                #proImage2
+                (click)="presentImage(proImage2)"
+                class="Profile_img_top"
+              />
+            </ion-avatar>
+          </div>
+        </ion-col>
+      </ion-row>
+      <div class="Row_div">
+        <ion-row class="Row_borders">
+          <ion-col text-center>
+            <div class="ion-text-center">
+              <p>
+                Would You like provider {{providerName}} to work on anything
+                else?
+              </p>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col text-center>
+            <div class="ion-text-center">
+              <button ion-button small round (click)="requestNewJob()">
+                Request a new job
+              </button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-card>
+    <!-- after job completed -->
+
+    <ion-item no-lines *ngIf="providerId != '0' && workType == 1">
+      <ion-card class="Main_card" *ngIf="WorkStatus == 1||2||3">
+        <div class="padd_card_div">
+          <ion-row class="border_row">
+            <ion-col col-12 class="vertical_centr">
+              <img src="{{ServiceIcon}}" class="Service_logoImg" />
+              <div text-wrap class="fild_name">{{ServiceName}}</div>
+            </ion-col>
+          </ion-row>
+        </div>
+        <div class="Row_div">
+          <ion-row class="Row_borders">
+            <ion-col col-4 class="vertical_centr">
+              <img
+                *ngIf="this.Acceptdata.is_assigned!=='1' && !this.assignedTecImage"
+                src="assets/imgs/profile.jpg"
+                class="Profile_img"
+              />
+              <img
+                *ngIf="this.Acceptdata.is_assigned=='1' && this.assignedTecImage"
+                src="{{config.url}}{{assignedTecImage}}"
+                #tecImage2
+                (click)="presentImage(tecImage2)"
+                class="Profile_img"
+              />
+            </ion-col>
+            <ion-col col-8>
+              <div
+                class="ServiceUsNm_div"
+                *ngIf="this.Acceptdata.is_assigned=='1' && this.assignedTec"
+              >
+                <ion-icon name="md-hammer"></ion-icon
+                ><span class="providerName">TECHNICIAN:&nbsp;</span
+                >{{assignedTec}}
+              </div>
+
+              <div class="ServiceUsNm_div">
+                <ion-icon name="home"></ion-icon>
+                <span class="providerName">PROVIDER:</span
+                >&nbsp;{{providerName}}
+              </div>
+              <div class="ServiceUsNm_div">
+                {{CompleteJb}} <span class="Job_Completed">Jobs Completed</span>
+              </div>
+              <div>
+                <ion-item class="pw_star" no-lines>
+                  <span class="total_rating">{{myRating}}</span>
+                  <ion-icon *ngIf="myRating>=1" name="star"></ion-icon>
+                  <ion-icon *ngIf="myRating>=2" name="star"></ion-icon>
+                  <ion-icon *ngIf="myRating>=3" name="star"></ion-icon>
+                  <ion-icon *ngIf="myRating>=4" name="star"></ion-icon>
+                  <ion-icon *ngIf="myRating>=5" name="star"></ion-icon>
+                  <ion-icon *ngIf="myRating%1!=0" name="star-half"></ion-icon>
+                  <ion-icon *ngIf="myRating==0" name="star-outline"></ion-icon>
+                  <ion-icon *ngIf="myRating<=1" name="star-outline"></ion-icon>
+                  <ion-icon *ngIf="myRating<=2" name="star-outline"></ion-icon>
+                  <ion-icon *ngIf="myRating<=3" name="star-outline"></ion-icon>
+                  <ion-icon *ngIf="myRating<=4" name="star-outline"></ion-icon>
+                </ion-item>
+              </div>
+            </ion-col>
+            <!--  <ion-col col-4 *ngIf="WorkStatus == 3">
+                              <button style="margin-top: 30px" color="theme_color" ion-button (click)="Review(0)" >
+                  add review
+                  </button>
+                            </ion-col >
+                            <ion-col col-4 *ngIf="WorkStatus == 3">
+                              <button style="margin-top: 30px" color="theme_color" ion-button (click)="Review(0)" >
+                    add review
+                  </button>
+                            </ion-col> -->
+          </ion-row>
+          <ion-row *ngIf="this.WorkStatus === 1||2 && this.WorkStatus!==3">
+            <ion-col col-6 *ngIf="WorkStatus == 1 || 2">
+              <button
+                *ngIf="this.Acceptdata.is_assigned!=='1'"
+                color="theme_color"
+                ion-button
+                full
+                (click)="MessageClient('',0,this.providerId,this.providerName,1)"
+              >
+                <img
+                  *ngIf="WorkStatus == 1 || 2"
+                  src="assets/imgs/message.png"
+                  class="Message_YourImage"
+                />Message
+              </button>
+              <button
+                *ngIf="this.Acceptdata.is_assigned=='1'"
+                color="theme_color"
+                ion-button
+                full
+                (click)="MessageClient('',0,this.assignedTecId,this.assignedTec,2)"
+              >
+                <img
+                  src="assets/imgs/message.png"
+                  class="Message_YourImage"
+                />Message
+              </button>
+            </ion-col>
+            <ion-col col-6 *ngIf="WorkStatus == 1 || 2">
+              <button
+                color="theme_color"
+                ion-button
+                full
+                (click)="PhoneCall()"
+                *ngIf="WorkStatus == 1 || 2"
+              >
+                <ion-icon
+                  name="md-call"
+                  class="call_YourImage"
+                  *ngIf="WorkStatus == 1 || 2"
+                ></ion-icon
+                >Call
+              </button>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-card>
+    </ion-item>
+    <!-- after accepting fixed services -->
+
+    <!-- recipt details for fixed job -->
+    <ion-card *ngIf="this.WorkStatus==3 && this.recipt">
+      <ion-item>
+        <div class="Detail_divBack">
+          <span
+            *ngIf="this.PaymentStatus=='1'"
+            style="padding-right: 150px; color: rgb(10, 173, 10)"
+            >paid</span
+          >
+          <span
+            *ngIf="this.PaymentStatus=='0'"
+            style="padding-right: 150px; color: rgb(255, 0, 0)"
+            >un paid</span
+          ><span>RECIEPT DETAILS</span>
+        </div>
+      </ion-item>
+
+      <ion-item class="Item_classpad" *ngIf="this.recipt">
+        <ion-row class="main_row_div">
+          <ion-col col-12 no-padding class="vertical_centr">
+            <img src="{{mainCatIcon}}" class="Service_logoImg" />
+            <div class="subCat_name">{{mainCatName}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12 no-padding class="vertical_centr">
+            <img src="{{ServiceIcon}}" class="Service_logoImg" />
+            <div class="subCat_name">{{ServiceName}}</div>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+
+      <ion-item class="Item_classpad" *ngIf="this.recipt">
+        <!--   <div [ngClass]=" isFlashDeal==='1'?'Price_quote color_black strike-through':'Price_quote color_black ' ">
+                    Labour cost
+                    <span [ngClass]=" isFlashDeal==='1'?'CurrentPrice strike-through':'CurrentPrice ' ">
+            {{this.labourTotal+this.labourTotal*tax|currency:'USD'}}</span
+          >
+        </div> -->
+
+        <div class="Price_quote color_black">
+          Labour cost
+          <span class="CurrentPrice">{{this.labourTotal |currency:'USD'}}</span>
+        </div>
+        <div class="Price_quote color_black">
+          Additional/parts cost
+          <span class="CurrentPrice"
+            >{{this.additionRateTotal|currency:'USD'}}</span
+          >
+        </div></ion-item
+      >
+      <ion-item class="Item_classpad" *ngIf="this.recipt">
+        <div class="Price_quote color_black">
+          Flash discount
+          <span class="CurrentPrice">{{discountPercentage }}%</span>
+        </div>
+      </ion-item>
+
+      <ion-item class="Item_classpad" *ngIf="this.recipt">
+        <div class="Price_quote color_black">
+          Sub Total
+          <span class="CurrentPrice">{{this.subTotal |currency:'USD'}}</span>
+        </div>
+        <div *ngIf="this.creditUsed" class="Price_quote color_black">
+          credit discount
+          <span class="CurrentPrice"
+            >{{ -this.creditUsed |currency:'USD'}}</span
+          >
+        </div>
+        <div *ngIf="this.pointsUsed" class="Price_quote color_black">
+          points discount used
+          <span class="CurrentPrice"
+            >-{{ this.pointsUsed |currency:'USD'}}</span
+          >
+        </div>
+
+        <div class="Price_quote color_black" *ngIf="this.recipt">
+          Tax(13%)
+          <span class="CurrentPrice">{{ this.taxValue |currency:'USD'}}</span>
+        </div>
+      </ion-item>
+      <ion-item class="Item_classpad" *ngIf="this.recipt">
+        <ion-row class="margin_t_10" *ngIf=" completedMedia || preMedia">
+          <ion-col col-6 *ngFor="let media of preMedia">
+            <div class="quition_div">Prework Media</div>
+            <div
+              class="atteche_div"
+              *ngIf="!media"
+              (click)="Attechfile('img4')"
+            ></div>
+            <img
+              *ngIf="media"
+              src="{{config.url}}{{media}}"
+              class="Upload2_2medea"
+              #myImage
+              (click)="presentImage(myImage)"
+            />
+          </ion-col>
+          <ion-col col-6 *ngFor="let media of completedMedia">
+            <div class="quition_div">Completed Media</div>
+            <div
+              class="atteche_div"
+              *ngIf="!media"
+              (click)="Attechfile('img3')"
+            ></div>
+            <img
+              *ngIf="media"
+              src="{{config.url}}{{media}}"
+              class="Upload2_2medea"
+              #myImage
+              (click)="presentImage(myImage)"
+            />
+          </ion-col>
+        </ion-row>
+      </ion-item>
+
+      <ion-item class="Item_classpad" *ngIf="this.recipt">
+        <span class="Requst_time">Materials/additional labour: </span>
+        <ion-row style="padding: 2px 0 0">
+          <ion-col col-1 no-padding class="vertical_centrC">
+            <ion-icon name="md-paper"></ion-icon>
+          </ion-col>
+          <ion-col col-11 no-padding>
+            <span text-wrap class="Date_div">{{this.additionCostNote}}</span>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+
+      <ion-item class="Item_classpad" *ngIf="this.recipt">
+        <span class="Requst_time"> Final notes/Recommendations:</span>
+        <ion-row style="padding: 2px 0 0">
+          <ion-col col-1 no-padding class="vertical_centrC">
+            <ion-icon name="md-paper" class="calenter_icon"></ion-icon>
+          </ion-col>
+          <ion-col col-11 no-padding>
+            <span text-wrap class="Date_div">{{this.finalJobNote}}</span>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+      <ion-item *ngIf="this.recipt">
+        <div class="grandTotal_div">
+          <span class="grand_total_left_span"> Grand total</span>
+          <span class="grand_total_right_span"
+            >{{this.grandTotal |currency:'USD'}}</span
+          >
+        </div>
+      </ion-item>
+      <ion-item class="Item_classpad" *ngIf="CompletDetail && this.recipt">
+        <div *ngIf="PaymentStatus != '2'">
+          <button
+            ion-button
+            full
+            clear
+            *ngIf="PaymentType == '1'"
+            class="Cancel_btn"
+            (click)="payment('1', '1')"
+          >
+            Cash on delivery
+          </button>
+          <button
+            ion-button
+            full
+            clear
+            *ngIf="PaymentType == '2'"
+            class="Cancel_btn"
+            (click)="payment('2', '0')"
+          >
+            Card on delivery
+          </button>
+          <button
+            ion-button
+            full
+            clear
+            *ngIf="PaymentType == '3'"
+            class="Cancel_btn"
+            (click)="payment('3', '0')"
+          >
+            PayPal
+          </button>
+          <button
+            ion-button
+            full
+            clear
+            *ngIf="PaymentType == '4'"
+            class="Cancel_btn"
+            (click)="payment('4', '0')"
+          >
+            Credit card
+          </button>
+        </div>
+        <div *ngIf="PaymentStatus == '0' || '2'">
+          <button
+            ion-button
+            full
+            *ngIf="IsReview == '0'"
+            class="rate_btn"
+            (click)="Review(0)"
+          >
+            Review
+          </button>
+          <button
+            ion-button
+            full
+            *ngIf="IsReview == '1'"
+            class="rate_btn"
+            (click)="Review(1)"
+          >
+            Edit Review
+          </button>
+        </div>
+      </ion-item>
+    </ion-card>
+
+    <ion-card>
+      <ion-item>
+        <div class="Detail_divBack">REQUESTED JOB DETAILS</div>
+      </ion-item>
+      <ion-item class="Item_classpad">
+        <ion-row class="main_row_div">
+          <ion-col col-12 no-padding class="vertical_centr">
+            <img src="{{mainCatIcon}}" class="Service_logoImg" />
+            <div class="subCat_name">{{mainCatName}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row *ngIf="this.workType==1">
+          <ion-col col-12 no-padding class="vertical_centr">
+            <img src="{{ServiceIcon}}" class="Service_logoImg" />
+            <div class="subCat_name">{{ServiceName}}</div>
+          </ion-col>
+        </ion-row>
+        <div class="free_quote color_black" *ngIf="workType == 2">
+          FREE QUOTE
+        </div>
+        <div class="Paddings_div" *ngIf="workType == 1">
+          <div
+            [ngClass]=" isFlashDeal==='1'?'Price_quote color_black strike-through':'Price_quote color_black ' "
+          >
+            {{priceDescription}}
+            <span
+              [ngClass]=" isFlashDeal==='1'?'CurrentPrice strike-through':'CurrentPrice ' "
+            >
+              {{ServicePrice |currency:'USD'}}</span
+            >
+          </div>
+
+          <div *ngIf="isFlashDeal=='1'" class="Price_quote color_black">
+            {{priceDescription}}
+            <span class="CurrentPrice">
+              {{discountedPrice |currency:'USD'}}</span
+            >
+          </div>
+          <div *ngIf="isFlashDeal=='1'" class="Price_quote color_black">
+            Discount pecentage
+            <span class="CurrentPrice"> {{discountPercentage }}%</span>
+          </div>
+          <div
+            *ngIf="additionalRatePrice && additionalRateDescription "
+            class="Price_quote color_black"
+          >
+            {{additionalRateDescription}}
+            <span class="CurrentPrice">
+              {{additionalRatePrice |currency:'USD'}}</span
+            >
+          </div>
+
+          <div
+            *ngIf="additionalRatePrice && !additionalRateDescription"
+            class="Price_quote color_black"
+          >
+            Additional Rate
+            <span class="CurrentPrice">
+              {{additionalRatePrice |currency:'USD'}}</span
+            >
+          </div>
+        </div>
+        <div class="Name_div_date">
+          <span class="Requst_time">DATE AND TIME REQUESTED</span>
+        </div>
+        <ion-row style="padding: 5px 0 0">
+          <ion-col col-1 no-padding class="vertical_centrC">
+            <ion-icon name="md-calendar" class="calenter_icon"></ion-icon>
+          </ion-col>
+          <ion-col col-5 no-padding>
+            <div class="Date_div" *ngFor="let dt of Datee">{{dateSet(dt)}}</div>
+          </ion-col>
+          <ion-col col-6 no-padding>
+            <div class="Date_div" *ngFor="let tms of TimesSplit">{{tms}}</div>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+
+      <ion-item class="Item_classpad">
+        <span class="Requst_time">ADDRESS</span>
+        <ion-row style="padding: 2px 0 0">
+          <ion-col col-1 no-padding class="vertical_centrC">
+            <ion-icon name="md-pin" class="calenter_icon"></ion-icon>
+          </ion-col>
+          <ion-col col-11 no-padding>
+            <span text-wrap class="Date_div">{{Address}}</span>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+
+      <ion-item class="Item_classpad">
+        <div class="Name_div">
+          <span class="Requst_time">JOB DESCRIPTION</span>
+        </div>
+        <ion-col>
+          <ion-icon name="md-paper">
+            <div text-wrap class="Timing_constra">{{Description}}</div>
+          </ion-icon>
+        </ion-col>
+      </ion-item>
+      <ion-item class="Item_classpad" *ngIf="mynewurl == '1'">
+        <div class="Name_div">
+          <span class="Requst_time">ATTACHMENT</span>
+        </div>
+        <div>
+          <ion-row>
+            <ion-col
+              col-6
+              *ngFor="let attch of newAttechmeny"
+              class="vertical_centr"
+            >
+              <img
+                *ngIf="attch.type == '1'"
+                src="{{config.url}}{{attch.filename}}"
+                class="Upload_medea"
+                #myImage
+                (click)="presentImage(myImage)"
+              />
+              <video
+                *ngIf="attch.type == '2'"
+                controls="controls"
+                preload="metadata"
+                webkit-playsinline="webkit-playsinline"
+                class="Upload_medea"
+              >
+                <source
+                  src="{{config.url}}{{attch.filename}}"
+                  type="video/mp4"
+                />
+              </video>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-item>
+
+      <ion-item class="Item_classpad" *ngIf="WorkStatus == 0">
+        <!-- <button ion-button full clear class="Reschedule_btn" (click)="ReschedulJob('Res')">
+        <ion-icon name="md-create" class="create_btn_icon"></ion-icon>Reschedule Job
+      </button> -->
+      </ion-item>
+
+      <ion-item class="Item_classpad" *ngIf="WorkStatus == 2">
+        <button
+          ion-button
+          full
+          clear
+          class="rate_btn"
+          (click)="CreateDispute()"
+        >
+          Create Dispute
+        </button>
+      </ion-item>
+    </ion-card>
+  </ion-list>
+
+  <div class="facebook_div" *ngIf="WorkStatus == 0">
+    <button ion-button full round class="facebook_btn" *ngIf="WorkStatus == 0">
+      <ion-icon name="logo-facebook" class="facebook_logo"></ion-icon> Save $15
+      on this job
+    </button>
+  </div>
+  <div *ngIf="WorkStatus == 0">
+    <button
+      ion-button
+      full
+      clear
+      round
+      class="Reschedule_btn"
+      (click)="ReschedulJob()"
+      *ngIf="WorkStatus == 0"
+    >
+      <ion-icon name="md-create" class="create_btn_icon"></ion-icon>Reschedule
+      Job
+    </button>
+    <button
+      ion-button
+      full
+      clear
+      round
+      class="Cancel_btn"
+      (click)="CancelJob()"
+    >
+      Cancel Job
+    </button>
+  </div>
+</ion-content>
+
+<!-- <ion-footer *ngIf="providerId != '0'">
+  <ion-row>
+    <ion-col col-12>
+      <button ion-button full clear class="Message_btn" (click)="MessageClient()">
+        <ion-icon name="ios-chatboxes-outline" class="Followup_btn_icon"></ion-icon>Message Client
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-footer> -->

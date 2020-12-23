@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Conversation</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item lines class="item_back_tran" *ngFor="let con of converasations" (click)="chaat(con.UserChatID,con.UserChatName,con.ProviderID,con.ProviderName)">
+            <ion-row>
+                <ion-col col-2 class="vertical_centr">
+                    <!-- <img src="assets/imgs/profile.jpg" class="Profile_logo"> -->
+                    <img *ngIf="!con.image" src="assets/imgs/profiles.jpg" class="Profile_logo_complet" />
+                    <img *ngIf="con.image" src="{{config.url}}{{con.image}}" #image (click)="presentImage(image)" class="Profile_logo_complet" />
+                </ion-col>
+                <ion-col col-10 class="Padd_col vertical_centrC">
+                    <div class="User_name">{{con.ProviderName}}</div>
+                    <!-- <div class="Address_div">204 Roslin Avenue <span class="Completed_span">Completed</span> </div> -->
+                    <!-- <div class="Massge_div dotdot">On my way</div> -->
+                    <!-- <div class="Date_Time_div">{{ServceDate(con.ServicesDate)}}</div> -->
+                </ion-col>
+            </ion-row>
+        </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Local Deals</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list no-lines class="List_class">
+    <ion-item *ngFor="let offer of StreakList; let i = index" class="margin_item">
+      <div class="Boder_div">
+		<img src="{{config.imgs}}{{offer.image}}">
+        <div text-wrap class="Detail_div"><span class="Name_span">{{offer.name}}</span> in <span
+            class="Address_span">{{offer.address}}</span> booked "Electronic Appliance" for {{DateSet(offer.end_date)}}
+          between Morning: 7AM - 12PM</div>
+        <div text-wrap class="Book_Service">You can book this service for the same date and receive a discount of $50
+        </div>
+        <button ion-button class="Book_btn" (click)="RescueStreak(i)">Book now</button>
+      </div>
+    </ion-item>
+  </ion-list>
+  <br><br><br><br><br>
+</ion-content>

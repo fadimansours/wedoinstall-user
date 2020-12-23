@@ -1,0 +1,111 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Profile</ion-title>
+        <ion-buttons right>
+            <button ion-button icon-only (click)="Chat()">
+        <ion-icon name="md-chatboxes" class="chatboxes_icon"></ion-icon>
+      </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="main_cntaint">
+    <ion-list no-lines>
+        <ion-item style="background: transparent">
+            <div class="Cover_back"></div>
+            <div class="Covar_white"></div>
+            <ion-card class="Prifile_card">
+                <img *ngIf="!userService.userDetail?.image" src="assets/imgs/profileimg.jpg" class="profile_image" />
+
+                <img *ngIf="userService.userDetail?.image" src="{{config.url}}{{userService.userDetail?.image}}" class="profile_image" />
+                <div class="Fadi_mansour">
+                    {{userService.userDetail?.name}} {{userService.userDetail?.last_name}}
+                </div>
+                <!-- <div class="Region_div">
+          <ion-icon name="md-pin" class="Pin_icon"></ion-icon>Region: Toronto
+        </div> -->
+            </ion-card>
+        </ion-item>
+        <div>
+            <ion-row class="Pont_row">
+                <ion-col col-6>
+                    <button ion-button full class="Point_btn" (click)="PointView()">
+            Points <ion-icon name="logo-codepen" class="Point_logo"></ion-icon>
+            <span class="Paint_span"> {{creditService.getPoints()}}</span>
+          </button>
+                </ion-col>
+                <ion-col col-6>
+                    <button ion-button full class="Point_btn" (click)="CreditView()">
+            Credit <ion-icon name="logo-usd" class="Credit_logo"></ion-icon>
+            <span class="Credit_span"> {{creditService.getCredit() }}</span>
+          </button>
+                </ion-col>
+            </ion-row>
+        </div>
+        <div class="Menu_Btn_div">
+            <ion-row class="Menu_Btn_row" (click)="EditProfile()">
+                <ion-col col-1 no-padding text-center>
+                    <ion-icon name="md-person" class="Menu_icon"></ion-icon>
+                </ion-col>
+                <ion-col col-10 no-padding>
+                    <div class="Profile_div">Profile Details</div>
+                </ion-col>
+            </ion-row>
+            <ion-row class="Menu_Btn_row" (click)="CreditView()">
+                <ion-col col-1 no-padding text-center>
+                    <ion-icon name="logo-usd" class="Menu_icon"></ion-icon>
+                </ion-col>
+                <ion-col col-10 no-padding>
+                    <div class="Profile_div">Credits</div>
+                </ion-col>
+            </ion-row>
+            <ion-row class="Menu_Btn_row" (click)="PointView()">
+                <ion-col col-1 no-padding text-center>
+                    <ion-icon name="logo-nodejs" class="Menu_icon"></ion-icon>
+                </ion-col>
+                <ion-col col-10 no-padding>
+                    <div class="Profile_div">Points</div>
+                </ion-col>
+            </ion-row>
+            <ion-row class="Menu_Btn_row" (click)="Myorde()">
+                <ion-col col-1 no-padding text-center>
+                    <ion-icon name="ios-basket" class="Menu_icon"></ion-icon>
+                </ion-col>
+                <ion-col col-10 no-padding>
+                    <div class="Profile_div">Myorder</div>
+                </ion-col>
+            </ion-row>
+            <ion-row class="Menu_Btn_row" (click)="Payment()">
+                <ion-col col-1 no-padding text-center>
+                    <ion-icon name="ios-card" class="Menu_icon"></ion-icon>
+                </ion-col>
+                <ion-col col-10 no-padding>
+                    <div class="Profile_div">Payment Details</div>
+                </ion-col>
+            </ion-row>
+            <ion-row class="Menu_Btn_row" (click)="Address()">
+                <ion-col col-1 no-padding text-center>
+                    <ion-icon name="ios-pin-outline" class="Menu_icon"></ion-icon>
+                </ion-col>
+                <ion-col col-10 no-padding>
+                    <div class="Profile_div">Address Details</div>
+                </ion-col>
+            </ion-row>
+            <ion-row class="Menu_Btn_row" (click)="Logout()">
+                <ion-col col-1 no-padding text-center>
+                    <ion-icon name="md-power" class="Menu_icon"></ion-icon>
+                </ion-col>
+                <ion-col col-10 no-padding>
+                    <div class="Profile_div">Log Out</div>
+                </ion-col>
+            </ion-row>
+        </div>
+    </ion-list>
+
+    <br /><br /><br /><br /><br />
+    <ion-fab bottom end>
+        <button ion-fab mini (click)="AdminChat()">
+      <img src="assets/imgs/fablogo.png" />
+    </button>
+    </ion-fab>
+</ion-content>

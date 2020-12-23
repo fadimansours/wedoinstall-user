@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Address Details</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="main_cntaint">
+
+    <!-- <div class="Main_div">
+    <div class="primary_div">PRIMARY ADDRESS</div>
+    <ion-row class="primary_row">
+      <ion-col col-1 class="vertical_centr">
+        <ion-icon name="md-pin"></ion-icon>
+      </ion-col>
+      <ion-col col-11>
+        <div class="address_div">653 McCowan Road</div>
+        <div class="address_div">Toronto, ON</div>
+      </ion-col>
+    </ion-row>
+  </div> -->
+
+    <div class="Main_div">
+        <div class="primary_div">YOUR ADDRESSES</div>
+        <ion-row class="primary_row" *ngFor="let Adres of AddressList;let i = index" (click)="SelectAddress(i,Adres.id)">
+            <ion-col col-1 class="vertical_centr">
+                <ion-icon name="md-pin"></ion-icon>
+            </ion-col>
+            <ion-col col-10>
+                <div text-wrap class="address_div">{{Adres.address}}</div>
+                <!-- <div class="address_div">Ashawa, ON</div> -->
+            </ion-col>
+            <ion-col col-1 class="vertical_centr">
+                <ion-icon name="md-checkmark" *ngIf="Adres.id == SelectAdresId"></ion-icon>
+            </ion-col>
+        </ion-row>
+    </div>
+
+    <button ion-button clear class="CardAdd_btn" *ngIf="AddBtnShow == '0' || AddBtnShow == '1'" (click)="AddAddress()">+
+    Add a new Address</button>
+    <button ion-button clear class="Continue_btn" *ngIf="AddBtnShow == '1'" (click)="AddressSelec()">Continue</button>
+
+    <button ion-button clear class="CardAdd_btn" *ngIf="AddBtnShow == '0'" (click)="EditAddress()">Edit Address</button>
+    <br><br><br><br><br><br><br><br>
+</ion-content>

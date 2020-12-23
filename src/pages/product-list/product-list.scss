@@ -1,0 +1,59 @@
+page-product-list {
+    .toolbar-background {background-color: #ffffff !important;}
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default{color: #000000}
+    .bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default{color: #000000;}
+    .label-md{margin: 0px;}
+    .item-md.item-block .item-inner{padding: 0px;}
+    .item-md{padding: 0px;}
+    .label-ios{margin: 0px;}
+    .item-ios.item-block .item-inner{padding: 0px;}
+    .item-ios{padding: 0px;}
+    .col{padding: 0px;}
+    .item-block{min-height: 1.4rem;}
+
+    .What_do{
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 10px 0;
+    }
+    .Time_hours{
+        font-size: 13px;
+    }
+    .md_time{
+        padding: 0 5px;
+    }
+    .Searchbar_div{
+        padding: 0 20px;
+    }
+    .searchbar-md .searchbar-input{
+        border: 1px solid #d1d1d1;
+        box-shadow: none;
+        border-radius: 50px;
+    }
+    .searchbar-md{
+        padding: 15px 0 15px 0;
+    }
+    .List_class{
+        padding: 0 10px;
+    }
+    .Card_class{
+        width: 100%;
+        margin: 0px;
+        box-shadow: 0px 0px 2px 1px #d1d1d1;
+        border-radius: 4px;
+    }
+    .col_pad{
+        padding: 10px;
+    }
+    .produc_img{
+        width: 100%;
+    }
+    .Drywall_div{
+        padding: 10px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+
+}

@@ -1,0 +1,145 @@
+page-rescue-streak {
+
+    .Rescue_content{
+        background: rgba(0,0,0,0.7);
+    }
+    .Main_card{
+        padding: 20px;
+        margin-top: 8%;
+    }
+    .close_div{
+        text-align: right;
+    }
+    .close_icon{
+        zoom: 1.6;
+    }
+    .Title_div{
+        text-align: center;
+        font-size: 23px;
+        font-weight: 500;
+        padding: 0 0 10px 0;
+    }
+    .Detail_div{
+        text-align: center;
+        font-size: 17px;
+        line-height: 1.4;
+    }
+    .ImgeWithDiv{
+        color: #fff;
+        background: #6c41c1;
+        padding: 1px 5px;
+        border-radius: 50px;
+    }
+    .Divwith_logo{
+        padding: 2px 5px 4px;
+    }
+    .Home_name_div{
+        color: #fff;
+        padding: 4px 0 0 8px;
+    }
+    .padd_row{
+        padding: 15px 0px;
+    }
+    .Streck_ends{
+        float: right;
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+        padding-top: 3px;
+    }
+    .time_icon{
+        padding-right: 8px;
+    }
+    .Pont_given_div{
+        border: 1px dashed #6c41c1;
+        transform: rotate(46deg);
+        padding: 3px 0px;
+        border-radius: 8px;
+    }
+    .Pont_given_inner{
+        color: #6c41c1;
+        font-size: 14px;
+        // line-height: 0.8;
+        text-align: center;
+        transform: rotate(-46deg);
+    }
+    .Pont_deseble_div{
+        border: 1px dashed #a494c3;
+        transform: rotate(46deg);
+        padding: 3px 0px;
+        border-radius: 8px;
+    }
+    .Pont_deseble_inner{
+        color: #a494c3;
+        font-size: 14px;
+        // line-height: 0.8;
+        text-align: center;
+        transform: rotate(-46deg);
+    }
+    .point_span_pts{
+        font-size: 10px;
+    }
+    .Col_paddin{
+        padding: 10px;
+    }
+    .Second_Divwith_logo{
+        width: 80%;
+        margin: auto;
+        display: table;
+        padding: 4px 0;
+    }
+    .Pont_1x_div{
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+        padding: 2px 0;
+    }
+    .Jobs_Book_row{
+        padding: 10px 0;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    .Jobs_Booked{
+        padding-top: 4px;
+        font-size: 14px;
+    }
+    .Jobs_Booked_span{
+        color: #6c41c1;
+    }
+    .BookRow{
+        padding: 7px;
+    }
+    .Book_btn{
+        height: 25px;
+        font-size: 11px !important;
+        font-weight: 300;
+        letter-spacing: 1.2px;
+        padding: 0px 12px;
+        float: right;
+        margin: 0;
+    }
+    .Book_name{
+        font-size: 13px;
+        font-weight: 400;
+        padding: 2px 0 0 0;
+    }
+    .DotCreate_div{
+        width: 9px;
+        height: 9px;
+        border: 2px solid #cfcfcf;
+        border-radius: 50%;
+        background: #cfcfcf;
+        margin: auto;
+    }
+    .Line_create{
+        width: 1px;
+        height: 30px;
+        border: 1px solid #cfcfcf;
+        background: #cfcfcf;
+        margin: auto;
+    }
+    .margin_t_13{
+        margin-top: 13px;
+    }
+    
+    
+}

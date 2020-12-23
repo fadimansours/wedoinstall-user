@@ -1,0 +1,450 @@
+page-request-product {
+    .toolbar-title-md {
+        color: #fff;
+    }
+    .toolbar-title-ios {
+        color: #fff;
+    }
+    .Search_name {
+        color: #fff;
+        padding: 0px 12px;
+        letter-spacing: 0.6px;
+        font-size: 15px;
+        font-weight: 300;
+    }
+    .cover_div {
+        z-index: -999999;
+    }
+    .Image_show {
+        width: 100%;
+        margin: auto;
+    }
+    .quition_div {
+        letter-spacing: 1px;
+        font-weight: 400;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    .strike-through {
+        text-decoration: line-through;
+        text-decoration-color: red;
+    }
+    .item-md [item-left],
+    .item-md [item-right],
+    .item-md [item-start],
+    .item-md [item-end] {
+        margin: 0px;
+    }
+    .item-ios [item-left],
+    .item-ios [item-right],
+    .item-ios [item-start],
+    .item-ios [item-end] {
+        margin: 0px;
+    }
+    .item-md ion-icon[item-left]+.item-inner,
+    .item-md ion-icon[item-left]+.item-input,
+    .item-md ion-icon[item-start]+.item-inner,
+    .item-md ion-icon[item-start]+.item-input {
+        margin: 0px;
+    }
+    .item-ios ion-icon[item-left]+.item-inner,
+    .item-ios ion-icon[item-left]+.item-input,
+    .item-ios ion-icon[item-start]+.item-inner,
+    .item-ios ion-icon[item-start]+.item-input {
+        margin: 0px;
+    }
+    .item-md.item-block .item-inner {
+        padding: 0px;
+    }
+    .label-md {
+        margin: 0px;
+    }
+    .item-md {
+        padding: 0px;
+    }
+    .item-ios.item-block .item-inner {
+        padding: 0px;
+    }
+    .label-ios {
+        margin: 0px;
+    }
+    .item-ios {
+        padding: 0px;
+    }
+    .slide_div {
+        position: relative;
+    }
+    .slide_item {
+        position: relative;
+        overflow: visible !important;
+        margin-bottom: 50px;
+    }
+    .swiper-container {
+        overflow: visible;
+        margin-bottom: 30px;
+    }
+    .price_div {
+        color: white;
+    }
+    .img_div {
+        position: absolute;
+        top: 0px;
+    }
+    .Main_item {
+        padding: 0px 20px;
+        background: transparent;
+        padding-top: 50px;
+    }
+    .First_item {
+        padding: 0px 20px;
+        background: transparent;
+    }
+    .Input_item {
+        padding: 0px 10px;
+    }
+    .Datetime_item {
+        padding: 0px 1px 0 5px;
+        margin-top: 15px;
+    }
+    .list-md .item-input:last-child {
+        border-bottom: 2px solid #dedede;
+    }
+    .list-ios .item-input:last-child {
+        border-bottom: 2px solid #dedede;
+    }
+    .Adress_input {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(243, 0, 0, 0.12) !important;
+    }
+    .text-input-md {
+        // box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(243, 0, 0, 0.12) !important;
+        margin: 13px 0px;
+        width: calc(100% - 0px - 0px);
+        padding: 0 15px !important;
+    }
+    .text-input-ios {
+        margin: 13px 0px;
+        width: calc(100% - 0px - 0px);
+        padding: 0 15px !important;
+    }
+    .Qunty_input {
+        padding: 0 5px;
+    }
+    .quition_main {
+        padding: 25px 0px;
+    }
+    .Transperntdiv {
+        background: #fff;
+        // padding: 80px;
+        height: 170px;
+        position: relative;
+    }
+    .selling_limit {
+        font-size: 14px;
+        font-weight: 500;
+        background: #ffffff;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        padding: 0px 25px;
+    }
+    .expire_date {
+        font-size: 14px;
+        font-weight: 500;
+        background: #ffffff;
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        padding: 0px 25px;
+    }
+    .last_color {
+        color: #587cf5;
+    }
+    .Main_card {
+        position: absolute;
+        width: 90%;
+        margin: 0px;
+        left: 5%;
+        top: 80px;
+        background: #2a3350;
+        min-height: 190px;
+    }
+    .padd_card_div {
+        //padding: 10px 20px;
+        //position: absolute;
+        padding: 10px;
+    }
+    .main_div {
+        position: relative;
+    }
+    .fild_name {
+        padding: 5px 0 0 0;
+        color: #fff;
+        font-size: 16px;
+    }
+    .free_quote {
+        text-align: center;
+        font-size: 30px;
+        color: #fff;
+        padding: 10px 0 0 0;
+    }
+    .Price_quote {
+        font-size: 14px;
+        color: #fff;
+        padding: 3px 0;
+    }
+    .Logo_image {
+        width: 26px;
+        height: 26px;
+        padding: 3px;
+        background: #e6e4e4;
+        border-radius: 50%;
+    }
+    .Detail_card_div {
+        font-size: 14px;
+        text-align: center;
+        color: #6e7db3;
+        padding: 1px 0px 15px;
+        margin-bottom: 10px;
+    }
+    .bg-transparent {
+        background: transparent !important;
+    }
+    .optionItem {
+        color: white;
+        padding: 0;
+    }
+    .continue_btn {
+        margin: auto;
+        color: #fff;
+        background: #5371df;
+        padding: 10px 30px !important;
+        text-transform: none;
+        font-size: 15px !important;
+        height: 38px !important;
+        border-radius: 50px;
+    }
+    textarea {
+        width: 100%;
+        border: 0px;
+        padding-top: 5px;
+        font-size: 13px;
+        resize: none;
+    }
+    .atteche_div {
+        width: 145px;
+        border: 1px dashed #b9b9b9;
+        margin: auto;
+        padding: 5px;
+        border-radius: 12px;
+        margin-top: 8px;
+        margin-bottom: 15px;
+    }
+    .Upload_medea {
+        border-radius: 12px;
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+    }
+    .Descount_div {
+        position: absolute;
+        top: 60px;
+        left: 5px;
+        text-align: center;
+        background: #fa6362;
+        border-radius: 50%;
+        padding: 9px 8px;
+        color: #fff;
+        letter-spacing: 0.3px;
+        font-size: 11px;
+        z-index: 9999;
+    }
+    .expire_div {
+        position: absolute;
+        top: 72px;
+        right: 12px;
+        text-align: center;
+        padding: 9px 8px;
+        color: #fa6362;
+        letter-spacing: 0.3px;
+        font-size: 13px;
+        z-index: 9999;
+    }
+    .DescountUnder {
+        text-decoration: line-through;
+        color: #5371df;
+        padding: 0 5px;
+    }
+    .CurrentPrice {
+        padding: 0 5px;
+        float: right;
+    }
+    .Paddings_div {
+        margin-right: 80px;
+    }
+    .Points_div {
+        font-size: 12px;
+        color: #fa6362;
+    }
+    .Hourly_div {
+        padding: 10px 5px;
+        border: 2px solid #b9b9b9;
+        color: #000000;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+    }
+    .Select_Hourly_div {
+        padding: 10px 5px;
+        border: 2px solid #587cf5;
+        color: #587cf5;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        background: #ffffff;
+    }
+    .Paddind_div {
+        padding: 8px 3px 5px;
+    }
+    .Add_icon {
+        color: #587cf5;
+    }
+    .Datbottom_row {
+        border-bottom: 2px solid #dedede;
+        margin-top: 10px;
+    }
+    .available_date {
+        font-size: 13px;
+        color: #aaaaaa;
+    }
+    .Selected_row {
+        background: #ffffff;
+        box-shadow: 0px 1px 10px 3px #dedede;
+        padding: 3px 0px;
+        border-radius: 3px;
+    }
+    .Select_padd {
+        padding: 3px 5px;
+    }
+    .Selected_date {
+        font-size: 13px;
+        font-weight: 300;
+    }
+    .Icon_date_cale {
+        color: #808080;
+        zoom: 0.9;
+    }
+    .navigate_icon {
+        transform: rotate(50deg);
+        color: #5371df;
+        zoom: 0.9;
+    }
+    .Selected_Addres {
+        font-size: 13px;
+        font-weight: 400;
+        color: #5371df;
+    }
+    .After_Hour {
+        font-size: 12px;
+        font-weight: 500;
+        background: #ffffff;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        padding: 3px 8px;
+    }
+    .Holidays_span {
+        font-size: 15px;
+        font-weight: 500;
+        float: right;
+        color: rgb(223, 54, 54);
+    }
+    .Point_logo_div {
+        zoom: 1;
+        padding-left: 2px;
+        color: #3b29b0;
+        margin-top: 2px;
+    }
+    .Paint_span {
+        color: #3b29b0;
+        font-size: 18px !important;
+    }
+    .point_div {
+        padding: 10px 5px;
+        border: 3px solid #969494;
+        color: #000000;
+        font-size: 12px;
+        font-weight: 500;
+        text-align: center;
+    }
+    .Select_point_div {
+        padding: 10px 5px;
+        border: 3px solid #3d2bb1;
+        color: #3d2bb1;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: center;
+        background: #ffffff;
+    }
+    ion-item {
+        .Coupon_card {
+            margin: 10px 20px 10px 20px;
+            width: calc(100% - 40px);
+            border-radius: 8px;
+            box-shadow: 0px 3px 4px 0px (#b1b1b1);
+            border: 1px solid #dadada;
+        }
+        .CuPon_row {
+            border: 1px solid #cecece;
+            padding: 0px 0 0px 5px;
+            border-radius: 5px;
+        }
+        .coupon_img {
+            padding: 5px 2px;
+        }
+        .Coupon_cod_d {
+            padding: 10px 6px;
+        }
+        .Code_input {
+            border: 0px;
+            width: 100%;
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+        .add_div {
+            background: #268fa9;
+            color: #fff;
+            font-size: 16px;
+            padding: 6px 0;
+            text-align: center;
+            border-radius: 0 5px 5px 0;
+        }
+    }
+    .no-padding {
+        padding: 0px;
+    }
+    .row-border {
+        border-radius: 40% !important;
+    }
+    .item_trans {
+        background: transparent;
+    }
+    .Discount_div {
+        font-size: 14px;
+        color: #b1b1b1;
+        text-align: center;
+        padding-bottom: 5px;
+    }
+    .icon-gold {
+        color: rgba(255, 217, 0, 0.952) !important;
+    }
+    .Footer_padd {
+        padding: 10px 15px;
+    }
+    .Request_btn {
+        color: #ffffff;
+        font-size: 13px;
+        text-transform: none;
+        border-radius: 50px;
+        background: #4b68dd;
+    }
+}

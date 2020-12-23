@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Popular Tradesglobe Services</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="main_cntaint">
+    <ion-list>
+        <ion-item class="Popular_item" *ngFor="let catlist of CategoryList; let i = index" (click)="Seasonam(i)">
+            <img src="{{config.imgs}}{{catlist.picture}}" class="Popular_image" />
+            <div class="Popular_more_row">
+                <div text-wrap class="Popular_sernm">{{catlist.name}}</div>
+            </div>
+        </ion-item>
+    </ion-list>
+
+    <ion-fab bottom end>
+        <button ion-fab mini><img src="assets/imgs/fablogo.png" /></button>
+    </ion-fab>
+</ion-content>

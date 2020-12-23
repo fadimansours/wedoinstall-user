@@ -1,0 +1,147 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Confirm Job Detail</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="Config_detail">CONFIRM JOB DETAILS</div>
+
+  <ion-list class="list_paddin">
+    <ion-item class="Pddin_item">
+      <div class="vertical_centr" *ngIf="!isPackage">
+        <img src="{{config.imgs}}{{Srvicon}}" class="Logo_image" />
+        <span class="Service_name">{{Srvname}}</span>
+      </div>
+      <div class="vertical_centr" *ngIf="isPackage">
+        <span class="Service_name">{{JobData.serviceName}}</span>
+      </div>
+      <div class="free_quote" *ngIf="Srvtype == '2'">FREE QUOTE</div>
+      <div class="Paddings_div" *ngIf="!Srvtype || Srvtype == '1'">
+        <div class="Price_quote strike-through" *ngIf="isFlashDeal || isStreak">
+          {{priceDescription}}
+          <span class="CurrentPrice strike-through">$ {{realPrice}}</span>
+        </div>
+        <div class="Price_quote">
+          {{priceDescription}} <span class="CurrentPrice">$ {{Costprice}}</span>
+        </div>
+        <div
+          class="Price_quote"
+          *ngIf="additionalRateDescription && CatogoryAdditionl"
+        >
+          {{additionalRateDescription}}
+          <span class="CurrentPrice">$ {{CatogoryAdditionl}}</span>
+        </div>
+        <div
+          class="Price_quote"
+          *ngIf="!additionalRateDescription && CatogoryAdditionl"
+        >
+          Additional Rate
+          <span class="CurrentPrice">$ {{CatogoryAdditionl}}</span>
+        </div>
+      </div>
+
+      <div class="Paddings_div" *ngIf="isPackage">
+        <div class="Price_quote">
+          {{"total rate"}} <span class="CurrentPrice">$ {{Costprice}}</span>
+        </div>
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <div class="Requested_div">DATE AND TIME REQUESTED</div>
+      <ion-row class="Row_paddin">
+        <ion-col col-6>
+          <div class="date_div" *ngFor="let dts of Srvdate">
+            <ion-icon name="md-calendar" class="Calenea_icon"></ion-icon>
+            {{dateSet(dts)}}
+          </div>
+        </ion-col>
+        <ion-col col-6 *ngIf="!isStreak">
+          <div class="Time_div" *ngFor="let tims of Srvtime">({{tims}})</div>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+    <ion-item>
+      <div class="Requested_div">ADDRESS</div>
+      <ion-row class="Row_paddin">
+        <ion-col col-1 class="vertical_centrC">
+          <ion-icon name="md-pin"></ion-icon>
+        </ion-col>
+        <ion-col col-11>
+          <div text-wrap class="date_div">{{Srvaddres}}</div>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+    <ion-item>
+      <div class="Requested_div">JOB DETAILS</div>
+      <div text-wrap class="Detail_div">{{Srvdescri}}</div>
+    </ion-item>
+
+    <ion-item *ngIf="deadline">
+      <div class="Requested_div">DEADLINES</div>
+      <div text-wrap class="Detail_div">{{deadline}}</div>
+    </ion-item>
+    <ion-item *ngIf="couponDiscount && !isFlashDeal">
+      <div class="Requested_div">COUPON DISCOUNT VALUE</div>
+      <div text-wrap class="Detail_div">{{couponDiscount|currency}}</div>
+    </ion-item>
+    <ion-item *ngIf="pointsDiscount && !isFlashDeal">
+      <div class="Requested_div">POINTS DISCOUNT</div>
+      <div text-wrap class="Detail_div">{{pointsDiscount|currency}}</div>
+    </ion-item>
+
+    <ion-item *ngIf="mynewurl == '1'">
+      <div class="Requested_div">ATTACHMENT</div>
+      <div>
+        <ion-row>
+          <ion-col
+            col-6
+            *ngFor="let attch of newAttechmeny"
+            class="vertical_centr"
+          >
+            <img
+              *ngIf="attch.type == '1'"
+              src="{{config.url}}{{attch.filename}}"
+              class="Upload_medea"
+              #myImage
+              (click)="presentImage(myImage)"
+            />
+            <video
+              *ngIf="attch.type == '2'"
+              controls="controls"
+              preload="metadata"
+              webkit-playsinline="webkit-playsinline"
+              class="Upload_medea"
+            >
+              <source src="{{config.url}}{{attch.filename}}" type="video/mp4" />
+            </video>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer class="Footer_padd">
+  <button
+    ion-button
+    full
+    class="Request_btn"
+    (click)="Continue()"
+    *ngIf="Srvtype == '2'"
+  >
+    Request a Quote
+  </button>
+  <button
+    ion-button
+    full
+    class="Request_btn"
+    (click)="Continue()"
+    *ngIf="Srvtype != '2'"
+  >
+    Confirm
+  </button>
+</ion-footer>

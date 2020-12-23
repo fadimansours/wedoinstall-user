@@ -1,0 +1,51 @@
+<ion-content class="Rescld_content">
+
+  <ion-card class="Resedul_card">
+    <div class="thanks_rating_div">THANK YOU FOR RATING YOUR PRO</div>
+    <div class="Close_div">
+      <ion-icon name="md-close" (click)="CloseModel()"></ion-icon>
+    </div>
+    <div class="PaddMain_div">
+      <ion-row class="Paddin_row_cl">
+        <ion-col col-2 no-padding></ion-col>
+        <ion-col col-3 no-padding>
+          <img src="assets/imgs/profile.jpg" class="Profile_img">
+        </ion-col>
+        <ion-col col-5 no-padding class="vertical_centrC">
+          <div class="ServiceUsNm_div"> {{ServiceUserNm}}</div>
+        </ion-col>
+        <ion-col col-2 no-padding></ion-col>
+      </ion-row>
+    <!-- <div text-wrap class="Reason_div">Give a Review</div> -->
+    <div>
+      <ion-item class="pw_star" no-lines>
+        <ion-icon *ngIf="myRating>=1" name="star" (click)="rating(1)"></ion-icon>
+        <ion-icon *ngIf="myRating>=2" name="star" (click)="rating(2)"></ion-icon>
+        <ion-icon *ngIf="myRating>=3" name="star" (click)="rating(3)"></ion-icon>
+        <ion-icon *ngIf="myRating>=4" name="star" (click)="rating(4)"></ion-icon>
+        <ion-icon *ngIf="myRating>=5" name="star" (click)="rating(5)"></ion-icon>
+        <ion-icon *ngIf="myRating%1!=0" name="star-half"></ion-icon>
+        <ion-icon *ngIf="myRating==0" name="star-outline" (click)="rating(1)"></ion-icon>
+        <ion-icon *ngIf="myRating<=1" name="star-outline" (click)="rating(2)"></ion-icon>
+        <ion-icon *ngIf="myRating<=2" name="star-outline" (click)="rating(3)"></ion-icon>
+        <ion-icon *ngIf="myRating<=3" name="star-outline" (click)="rating(4)"></ion-icon>
+        <ion-icon *ngIf="myRating<=4" name="star-outline" (click)="rating(5)"></ion-icon>
+      </ion-item>
+    </div>
+    <div text-wrap class="Tradesglobethe_div">
+      Your rated {{ServiceUserNm}} a {{myRating}}/5 Thank you for rating your Pro.
+      Let Tradesglobe know what you thought about the service!
+    </div>
+    <div class="Requst_time">FEEDBACK</div>
+    <div>
+      <ion-item no-padding>
+        <ion-textarea rows="3" [(ngModel)]="reviewText"></ion-textarea>
+      </ion-item>
+    </div>
+
+    <button ion-button clear full class="Reason_btn" (click)="Continue()">Submit</button>
+  </div>
+
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,72 @@
+page-conversation {
+    .chatboxes_icon {
+        color: #fff;
+    }
+    .toolbar-title-md {
+        color: #fff;
+    }
+    .item-md {
+        padding: 0 16px;
+    }
+    .item-md.item-block .item-inner {
+        padding: 0px;
+    }
+    .label-md {
+        margin: 13px 0px 5px;
+    }
+    .toolbar-title-ios {
+        color: #fff;
+    }
+    .item-ios {
+        padding: 0 16px;
+    }
+    .item-ios.item-block .item-inner {
+        padding: 0px;
+    }
+    .label-ios {
+        margin: 13px 0px 5px;
+    }
+    .Profile_logo {
+        border-radius: 50%;
+    }
+    .Profile_logo_complet {
+        border-radius: 50%;
+    }
+    .Padd_col {
+        padding: 0 0 0 5px;
+    }
+    .User_name {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .Massge_div {
+        font-size: 13px;
+        color: #adadad;
+        padding: 4px 0 0;
+    }
+    .Address_div {
+        font-size: 14px;
+        color: #696969;
+        padding: 4px 0 0;
+    }
+    .Completed_span {
+        color: #1d9cd4;
+        padding: 0 0 0 5px;
+    }
+    .Date_Time_div {
+        text-align: right;
+        padding: 0px 0 3px 0;
+        color: #696969;
+        font-size: 13px;
+    }
+    .Hry_div {
+        font-size: 24px;
+        text-align: center;
+        font-weight: 500;
+        margin-top: 180px;
+    }
+    .item_back_tran {
+        border-bottom: 1px solid rgb(75, 72, 72);
+        margin: 0px 5px;
+    }
+}

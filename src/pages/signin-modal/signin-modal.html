@@ -1,0 +1,64 @@
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <img src="assets/imgs/mapin.png" *ngIf="Flashh == '1'">
+      <img src="assets/imgs/homeservice.png" *ngIf="Flashh == '2'">
+      <div>
+        <img src="assets/imgs/errdfor.png" class="close_imag" (click)="CloseBtn()">
+      </div>
+    </ion-item>
+
+    <ion-item class="Second_item" *ngIf="Flashh == '1'" no-lines>
+      <div text-wrap class="SaveUp_div">Save up to 25% when a Pro is already in your area!</div>
+      <ion-row>
+        <ion-col col-2>
+          <img src="assets/imgs/placeholder.png" class="Pinimg_icon">
+        </ion-col>
+        <ion-col col-10>
+          <div text-wrap class="icon_detail">See your flash map to find services in your area and the Pro's available
+            dates</div>
+        </ion-col>
+      </ion-row>
+      <ion-row class="Padding_10_row">
+        <ion-col col-2>
+          <div class="Lineing_div">|</div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+          <img src="assets/imgs/electric.png" class="Flashimg_icon">
+        </ion-col>
+        <ion-col col-10>
+          <div text-wrap class="icon_detail">Dates are available until someone else in your neighborhood books it!</div>
+        </ion-col>
+      </ion-row>
+      <ion-row class="Padding_10_row">
+        <ion-col col-2>
+          <div class="Lineing_div">|</div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+          <img src="assets/imgs/bell.png" class="Flashimg_icon">
+        </ion-col>
+        <ion-col col-10>
+          <div text-wrap class="icon_detail">Set customized notification when services you need are in your area</div>
+        </ion-col>
+      </ion-row>
+      <div text-wrap class="last_offer">Get 25% off your jobs with flash deals by signing up ofr logging in</div>
+      <ion-row>
+        <ion-col col-6><button ion-button class="Sign_btn" (click)="SignUp()">Sign Up</button></ion-col>
+        <ion-col col-6><button ion-button class="Sign_btn" (click)="Login()">Log In</button></ion-col>
+      </ion-row>
+    </ion-item>
+
+    <ion-item class="Second_item" *ngIf="Flashh == '2'" no-lines>
+      <div text-wrap class="SaveUp_div">Log In or Sign Up</div>
+      <div text-wrap class="homeowners_div">Tradesglobe instantly connects homeowners with amazing Pros. Sign up or
+        login to access all features!</div>
+
+      <div class="LogSign_div"><button ion-button full class="Login_btn" (click)="Login()">Log In</button></div>
+      <div class="LogSign_div"><button ion-button full class="siupbottm_btn" (click)="SignUp()">Sign Up</button></div>
+    </ion-item>
+  </ion-list>
+</ion-content>

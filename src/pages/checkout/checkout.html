@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Checkout</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="main_cntaint">
+  <ion-list no-lines class="CheckOut_list">
+
+    <ion-item class="Payable_item">
+      <div class="Address_div">Address:</div>
+      <ion-row class="Row_class" (click)="ChangeAddrs()">
+        <ion-col col-11>
+          <div text-wrap class="Adress_show">{{UserAddress}}</div>
+        </ion-col>
+        <ion-col col-1 class="vertical_centr">
+          <ion-icon name="md-create"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+    <ion-item class="Payable_item">
+      <div class="Total_Payable">Total Payable: <span class="Total_price">${{TotalPay}}</span></div>
+    </ion-item>
+
+    <ion-item class="Payable_item Margin_top">
+      <div>
+        <div text-wrap class="Total_Payable">Payment Option</div>
+        <button ion-button clear full (click)="PaymentOption('1')"
+          [ngClass]="(SelectPay == '1') ? 'Reason_Select_btn' : 'Reason_btn'">Cash On Delivery</button>
+        <button ion-button clear full (click)="PaymentOption('2')"
+          [ngClass]="(SelectPay == '2') ? 'Reason_Select_btn' : 'Reason_btn'">Card On Delivery</button>
+        <button ion-button clear full (click)="PaymentOption('3')"
+          [ngClass]="(SelectPay == '3') ? 'Reason_Select_btn' : 'Reason_btn'">Paypal</button>
+		<button ion-button clear full (click)="PaymentOption('4')"
+          [ngClass]="(SelectPay == '4') ? 'Reason_Select_btn' : 'Reason_btn'">Credit & Debit Cards</button>
+		<button ion-button clear full (click)="PaymentOption('5')"
+          [ngClass]="(SelectPay == '5') ? 'Reason_Select_btn' : 'Reason_btn'">Store Pickup</button>
+      </div>
+
+      <div class="Margin_top" *ngIf="SelectPay == '3'">
+        <div text-wrap class="Total_Payable">Stripe Payment</div>
+        <ion-row>
+          <ion-col col-8 class="padding_right_col">
+            <div class="Enter_card_div">Enter Card Number</div>
+            <input type="tel" class="Input_fild" placeholder="Card Number" [(ngModel)]="card_number">
+          </ion-col>
+
+          <ion-col col-4 class="padding_left_col">
+            <div class="Enter_card_div">Enter CVC</div>
+            <input type="tel" class="Input_fild" placeholder="CVC" [(ngModel)]="card_cvc">
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col col-6 class="padding_right_col">
+            <div class="Enter_card_div">Expiry Month</div>
+            <input type="tel" class="Input_fild" placeholder="Month" [(ngModel)]="card_month">
+          </ion-col>
+
+          <ion-col col-6 class="padding_left_col">
+            <div class="Enter_card_div">Expiry Year</div>
+            <input type="tel" class="Input_fild" placeholder="Year" [(ngModel)]="card_year">
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
+
+<ion-footer class="Footer_class">
+  <button ion-button clear full class="Reason_btn margi12" (click)="ContinuePay()">Continue</button>
+</ion-footer>

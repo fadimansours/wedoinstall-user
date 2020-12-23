@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Confirm checkout</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list no-lines class="ListClass">
+
+    <ion-item class="Item_class" *ngFor="let catlst of CartList">
+      <ion-row>
+        <ion-col col-3 class="vertical_centr">
+          <img src="{{config.imgs}}{{catlst.image}}" class="imag_class">
+        </ion-col>
+        <ion-col col-8 class="Col_8_padd">
+          <div text-wrap class="Pruduct_name">{{catlst.name}}</div>
+		  <!--<div class="Pruduct_price" *ngIf="catlst.disposal == '1'">With disposal ${{catlst.disposal_amount * catlst.qty}}</div>
+		  <div class="Pruduct_price" *ngIf="catlst.with_installation == '1'">With Installation ${{catlst.price_with_installation * catlst.qty}}</div>	-->
+		  <div class="Pruduct_price">${{catlst.price * catlst.qty}}</div>
+          <ion-row>
+              <div>{{catlst.qty}}</div>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+    <!-- <ion-item class="Item_class">
+      <ion-row>
+        <ion-col col-3 class="vertical_centr">
+          <img src="assets/imgs/pipe.jpg" class="imag_class">
+        </ion-col>
+        <ion-col col-8 class="Col_8_padd">
+          <div text-wrap class="Pruduct_name">ABS PIPE 3 inches x 6 ft CELL CORE</div>
+          <div class="Pruduct_price">$27.17</div>
+          <ion-row>
+            <ion-col col-2 class="vertical_centr Col_border">
+              <ion-icon name="md-remove" class="remove_add"></ion-icon>
+            </ion-col>
+            <ion-col col-2 class="vertical_centr Col_border">
+              <div>1</div>
+            </ion-col>
+            <ion-col col-2 class="vertical_centr Col_border">
+              <ion-icon name="md-add" class="remove_add"></ion-icon>
+            </ion-col>
+            <ion-col col-6 class="CartCol_btn">
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col col-1>
+          <div class="circle_close_div">
+            <ion-icon name="ios-close-circle-outline"></ion-icon>
+          </div>
+          <div class="forward_arrow_div">
+            <ion-icon name="ios-arrow-forward"></ion-icon>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-item> -->
+	<div class="address"><label><b>Address:</b> </label>{{address}}</div>
+	<div class="payment_type"><label><b>Payment type:</b> </label>{{payment_type_name}}</div>
+  </ion-list>
+</ion-content>
+<ion-footer class="footer_calss">
+  <div class="Item_subtotal">Item subtotal<span class="subtotal_span">${{TotalPrice}}</span></div>
+  <button ion-button full class="Checkout_div" (click)="CheckOut()">Confirm</button>
+</ion-footer>

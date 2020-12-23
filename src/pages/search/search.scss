@@ -1,0 +1,68 @@
+page-search {
+
+    .close_icon{ color: #ffffff; padding: 0 10px 0 0 !important; }
+    .header_color{background: #606c81;}
+    .back-button.show-back-button{display: none !important;}
+    .searchbar-md .searchbar-input, .searchbar-ios .searchbar-input{
+        padding: 8px 35px 2px 38px !important;
+        color: #06a7f7;
+        font-size: 18px;
+        background: transparent;
+        box-shadow: none;
+        border-bottom: 2px solid #06a7f7;
+        height: 42px !important;
+        border-radius: 0px;
+    }
+    .searchbar-md, .searchbar-ios{
+        background: #606c81 !important;
+        padding: 0px 20px 10px;
+    }
+    .searchbar-md .searchbar-search-icon{ 
+        top: 12px; left: 5px;
+        color: #06a7f7 !important;
+        background-image: url('../assets/imgs/magnifying-glass.png');
+    }
+    .searchbar-ios .searchbar-search-icon{ 
+        top: 12px; left: 5px;
+        color: #06a7f7 !important;
+        background-image: url('../assets/imgs/magnifying-glass.png');
+        background-size: 20px;
+        width: 21px;
+        height: 21px;
+    }
+    .searchbar-md .searchbar-clear-icon, .searchbar-ios .searchbar-clear-icon{
+        right: 5px;
+        background-image: url('../assets/imgs/close-searce.png');
+        background-size: 15px;
+    }
+    .col{padding: 0px;}
+    .item-md.item-block .item-inner{padding: 0px;}
+    .item-md{padding: 0px 20px; background: transparent;}
+    .label-md{margin: 0px;}
+    .item-ios.item-block .item-inner{padding: 0px;}
+    .item-ios{padding: 0px 20px; background: transparent;}
+    .label-ios{margin: 0px;}
+    .border_row{border-bottom: 2px solid #4b5d8a; padding: 14px 0px 6px;}
+    .fild_name{
+        color: #ebebeb;
+        letter-spacing: 0.5px;
+        text-align: left;
+    }
+    .Logo_image{
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: #e6e4e4;
+        padding: 3px;
+    }
+    .segment-md .segment-button{
+        color: #000000;
+        font-size: 16px !important;
+        text-transform: none;
+        opacity: 0.6;
+    }
+    .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated{
+        border-color: #000000;
+        opacity: 1;
+    }
+}

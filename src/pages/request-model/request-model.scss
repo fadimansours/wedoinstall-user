@@ -1,0 +1,148 @@
+page-request-model {
+    .label-md{margin: 0px;}
+    .item-md.item-block .item-inner{padding: 0px;}
+    .item-md{padding: 0px;}
+    .label-ios{margin: 0px;}
+    .item-ios.item-block .item-inner{padding: 0px;}
+    .item-ios{padding: 0px;}
+    .list-ios > .item-block:first-child{border-top: 0px;}
+    .item-block{min-height: 2rem;}
+    .col{padding: 0px;}
+    .content_back{
+        background: rgba(0, 0, 0, 0.6);
+    }
+    .Itetn_class{
+        background: transparent;
+    }
+    .Main_card{
+        border-radius: 5px;
+        margin: 25px auto 0;
+        width: calc(100% - 30px);
+    }
+    .Close_icon{
+        position: absolute;
+        right: 28px;
+        top: 28px;
+        font-size: 22px;
+    }
+    .Requested_div{
+        font-size: 13px;
+        font-weight: 500;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .Main_line_div{
+        padding: 10px 15px;
+    }
+    .logo_imames{
+        width: 28px;
+        height: 28px;
+        padding: 5px;
+        border-radius: 50%;
+        background: #029eff;
+    }
+    .logo_imames_hand{
+        width: 28px;
+        height: 28px;
+        padding: 5px;
+        border-radius: 50%;
+        background: #bdbdbd;
+    }
+    .Lineclss{
+        border-top: 2px solid #bdbdbd;
+        padding: 0 14px 0;
+    }
+    .Requested_span{
+        font-size: 10px;
+        font-weight: 400;
+        color: #029eff;
+    }
+    .Accepted_span{
+        font-size: 10px;
+        font-weight: 400;
+        color: #bdbdbd;
+    }
+    .spaceclss{
+        // border-top: 2px solid #bdbdbd;
+        padding: 0 6px 0;
+    }
+    .Row_back{
+        background: #f3f3f3;
+        margin-top: 10px;
+    }
+    .makelocation_img{
+        width: 100%;
+        height: 100px;
+        opacity: 0.7;
+    }
+    .Your_mgs{
+        margin-top: 20px;
+    }
+    .RigtArrow_img{
+        background: #3cb442;
+        border-radius: 50%;
+        padding: 5px;
+        width: 24px;
+        height: 24px;
+    }
+    .Youre_done{
+        font-size: 17px;
+        font-weight: 600;
+        padding: 0 5px;
+        letter-spacing: 0.4px;
+    }
+    .notifiying_nearby{
+        font-size: 11px;
+        font-weight: 500;
+        padding: 10px 0 0 0;
+        letter-spacing: 0.4px;
+    }
+    .requwstimg_div{
+        text-align: center;
+        margin: 10px auto 10px;
+    }
+    .Main_todaydiv{
+       padding: 5px 50px;
+    }
+    .Want_tosave{
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+    }
+    .Facebook_friends{
+        font-size: 13px;
+        text-align: center;
+        font-weight: 400;
+        color: #727272a6;
+        padding: 8px 0 0 0;
+    }
+    .Facebook_btn{
+        background: #476ea7;
+        color: #ffffff;
+        border-radius: 50px;
+        box-shadow: none;
+        font-weight: 300;
+        text-transform: none;
+        letter-spacing: 0.9px;
+        margin: 20px 0 0 0;
+        height: 37px !important;
+    }
+    .Facebok_logo{
+        padding: 0 5px;
+    }
+    .Close_lastDiv{
+        padding: 30px 15px 10px;
+    }
+    .close_btnlast{
+        color: #ffffff;
+        background: #5272df;
+        font-size: 13px !important;
+        text-transform: none;
+        border-radius: 50px;
+        font-weight: 300;
+        letter-spacing: 0.4px;
+        box-shadow: none;
+        height: 40px !important;
+    }
+
+}

@@ -1,0 +1,90 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Cart</ion-title>
+        <ion-buttons top right>
+            <button ion-button icon-only top>
+        <ion-icon name="md-cart" class="chatboxes_icon"></ion-icon>
+      </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list no-lines class="ListClass">
+        <ion-item class="Item_class" *ngFor="let item of cartList">
+            <ion-row>
+                <ion-col col-3 class="vertical_centr">
+                    <img src="{{config.imgs}}{{item.image1}}" class="imag_class" />
+                </ion-col>
+                <ion-col col-8 class="Col_8_padd">
+                    <div text-wrap class="Pruduct_name">{{item.productName}}</div>
+                    <!--<div class="Pruduct_price" *ngIf="item.disposal == '1'">With disposal ${{item.disposal_amount * item.qty}}</div>
+		  <div class="Pruduct_price" *ngIf="item.with_installation == '1'">With Installation ${{item.price_with_installation * item.qty}}</div>	-->
+                    <div class="Pruduct_price">${{item.totalPrice * item.quantity}}</div>
+                    <ion-row>
+                        <ion-col col-2 class="vertical_centr Col_border" *ngIf="item.quantity>1">
+                            <ion-icon name="md-remove" class="remove_add" (click)="decreaseQty(item)"></ion-icon>
+                        </ion-col>
+                        <ion-col col-2 class="vertical_centr Col_border">
+                            <div>{{item.quantity}}</div>
+                        </ion-col>
+                        <ion-col col-2 class="vertical_centr Col_border" *ngIf="item.availableQuantity>item.quantity">
+                            <ion-icon name="md-add" class="remove_add" (click)="increaseQty(item)"></ion-icon>
+                        </ion-col>
+                        <ion-col col-6 class="CartCol_btn"> </ion-col>
+                    </ion-row>
+                </ion-col>
+                <ion-col col-1>
+                    <div class="circle_close_div">
+                        <ion-icon name="ios-close-circle-outline" (click)="removeProduct(item)"></ion-icon>
+                    </div>
+                    <!-- <div class="forward_arrow_div">
+                        <ion-icon name="ios-arrow-forward"></ion-icon>
+                    </div> -->
+                </ion-col>
+            </ion-row>
+        </ion-item>
+
+        <!-- <ion-item class="Item_class">
+      <ion-row>
+        <ion-col col-3 class="vertical_centr">
+          <img src="assets/imgs/pipe.jpg" class="imag_class">
+        </ion-col>
+        <ion-col col-8 class="Col_8_padd">
+          <div text-wrap class="Pruduct_name">ABS PIPE 3 inches x 6 ft CELL CORE</div>
+          <div class="Pruduct_price">$27.17</div>
+          <ion-row>
+            <ion-col col-2 class="vertical_centr Col_border">
+              <ion-icon name="md-remove" class="remove_add"></ion-icon>
+            </ion-col>
+            <ion-col col-2 class="vertical_centr Col_border">
+              <div>1</div>
+            </ion-col>
+            <ion-col col-2 class="vertical_centr Col_border">
+              <ion-icon name="md-add" class="remove_add"></ion-icon>
+            </ion-col>
+            <ion-col col-6 class="CartCol_btn">
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col col-1>
+          <div class="circle_close_div">
+            <ion-icon name="ios-close-circle-outline"></ion-icon>
+          </div>
+          <div class="forward_arrow_div">
+            <ion-icon name="ios-arrow-forward"></ion-icon>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-item> -->
+    </ion-list>
+</ion-content>
+
+<ion-footer class="footer_calss">
+    <div class="Item_subtotal">
+        Item subtotal<span class="subtotal_span">${{totalPrice}}</span>
+    </div>
+    <button ion-button full class="Checkout_div" (click)="CheckOut()">
+    Checkout
+  </button>
+</ion-footer>

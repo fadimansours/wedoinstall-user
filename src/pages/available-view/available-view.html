@@ -1,0 +1,146 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Points</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="main_cntaint">
+  <ion-list no-lines>
+    <ion-item style="background: transparent;">
+      <div class="Cover_back"></div>
+      <div class="Covar_white"></div>
+      <ion-card class="Prifile_card">
+        <div class="YourPoint_div">YOUR POINTS</div>
+        <div class="Pont_row_div">
+          <ion-row>
+            <ion-col col-5>
+              <img src="assets/imgs/pointlogo.png" class="Ponit_logo">
+            </ion-col>
+            <ion-col col-7>
+              <div class="Total_point">{{config.UserPoint}}</div>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-card>
+    </ion-item>
+    <ion-item style="background: transparent;">
+      <ion-card class="Redeem_card">
+        <div class="redeemPoint_div">REDEEM POINTS</div>
+        <div>
+          <ion-row>
+            <ion-col col-2 no-padding>
+              <img src="assets/imgs/pointlogo.png" class="Point_img">
+            </ion-col>
+            <ion-col col-6 no-padding>
+              <div class="Redeem_div dotdot">Redeem 300 points for..</div>
+              <div class="Ponit_count">{{config.UserPoint}}/300 pts</div>
+            </ion-col>
+            <ion-col col-4 no-padding>
+              <button ion-button clear class="Redeem_btn">Redeem</button>
+            </ion-col>
+          </ion-row>
+        </div>
+        <ion-item no-lines class="range_item">
+          <ion-range min="0" max="300" [(ngModel)]="saturation" readonly="true" color="secondary">
+          </ion-range>
+        </ion-item>
+        <div class="Learn_point" (click)="LearnMore()">Learn more about points</div>
+      </ion-card>
+    </ion-item>
+
+    <ion-item style="background: transparent;">
+      <div class="Points_div">POINT STREAKS</div>
+      <div class="scrollmenu">
+        <table>
+          <tr>
+            <td *ngFor="let strk of StreakList">
+              <div class="position_div">
+                <ion-card class="ion_crd" (click)="RescueStreak()">
+                  <img src="assets/imgs/handyman.jpg" class="menuslide_image">
+                  <div class="slide_detail_div">
+                    <ion-row>
+                      <ion-col col-3>
+                        <div class="Upto_div">Up to <br><span class="Upto_span">{{strk.point}}x</span></div>
+                      </ion-col>
+                      <ion-col col-9>
+                        <div class="Ends_div">Ends: <span class="Ends_span">{{strk.end_date}}</span></div>
+                        <div class="Ends_div">Next job earn: <span class="Ends_span">x1</span></div>
+                      </ion-col>
+                    </ion-row>
+                  </div>
+                  <div class="ImgeWithDiv">
+                    <ion-row>
+                      <ion-col col-3 no-padding>
+                        <img src="assets/imgs/pointlogo.png" class="Divwith_logo">
+                      </ion-col>
+                      <ion-col col-8 no-padding>
+                        <div class="Home_name_div">Home</div>
+                      </ion-col>
+                    </ion-row>
+                  </div>
+                </ion-card>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </ion-item>
+
+    <ion-item style="background: transparent;">
+      <ion-card class="Redeem_card">
+        <div class="EarnPoint_div">EARN POINTS</div>
+        <div>
+          <ion-row class="Invite_row">
+            <ion-col col-9 no-padding>
+              <div text-wrap class="Invite_div">Invite friends to Tradesglobe</div>
+            </ion-col>
+            <ion-col col-3 no-padding>
+              <div class="Invite_Points">75 pts</div>
+            </ion-col>
+          </ion-row>
+          <!-- <ion-row class="Invite_row">
+            <ion-col col-9 no-padding>
+              <div text-wrap class="Invite_div">
+                For every $100 spent on a tradesglobeinc. job
+              </div>
+            </ion-col>
+            <ion-col col-3 no-padding>
+              <div class="Invite_Points">75 pts</div>
+            </ion-col>
+          </ion-row> -->
+        </div>
+      </ion-card>
+    </ion-item>
+
+    <!-- <ion-item style="background: transparent;">
+      <ion-card class="Redeem_card">
+        <div class="EarnPoint_div">HISTORY</div>
+        <div>
+          <ion-row class="Invite_row">
+            <ion-col col-9 no-padding>
+              <div text-wrap class="Invite_div">Add a subscription for the first time<span
+                  class="FirstDate_span">2018-12-24</span>
+              </div>
+            </ion-col>
+            <ion-col col-3 no-padding>
+              <div class="First_Points">+150 pts</div>
+            </ion-col>
+          </ion-row>
+          <ion-row class="Invite_row">
+            <ion-col col-9 no-padding>
+              <div text-wrap class="Invite_div">
+                Add an address for the first time <span class="FirstDate_span">2017-05-18</span>
+              </div>
+            </ion-col>
+            <ion-col col-3 no-padding>
+              <div class="First_Points">+100 pts</div>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-card>
+    </ion-item> -->
+  </ion-list>
+  <ion-fab bottom end>
+    <button ion-fab mini (click)="AdminChat()"><img src="assets/imgs/fablogo.png"></button>
+  </ion-fab>
+</ion-content>

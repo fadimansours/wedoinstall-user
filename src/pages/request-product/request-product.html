@@ -1,0 +1,382 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Request Job</ion-title>
+        <!-- <div class="Search_name">{{CatogoryName}}</div> -->
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="main_cntaint">
+    <ion-list no-lines>
+        <ion-slides autoplay="5000" loop="true" speed="500">
+            <ion-slide *ngFor="let item of cartList" class="slide_item">
+                <div class="slide_div">
+                    <img *ngIf="item.image1" src="{{config.imgs}}{{item.image1}}" width="100%" height="150px" class="Image_show" />
+                    <img *ngIf="!item.image1" src="../assets/imgs/banner1.jpg" width="100%" height="150px" class="Image_show" />
+
+                    <ion-card class="Main_card">
+                        <div class="main_div">
+                            <div class="padd_card_div">
+                                <ion-row class="border_row">
+                                    <ion-col col-12>
+                                        <div text-wrap class="fild_name">{{item.productName}}</div>
+                                    </ion-col>
+                                </ion-row>
+                                <!--   <div class="Paddings_div">
+                                    <div class="Price_quote">
+                                        {{"Price"}}
+                                        <span class="CurrentPrice">$ {{item.productPrice}}</span>
+                                    </div>
+
+                                    <div class="Price_quote">
+                                        {{"Quantity"}}
+                                        <span class="CurrentPrice"> {{item.quantity}}</span>
+                                    </div>
+                                </div> -->
+
+                                <div class="price_div">
+                                    <ion-row>
+                                        <ion-col col-6>product Price</ion-col>
+                                        <ion-col col-6> ${{item.initialPrice}}</ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col col-6>final unit Price</ion-col>
+                                        <ion-col col-6> ${{item.totalPrice}}</ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col col-6>Quantity</ion-col>
+                                        <ion-col col-6>{{item.quantity}}</ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col col-6>Total Price</ion-col>
+                                        <ion-col col-6>{{item.totalPrice*item.quantity}}</ion-col>
+                                    </ion-row>
+                                </div>
+
+                                <div style="padding: 5px 30px">
+                                    <ion-item class="bg-transparent optionItem">
+                                        <ion-label>With Installation +${{item.installationCharge}}
+                                        </ion-label>
+                                        <ion-checkbox item-right (ionChange)="getUnitPrice(item)" [(ngModel)]="item.withInstallation"></ion-checkbox>
+                                    </ion-item>
+                                    <ion-item class="bg-transparent optionItem">
+                                        <ion-label>With Disposal +${{item.disposalCharge}}</ion-label>
+                                        <ion-checkbox item-right (ionChange)="getUnitPrice(item)" [(ngModel)]="item.withDisposal"></ion-checkbox>
+                                    </ion-item>
+                                    <ion-item class="bg-transparent optionItem">
+                                        <ion-label>With Delivery +${{item.deliveryCharge}}</ion-label>
+                                        <ion-checkbox item-right (ionChange)="getUnitPrice(item)" [(ngModel)]="item.withDelivery"></ion-checkbox>
+                                    </ion-item>
+                                </div>
+
+                                <div text-wrap class="Detail_card_div">
+                                    {{item.ProductDescription}}
+                                </div>
+                            </div>
+                            <div text-wrap class="After_Hour">
+                                After Hour Rate (Evening, Weekends & Holidays)
+                                <span class="Holidays_span">1.5x</span>
+                            </div>
+                        </div>
+                    </ion-card>
+                </div>
+            </ion-slide>
+        </ion-slides>
+    </ion-list>
+
+    <ion-list no-lines style="margin-top: 20px">
+        <ion-item class="First_item">
+            <!-- <div class="Transperntdiv"></div> -->
+
+            <div class="quition_div">WHERE DO YOU NEED A TRADESGLOBE?</div>
+
+            <ion-row class="Datbottom_row" *ngIf="!address" (click)="AddressSelect()">
+                <ion-col col-1 text-center>
+                    <ion-icon name="md-add" class="Add_icon"></ion-icon>
+                </ion-col>
+                <ion-col col-11 class="vertical_centrC">
+                    <div class="available_date">Add available Address</div>
+                </ion-col>
+            </ion-row>
+
+            <div class="Paddind_div" *ngIf="address">
+                <ion-row class="Selected_row Select_padd">
+                    <ion-col col-1>
+                        <ion-icon name="md-navigate" class="navigate_icon"></ion-icon>
+                    </ion-col>
+                    <ion-col col-10 class="vertical_centrC">
+                        <div class="Selected_Addres dotdot">{{address}}</div>
+                    </ion-col>
+                    <ion-col col-1 (click)="AddressSelect()">
+                        <ion-icon name="create" class="Icon_date_cale"></ion-icon>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+            <div class="quition_main">
+                <div class="quition_div">
+                    WHEN SHOULD WE SEND SOMEONE?
+                    <span class="last_color">({{DateLangh}}/3)</span>
+                </div>
+
+                <ion-row class="Datbottom_row" *ngIf="alldate.length == 0" (click)="SelectTimeDate('1')">
+                    <ion-col col-1 text-center>
+                        <ion-icon name="md-add" class="Add_icon"></ion-icon>
+                    </ion-col>
+                    <ion-col col-11 class="vertical_centrC">
+                        <div class="available_date">Add available date</div>
+                    </ion-col>
+                </ion-row>
+
+                <div class="Paddind_div" *ngIf="alldate[0]">
+                    <ion-row class="Selected_row">
+                        <ion-col col-1>
+                            <ion-icon name="md-calendar" class="Icon_date_cale"></ion-icon>
+                        </ion-col>
+                        <ion-col col-10 class="vertical_centrC">
+                            <div class="Selected_date">{{alldate[0]}} ({{Times[0]}})</div>
+                        </ion-col>
+                        <ion-col col-1 (click)="DateDelet('1')">
+                            <ion-icon name="close-circle" class="Icon_date_cale"></ion-icon>
+                        </ion-col>
+                    </ion-row>
+                </div>
+
+                <ion-row class="Datbottom_row" *ngIf="alldate.length == 1" (click)="SelectTimeDate('2')">
+                    <ion-col col-1 text-center>
+                        <ion-icon name="md-add" class="Add_icon"></ion-icon>
+                    </ion-col>
+                    <ion-col col-11 class="vertical_centrC">
+                        <div class="available_date">Add available date</div>
+                    </ion-col>
+                </ion-row>
+
+                <div class="Paddind_div" *ngIf="alldate[1]">
+                    <ion-row class="Selected_row">
+                        <ion-col col-1>
+                            <ion-icon name="md-calendar" class="Icon_date_cale"></ion-icon>
+                        </ion-col>
+                        <ion-col col-10 class="vertical_centrC">
+                            <div class="Selected_date">{{alldate[1]}} ({{Times[1]}})</div>
+                        </ion-col>
+                        <ion-col col-1 (click)="DateDelet('2')">
+                            <ion-icon name="close-circle" class="Icon_date_cale"></ion-icon>
+                        </ion-col>
+                    </ion-row>
+                </div>
+
+                <ion-row class="Datbottom_row" *ngIf="alldate.length == 2" (click)="SelectTimeDate('3')">
+                    <ion-col col-1 text-center>
+                        <ion-icon name="md-add" class="Add_icon"></ion-icon>
+                    </ion-col>
+                    <ion-col col-11 class="vertical_centrC">
+                        <div class="available_date">Add available date</div>
+                    </ion-col>
+                </ion-row>
+
+                <div class="Paddind_div" *ngIf="alldate[2]">
+                    <ion-row class="Selected_row">
+                        <ion-col col-1>
+                            <ion-icon name="md-calendar" class="Icon_date_cale"></ion-icon>
+                        </ion-col>
+                        <ion-col col-10 class="vertical_centrC">
+                            <div class="Selected_date">{{alldate[2]}} ({{Times[2]}})</div>
+                        </ion-col>
+                        <ion-col col-1 (click)="DateDelet('3')">
+                            <ion-icon name="close-circle" class="Icon_date_cale"></ion-icon>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </div>
+
+            <div class="quition_main">
+                <div class="quition_div">WHAT DO YOU NEED TO BE DONE?</div>
+                <ion-item class="Input_item">
+                    <textarea rows="6" [(ngModel)]="description" placeholder="give us a brief description of the job that needs to be completed"></textarea>
+                </ion-item>
+            </div>
+
+            <div class="quition_div">Add Photo</div>
+            <ion-row>
+                <ion-col col-6>
+                    <div class="atteche_div" (click)="Attechfile('img1')">
+                        <img *ngIf="!imageUrl1" src="assets/imgs/attechfile.png" />
+                        <img *ngIf="imageUrl1" src="{{config.url}}{{imageUrl1}}" class="Upload_medea" #myImage (click)="presentImage(myImage)" />
+                    </div>
+                </ion-col>
+                <ion-col col-6>
+                    <div class="atteche_div" (click)="Attechfile('img2')">
+                        <img *ngIf="!imageUrl2" src="assets/imgs/attechfile.png" />
+                        <img *ngIf="imageUrl2" src="{{config.url}}{{imageUrl2}}" class="Upload_medea" #myImage (click)="presentImage(myImage)" />
+                    </div>
+                </ion-col>
+            </ion-row>
+
+            <div class="quition_div">Add Video</div>
+            <ion-row>
+                <ion-col col-6>
+                    <div class="atteche_div" (click)="VideoUplod('vdo1')">
+                        <img *ngIf="!videoUrl1" src="assets/imgs/attechfile.png" />
+                        <video *ngIf="videoUrl1" controls="controls" preload="metadata" webkit-playsinline="webkit-playsinline" class="Upload_medea">
+              <source src="{{config.url}}{{videoUrl1}}" type="video/mp4" />
+            </video>
+                    </div>
+                </ion-col>
+                <ion-col col-6>
+                    <div class="atteche_div" (click)="VideoUplod('vdo2')">
+                        <img *ngIf="!videoUrl2" src="assets/imgs/attechfile.png" />
+                        <video *ngIf="videoUrl2" controls="controls" preload="metadata" webkit-playsinline="webkit-playsinline" class="Upload_medea">
+              <source src="{{config.url}}{{videoUrl2}}" type="video/mp4" />
+            </video>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-item>
+
+        <!--   <ion-item
+      *ngIf="!this.isFlash && !isStreak && !isPackage"
+      class="First_item item_border"
+    >
+      <ion-item class="item_trans">
+        <div item-start class="quition_div">REDEEM YOUR POINTS?</div>
+        <div item-end>
+          {{this.creditService.getPoints()}}
+          <ion-icon name="logo-codepen" small class="Point_logo_div"></ion-icon>
+        </div>
+      </ion-item>
+      <ion-row class="row-border">
+        <ion-col col-3 class="no-padding col-border">
+          <div
+            (click)="pointSection1(300,5)"
+            [ngClass]="(selectedPointSec1) ? 'Select_point_div' : 'point_div'"
+          >
+            $5
+            <br />
+            <span
+              >300<ion-icon
+                name="logo-codepen"
+                small
+                class="Point_logo_div"
+              ></ion-icon>
+            </span>
+          </div>
+        </ion-col>
+        <ion-col col-3 class="no-padding">
+          <div
+            (click)="pointSection2(500,10)"
+            [ngClass]="(selectedPointSec2) ? 'Select_point_div' : 'point_div'"
+          >
+            $10
+            <br />
+            <span
+              >500<ion-icon
+                name="logo-codepen"
+                small
+                class="Point_logo_div"
+              ></ion-icon>
+            </span>
+          </div>
+        </ion-col>
+        <ion-col col-3 class="no-padding">
+          <div
+            (click)="pointSection3(700,15)"
+            [ngClass]="(selectedPointSec3) ? 'Select_point_div' : 'point_div'"
+          >
+            $15
+            <br />
+            <span
+              >700<ion-icon
+                name="logo-codepen"
+                small
+                class="Point_logo_div"
+              ></ion-icon>
+            </span>
+          </div>
+        </ion-col>
+        <ion-col col-3 class="no-padding col-border">
+          <div
+            (click)="pointSection4(900,20)"
+            [ngClass]="(selectedPointSec4) ? 'Select_point_div' : 'point_div'"
+          >
+            $20
+            <br />
+            <div>
+              900
+              <ion-icon
+                name="logo-codepen"
+                small
+                class="Point_logo_div"
+              ></ion-icon>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item
+      *ngIf="!this.isFlash && !isStreak && !isPackage"
+      style="margin-top: 15px"
+      class="First_item"
+    >
+      <ion-icon class="icon-gold" item-start name="ios-cash"></ion-icon>
+      <ion-label
+        style="margin-left: 10px"
+        *ngIf="!this.couponName"
+        (click)="showInputCoupon()"
+        >Add Coupon</ion-label
+      >
+      <ion-label style="margin-left: 10px" *ngIf="this.couponName"
+        >{{this.couponName}}</ion-label
+      >
+      <ion-icon
+        *ngIf="!this.couponValue"
+        item-end
+        [name]="this.showInputCouponBox?'md-remove':'md-add'"
+        (click)="showInputCoupon()"
+      ></ion-icon>
+      <div
+        *ngIf="this.couponValue"
+        style="color: rgba(255, 217, 0, 0.952)"
+        item-end
+      >
+        <ion-icon class="icon-gold" name="logo-usd"></ion-icon>
+        <span style="font-size: 18px; font-weight: 600"
+          >{{this.couponValue}}</span
+        >
+      </div>
+    </ion-item>
+    <ion-item
+      class="First_item"
+      *ngIf="(this.showInputCouponBox && !this.couponName) && !this.isFlash && !isStreak && !isPackage"
+    >
+      <div class="quition_div" style="margin-top: 10px">HAVE A PROMO CODE?</div>
+      <ion-row>
+        <div class="Coupon_cod_d">
+          <ion-row class="CuPon_row">
+            <ion-col col-1 no-padding>
+              <img src="assets/imgs/tickets.png" class="coupon_img" />
+            </ion-col>
+            <ion-col col-9 no-padding>
+              <input
+                placeholder="Enter a promo code"
+                class="Code_input"
+                [(ngModel)]="couponCode"
+              />
+            </ion-col>
+            <ion-col col-2 no-padding>
+              <div class="add_div" (click)="addCoupon()">ADD</div>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-row>
+      <div class="Discount_div">
+        *Only one coupon is valid per job.<br />Discount is not applied unitl
+        the job has been booked
+      </div>
+    </ion-item>
+ -->
+    </ion-list>
+</ion-content>
+<ion-footer class="Footer_padd">
+    <button ion-button full class="Request_btn" (click)="Continue()">
+    Request a Job
+  </button>
+</ion-footer>

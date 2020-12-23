@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Seasonal</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="main_cntaint">
+    <ion-row>
+        <ion-col col-5 class="Detail_col">
+            <div class="Getting_div">Getting ready for the season? Let us help.</div>
+            <div class="recommended_div">
+                We recommended a list od Tradesglobe Services to make sure your house is in tip top shape.
+            </div>
+        </ion-col>
+        <ion-col col-7 no-padding>
+            <img src="assets/imgs/teapaper.jpg" class="teapaper_img" />
+        </ion-col>
+    </ion-row>
+
+    <ion-row class="Seasonal_row">
+        <ion-col col-6 class="Seasonal_col" *ngFor="let seson of SeasonalList; let i = index">
+            <ion-card class="ion_crd_seasonal">
+                <img src="{{config.imgs}}{{seson.picture}}" class="seasonal_image" />
+                <div class="slide_detail_div">
+                    <div class="recipe_name dotdot">{{seson.name}}</div>
+                    <br />
+                    <button ion-button clear class="booknow_btn" (click)="BookSeason(i)">
+            Book Now
+          </button>
+                </div>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+
+    <ion-fab bottom end>
+        <button ion-fab mini (click)="AdminChat()">
+      <img src="assets/imgs/fablogo.png" />
+    </button>
+    </ion-fab>
+</ion-content>

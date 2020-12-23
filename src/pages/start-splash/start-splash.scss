@@ -1,0 +1,96 @@
+page-start-splash {
+
+    .First_slide{
+        // background: linear-gradient(rgba(20,20,20, .5), rgba(20,20,20, .5)), url("../assets/imgs/slide1.jpg") !important;
+        background-image: url("../assets/imgs/slide2.jpg") !important;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .Second_slide{
+        // background: linear-gradient(rgba(20,20,20, .5), rgba(20,20,20, .5)), url("../assets/imgs/slide1.jpg") !important;
+        background-image: url("../assets/imgs/slide3.jpg") !important;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .Third_slide{
+        // background: linear-gradient(rgba(20,20,20, .5), rgba(20,20,20, .5)), url("../assets/imgs/slide1.jpg") !important;
+        background-image: url("../assets/imgs/slide4.jpg") !important;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .Four_slide{
+        // background: linear-gradient(rgba(20,20,20, .5), rgba(20,20,20, .5)), url("../assets/imgs/slide1.jpg") !important;
+        background-image: url("../assets/imgs/slide1.jpg") !important;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    // .img-container { background-color: #000000; }
+    // .img-container img { opacity: 0.5; }
+
+    .slide_header_div{
+        font-size: 20px;
+        font-weight: 600;
+        color: #fff;
+        padding: 10px 30px;
+    }
+
+    .slide_detail_div{
+        font-size: 14px;
+        color: #fff;
+        padding: 10px 40px;
+    }
+
+    .Title_div{
+        font-size: 40px;
+        font-weight: 500;
+        position: absolute;
+        top: 10%;
+        text-align: center;
+        z-index: 99999;
+        width: 100%;
+        color: #fff;
+    }
+
+    .Button_div{
+        position: absolute;
+        bottom: 3%;
+        width: 100%;
+        padding: 0 40px;
+        z-index: 99999;
+    }
+
+    .Login_btn{
+        background: #0fc7ff;
+        color: #fff;
+        font-size: 16px !important;
+        height: 45px !important;
+        text-transform: none;
+        border-radius: 40px;
+        box-shadow: none;
+        margin: 0px 0 20px;
+    }
+    .Sign_btn{
+        background: #fff;
+        color: #0fc7ff;
+        font-size: 16px !important;
+        height: 45px !important;
+        text-transform: none;
+        border-radius: 40px;
+        box-shadow: none;
+    }
+
+    .Skip_now{
+        color: #fff;
+        text-align: center;
+        font-size: 17px;
+        margin-top: 25px;
+        padding: 10px 0;
+    }
+}

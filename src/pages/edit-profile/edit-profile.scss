@@ -1,0 +1,29 @@
+page-edit-profile {
+    .toolbar-title-md{color: #fff;}
+    .toolbar-title-ios{color: #fff;}
+    .Edit_input{
+        background: #fff;
+        border: 0px;
+        width: 90%;
+        padding: 8px 2px;
+        margin: auto;
+        display: table;
+    }
+    .First_name{
+        font-size: 14px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        padding: 0px 0px 15px;
+    }
+
+    .Saveprofile{
+        margin: auto;
+        display: table;
+        background: #5371df;
+        color: #fff;
+        border-radius: 50px;
+        width: 70%;
+        height: 45px !important;
+        margin-bottom: 30px;
+    }
+}

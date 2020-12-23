@@ -1,0 +1,152 @@
+<ion-content class="Rescld_content">
+    <ion-card class="Resedul_card">
+        <ion-row class="top-row">
+            <ion-col col-12 no-padding>
+                <div class="thanks_rating_div">
+                    PLEASE SELECT THE CREDIT TO BE ADDED TO BILL
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <div style="background-color: #b1b1b1 !important">
+            <div>
+                <ion-row class="Pont_row">
+                    <ion-col col-6>
+                        <button (click)="toggleOption2()" ion-button full [ngClass]="(this.creditOption2)?'selected_point_btn':'Point_btn'">
+              Points
+              <ion-icon name="logo-codepen" class="Point_logo"></ion-icon>
+              <span class="Paint_span">
+                {{this.creditService.getPoints()-this.pointsValue }}</span
+              >
+            </button>
+                    </ion-col>
+                    <ion-col col-6>
+                        <button (click)="toggleOption1()" [ngClass]="(this.creditOption1)?'selected_point_btn':'Point_btn'" ion-button full>
+              Credit <ion-icon name="logo-usd" class="Credit_logo"></ion-icon>
+              <span class="Credit_span">
+                {{this.creditService.getCredit()-this.creditValue }}</span
+              >
+            </button>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+            <ion-item *ngIf="this.creditOption1" style="background: transparent !important" class="range-item">
+                <ion-range no-padding [(ngModel)]="creditValue" pin mode="md" pin="true" step="5" [min]="myRange.lower" [max]="myRange.upper">
+                    <ion-icon range-left small name="logo-usd">0</ion-icon>
+                    <ion-icon *ngIf="this.creditOption1" range-right small name="logo-usd">{{this.creditService.getCredit() }}</ion-icon>
+                </ion-range>
+            </ion-item>
+
+            <ion-item class="points-item" *ngIf="this.creditOption2">
+                <ion-row>
+                    <ion-col col-3>
+                        <div (click)="pointSection('1',300,5)" [ngClass]="(selectedPointSec == '1') ? 'Select_Hourly_div' : 'Hourly_div'">
+                            $5
+                            <br />
+                            <span>300<ion-icon
+                  name="logo-codepen"
+                  small
+                  class="Point_logo_div"
+                ></ion-icon>
+              </span>
+                        </div>
+                    </ion-col>
+                    <ion-col col-3>
+                        <div (click)="pointSection('2',500,10)" [ngClass]="(selectedPointSec == '2') ? 'Select_Hourly_div' : 'Hourly_div'">
+                            $10
+                            <br />
+                            <span>500<ion-icon
+                  name="logo-codepen"
+                  small
+                  class="Point_logo_div"
+                ></ion-icon>
+              </span>
+                        </div>
+                    </ion-col>
+                    <ion-col col-3>
+                        <div (click)="pointSection('3',700,15)" [ngClass]="(selectedPointSec == '3') ? 'Select_Hourly_div' : 'Hourly_div'">
+                            $15
+                            <br />
+                            <span>700<ion-icon
+                  name="logo-codepen"
+                  small
+                  class="Point_logo_div"
+                ></ion-icon>
+              </span>
+                        </div>
+                    </ion-col>
+                    <ion-col col-3>
+                        <div (click)="pointSection('4',900,20)" [ngClass]="(selectedPointSec == '4') ? 'Select_Hourly_div' : 'Hourly_div'">
+                            $20
+                            <br />
+                            <div>
+                                900
+                                <ion-icon name="logo-codepen" small class="Point_logo_div"></ion-icon>
+                            </div>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-item>
+
+            <!--    <ion-item *ngIf="this.creditOption1" style="background: transparent !important">
+                <ion-card class="Coupon_card">
+                    <div class="Coupon_cod_d">
+                        <ion-row class="CuPon_row">
+                            <ion-col col-1 no-padding>
+                                <img src="assets/imgs/tickets.png" class="coupon_img" />
+                            </ion-col>
+                            <ion-col col-9 no-padding>
+                                <input placeholder="Enter a promo code" class="Code_input" [(ngModel)]="couponcode" />
+                            </ion-col>
+                            <ion-col col-2 no-padding>
+                                <div class="add_div" (click)="addCoupon()">ADD</div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-card>
+            </ion-item> -->
+            <!--  <ion-list radio-group [(ngModel)]="pointsValue">
+                <ion-row>
+                    <ion-col col-3 class="points-col">
+                        <ion-item class="points-item">
+                            <div>$5</div>
+                            <ion-radio class="radio" [disabled]="this.config.UserPoint<30" value="3000"></ion-radio>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col col-3 class="points-col">
+                        <ion-item class="points-item">
+                            <div>$10</div>
+                            <ion-radio class="radio" [disabled]="this.config.UserPoint<50" value="5000">$10</ion-radio>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col col-3 class="points-col">
+                        <ion-item class="points-item">
+                            <div class="points-div">$15</div>
+                            <ion-radio class="radio" [disabled]="this.config.UserPoint<70" value="7000">$15</ion-radio>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col col-3 class="points-col">
+                        <ion-item class="points-item">
+                            <div class="points-div">$20</div>
+                            <ion-radio class="radio" (click)="selectPoint()" value="90" [disabled]="this.config.UserPoint<9000">
+                            </ion-radio>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+            </ion-list>
+ -->
+            <div style="padding: 10px !important">
+                <button ion-button full color="success" class="Reason_btn" [disabled]="this.creditValue<1 && this.pointsValue<1" (click)="Continue()">
+          apply to bill
+        </button>
+            </div>
+
+            <div style="padding: 10px !important">
+                <button ion-button outline color="danger" round class="close_btn" (click)="CloseModel()">
+          Close
+        </button>
+            </div>
+        </div>
+    </ion-card>
+</ion-content>

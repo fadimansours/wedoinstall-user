@@ -1,0 +1,54 @@
+page-learnmore-modal {
+
+    .Rescue_content{
+        background: rgba(0,0,0,0.7);
+    }
+    .Main_card{
+        margin-top: 15%;
+        height: 530px;
+    }
+    .Slide_padd{
+        padding: 20px;
+    }
+    .close_div{
+        // text-align: right;
+        padding: 0px 0px 10px;
+    }
+    .Page_1_of{
+        font-size: 16px;
+        font-weight: 500;
+        background: #eaeaea;
+        padding: 4px 0;
+        text-align: center;
+        border-radius: 50px;
+    }
+    .close_icon{
+        zoom: 1.2;
+    }
+    .Title_div{
+        text-align: center;
+        font-size: 23px;
+        font-weight: 500;
+        padding: 0 0 20px 0;
+    }
+    .Detail_div{
+        text-align: center;
+        font-size: 17px;
+        line-height: 1.4;
+        font-weight: 500;
+        color: #b3b3b3;
+    }
+    .Learn_img{
+        margin-top: 20px;
+    }
+    .WhatCan_btn{
+        background: #5371df;
+        color: #fff;
+        height: 45px !important;
+        text-transform: none;
+        margin: 0px;
+        font-size: 18px !important;
+        border-radius: 50px;
+    }
+
+}

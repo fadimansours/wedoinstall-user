@@ -1,0 +1,525 @@
+page-accept-detail {
+    .toolbar-title-md {
+        color: #ffffff;
+    }
+    .toolbar-title-ios {
+        color: #ffffff;
+    }
+    .label-md {
+        margin: 0px;
+    }
+    .item-md.item-block .item-inner {
+        padding: 0px;
+    }
+    .item-md {
+        padding: 0px;
+    }
+    .label-ios {
+        margin: 0px;
+    }
+    .item-ios.item-block .item-inner {
+        padding: 0px;
+    }
+    .item-ios {
+        padding: 0px;
+    }
+    .list-ios>.item-block:first-child {
+        border-top: 0px;
+    }
+    .item-block {
+        min-height: 2rem;
+    }
+    #map {
+        width: 100%;
+        height: 225px;
+        // position: unset !important;
+    }
+    .gm-style-mtc {
+        display: none;
+    }
+    .gm-svpc {
+        display: none;
+    }
+    button.gm-control-active.gm-fullscreen-control {
+        display: none !important;
+    }
+    .gm-style-cc {
+        display: none;
+    }
+    .List_padding {
+        padding: 20px 5px;
+    }
+    .Main_line_div {
+        padding: 10px 15px;
+        margin-bottom: 30px;
+    }
+    .logo_imames {
+        width: 28px;
+        height: 28px;
+        padding: 5px;
+        border-radius: 50%;
+        background: #029eff;
+    }
+    .job_accepted {
+        color: white;
+        font-weight: bold;
+    }
+    .logo_imames_hand {
+        width: 28px;
+        height: 28px;
+        padding: 5px;
+        border-radius: 50%;
+        background: #bdbdbd;
+    }
+    .logo_inames_completed {
+        width: 28px;
+        height: 28px;
+        padding: 5px;
+        border-radius: 50%;
+        background: #05c915;
+    }
+    .Lineclss {
+        width: 30px;
+        border-top: 2px solid #bdbdbd;
+        padding: 0 14px 0;
+    }
+    .LineclssSel {
+        width: 30px;
+        border-top: 2px solid #029eff;
+        padding: 0 14px 0;
+    }
+    .Requested_span {
+        font-size: 12px;
+        font-weight: 400;
+        color: #029eff;
+    }
+    .Accepted_span {
+        font-size: 10px;
+        font-weight: 400;
+        color: #bdbdbd;
+    }
+    .spaceclss {
+        // border-top: 2px solid #bdbdbd;
+        padding: 0 6px 0;
+    }
+    .main_row_div {
+        padding-right: 25px;
+        padding-bottom: 5px;
+    }
+    .Service_logoImg {
+        height: 27px;
+        width: 27px;
+        border-radius: 50%;
+        background: #dbdbdb;
+        padding: 3px;
+    }
+    .main_cat_logoImg {
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        background: #dbdbdb;
+        padding: 3px;
+    }
+    .subCat_name {
+        font-size: 13px;
+        padding: 0 0 0 8px;
+        font-weight: 500;
+    }
+    .mainCat_name {
+        font-size: 15px;
+        padding: 0 0 0 8px;
+        font-weight: 500;
+    }
+    .Completed_div_col {
+        background: #1cafdb;
+        color: #fff;
+        padding: 5px 0;
+        text-align: center;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 0.8px;
+        // margin: 0 0 0 8px;
+    }
+    .quition_div {
+        letter-spacing: 1px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .Name_div {
+        padding: 0px 0 0;
+    }
+    .Name_div_date {
+        padding: 25px 0 0;
+    }
+    .Name_span {
+        font-size: 12px;
+        padding: 0 0 0 8px;
+    }
+    .Address_span {
+        font-size: 12px;
+        padding: 0 0 0 8px;
+        color: #1cafdb;
+    }
+    .LastMap_icon {
+        width: 28px;
+        height: 28px;
+        zoom: 0.9;
+        border: 1px solid #1cafdb;
+        border-radius: 8px;
+        color: #1cafdb;
+        float: right;
+    }
+    .Followup_btn {
+        border: 1px solid #1cafdb;
+        border-radius: 50px;
+        text-transform: none;
+        font-size: 12px !important;
+        padding: 18px 0 !important;
+        margin: 25px 0 20px;
+        color: #1cafdb;
+    }
+    .Followup_btn_icon {
+        zoom: 1.2;
+        padding: 0 5px 0 0;
+    }
+    .calenter_icon {
+        font-size: 18px;
+    }
+    .Requst_time {
+        font-size: 13px;
+        padding: 0 0 0 0px;
+        font-weight: 500;
+    }
+    .Date_div {
+        font-size: 12px;
+        color: #000000;
+        padding: 3px 0 0px 0;
+    }
+    .Timing_constra {
+        font-size: 12px;
+        padding: 8px 0 10px 0;
+    }
+    .Message_btn {
+        text-transform: none;
+        color: #1cafdb;
+        border: 2px solid #1cafdb;
+        border-radius: 4px;
+        font-weight: 300;
+        letter-spacing: 0.6px;
+        font-size: 13px !important;
+        width: 95%;
+        margin: 5px auto 10px;
+    }
+    .Receipt_btn {
+        text-transform: none;
+        color: #ffffff;
+        background: #1cafdb;
+        border-radius: 4px;
+        font-weight: 300;
+        letter-spacing: 0.6px;
+        font-size: 13px !important;
+    }
+    .Complete_btn {
+        text-transform: none;
+        color: #ffffff;
+        background: #26cc50;
+        border-radius: 4px;
+        font-weight: 300;
+        letter-spacing: 0.6px;
+        font-size: 13px !important;
+    }
+    ion-footer {
+        box-shadow: 1px 8px 20px 2px #aaaaaa;
+    }
+    .Arrow_back_row {
+        position: absolute;
+        top: 20px;
+        width: 100%;
+    }
+    .Arrow_icon {
+        margin: auto;
+        display: table;
+        zoom: 1.5;
+    }
+    .Header_div {
+        color: #000000;
+        font-weight: 500;
+        font-size: 17px;
+    }
+    .Toronto_pin_icon {
+        padding: 0 8px 0 0;
+        zoom: 0.9;
+    }
+    .no-padding {
+        padding: 0px;
+    }
+    .Reschedule_btn {
+        border: 1px solid #537bd5;
+        color: #537bd5;
+        font-size: 12px !important;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        margin: 15px 0px;
+        text-transform: none;
+        height: 32px !important;
+        border-radius: 4px;
+    }
+    .create_btn_icon {
+        padding: 0 5px 0 0;
+    }
+    .Cancel_btn {
+        border: 1px solid #fa929d;
+        color: #fa929d;
+        font-size: 12px !important;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        margin: 10px 0px;
+        text-transform: none;
+        height: 32px !important;
+        border-radius: 4px;
+    }
+    .rate_btn {
+        color: #ffffff;
+        font-size: 12px !important;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        margin: 0px;
+        text-transform: none;
+        height: 32px !important;
+        border-radius: 4px;
+        margin-top: 15px;
+    }
+    .Upload_medea {
+        margin: 8px 0 0 0;
+        height: 160px;
+        width: 160px;
+        border-radius: 15px;
+        object-fit: cover;
+    }
+    .Div_back_color {
+        background: #2a3350;
+    }
+    .padd_card_div {
+        padding: 5px 20px;
+        background: #2a3350;
+    }
+    .fild_name {
+        padding: 0 0 0 8px;
+        color: #fff;
+        font-size: 14px;
+    }
+    .free_quote {
+        text-align: center;
+        font-size: 22px;
+        color: #fff;
+        padding: 10px 5px;
+    }
+    .Price_quote {
+        font-size: 13px;
+        color: #fff;
+        padding: 3px 0;
+    }
+    .CurrentPrice {
+        padding: 0 5px;
+        float: right;
+    }
+    .Job_Completed {
+        font-size: 12px;
+        font-weight: 400;
+        color: #888888;
+    }
+    .providerName {
+        font-size: 14px;
+        font-weight: 500;
+        color: #888888;
+    }
+    .ServiceUsNm_div {
+        font-size: 14px;
+        padding: 5px 0 0;
+        font-weight: 400;
+    }
+    .pw_star {
+        color: #8f8f8f;
+        font-size: 14px;
+        min-height: 3.4rem;
+    }
+    .total_rating {
+        font-size: 14px !important;
+        color: #000000;
+    }
+    .Profile_img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+    }
+    .Profile_img_top {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .Row_div {
+        padding: 0px 10px 0px;
+    }
+    .Row_borders {
+        border-bottom: 1px solid #dbdbdb;
+    }
+    .Div_Padd_msg {
+        padding: 15px 50px;
+        border: 1px solid #776ef1;
+    }
+    .Message_YourImage {
+        width: 34px;
+        height: 24px;
+        padding: 0 5px;
+        color: #5272df;
+    }
+    .Message_Your {
+        font-size: 13px;
+        color: #5272df;
+        font-weight: 500;
+    }
+    .call_YourImage {
+        font-size: 20px;
+        padding: 0 5px;
+        color: #5272df;
+    }
+    .facebook_div {
+        padding: 5px 10px;
+    }
+    .facebook_logo {
+        padding: 0 8px 0 0;
+    }
+    .facebook_btn {
+        text-transform: none;
+        font-size: 14px !important;
+        height: 38px !important;
+        border-radius: 50px;
+        box-shadow: none;
+        background: #5272df;
+    }
+    .Detail_divBack {
+        background: #e9e9e9;
+        font-size: 12px;
+        color: #000000;
+        text-align: center;
+        padding: 8px 0;
+        font-weight: 500;
+        letter-spacing: 0.9px;
+    }
+    .grandTotal_div {
+        background: #72ce8f;
+        font-size: 12px;
+        color: #000000;
+        text-align: center;
+        padding: 8px 0;
+        font-weight: 500;
+        letter-spacing: 0.9px;
+        overflow: hidden;
+    }
+    .grand_total_left_span {
+        padding: 0 8px;
+        float: left;
+    }
+    .grand_total_right_span {
+        padding-right: 8px;
+        float: right;
+    }
+    .Item_classpad {
+        padding: 15px 15px;
+        border-bottom: 1px solid #ebebeb;
+    }
+    .strike-through {
+        text-decoration: line-through;
+        text-decoration-color: red;
+    }
+    .color_black {
+        color: #000000 !important;
+    }
+    .Paddings_div {
+        padding: 5px 25px;
+    }
+    .Pddin_item {
+        border-bottom: 1px solid #ebebeb;
+        padding: 15px 0 10px;
+    }
+    .free_quote_head {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .Config_detail {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 10px 0;
+        background: #dadadabd;
+    }
+    .Requested_div {
+        font-size: 13px;
+        font-weight: 600;
+        padding: 10px 0 10px 0 !important;
+        letter-spacing: 0.6px;
+    }
+    ion-card {
+        .item_quote {
+            padding: 2px 15px;
+            border-bottom: 1px solid #ebebeb;
+        }
+    }
+    .arrival_time {
+        font-size: 12px;
+    }
+    .estimate_arrival {
+        font-weight: 600;
+        font-size: 16px;
+    }
+    .accepted_date {
+        font-size: 12px;
+    }
+    .Date_div {
+        font-size: 12px;
+        color: #000000;
+        padding: 3px 0 0px 0;
+    }
+    .Row_paddin {
+        padding: 0 0 10px 0;
+    }
+    .Service_name {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 0 6px;
+    }
+    .Calenea_icon {
+        padding: 0 5px;
+    }
+    .Detail_div {
+        font-size: 13px;
+        padding: 3px 0px 0;
+    }
+    .quition_div {
+        letter-spacing: 1px;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    .Upload2_2medea {
+        border-radius: 12px;
+        width: 170px;
+        height: 130px;
+        object-fit: cover;
+    }
+    .atteche_div {
+        width: 145px;
+        height: 30px;
+        border: 1px dashed #b9b9b9 !important;
+        margin: auto;
+        padding: 5px;
+        border-radius: 12px;
+        margin-top: 8px;
+        margin-bottom: 15px;
+    }
+}

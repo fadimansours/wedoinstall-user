@@ -1,0 +1,148 @@
+<ion-content class="Rescue_content">
+
+  <ion-card class="Main_card">
+    <div class="close_div">
+      <ion-icon name="md-close" class="close_icon" (click)="CloseBtn()"></ion-icon>
+    </div>
+    <div class="Title_div">Tradesglobe Rescue Streak</div>
+    <div text-wrap class="Detail_div">Who you gonna call? Tradesglobe can handle all your last minute emergencies ans
+      save you more money with every job. Points will be added onec job has been completed.</div>
+    <div>
+      <ion-row class="padd_row">
+        <ion-col col-5 no-padding>
+          <ion-row class="ImgeWithDiv">
+            <ion-col col-3 no-padding>
+              <img src="assets/imgs/homeicon.png" class="Divwith_logo">
+            </ion-col>
+            <ion-col col-8 no-padding>
+              <div class="Home_name_div">Home</div>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col col-1 no-padding></ion-col>
+        <ion-col col-6 no-padding>
+          <div class="Streck_ends dotdot">
+            <ion-icon name="md-time" class="time_icon"></ion-icon>Streck ends on Mar 1
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div>
+      <ion-row>
+        <!-- <ion-col col-1></ion-col> -->
+        <ion-col class="Col_paddin">
+          <div class="Pont_given_div">
+            <div class="Pont_given_inner">
+              1x<br><span class="point_span_pts">pts</span>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col class="Col_paddin">
+          <div class="Pont_deseble_div">
+            <div class="Pont_deseble_inner">
+              3x<br><span class="point_span_pts">pts</span>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col class="Col_paddin">
+          <div class="Pont_deseble_div">
+            <div class="Pont_deseble_inner">
+              5x<br><span class="point_span_pts">pts</span>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col class="Col_paddin">
+          <div class="Pont_deseble_div">
+            <div class="Pont_deseble_inner">
+              7x<br><span class="point_span_pts">pts</span>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col class="Col_paddin">
+          <div class="Pont_deseble_div">
+            <div class="Pont_deseble_inner">
+              10x<br><span class="point_span_pts">pts</span>
+            </div>
+          </div>
+        </ion-col>
+        <!-- <ion-col col-1></ion-col> -->
+      </ion-row>
+    </div>
+    <div>
+      <ion-row class="Jobs_Book_row">
+        <ion-col col-9>
+          <div class="Jobs_Booked">Jobs Booked: <span class="Jobs_Booked_span">0/5 Next job earn</span></div>
+        </ion-col>
+        <ion-col col-3>
+          <ion-row class="ImgeWithDiv">
+            <ion-col col-3 no-padding>
+              <img src="assets/imgs/homeicon.png" class="Second_Divwith_logo">
+            </ion-col>
+            <ion-col col-8 no-padding>
+              <div class="Pont_1x_div">10x</div>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div>
+      <ion-row>
+        <ion-col col-1 no-padding>
+          <div class="DotCreate_div margin_t_13"></div>
+          <div class="Line_create"></div>
+          <div class="DotCreate_div"></div>
+          <div class="Line_create"></div>
+          <div class="DotCreate_div"></div>
+          <div class="Line_create"></div>
+          <div class="DotCreate_div"></div>
+          <div class="Line_create"></div>
+          <div class="DotCreate_div"></div>
+        </ion-col>
+        <ion-col col-11 no-padding>
+
+          <ion-row class="BookRow" *ngFor="let catlist of CategoryList; let i = index">
+            <ion-col col-9 no-padding *ngIf="i < 5">
+              <div class="Book_name">{{catlist.name}}</div>
+            </ion-col>
+            <ion-col col-3 no-padding  *ngIf="i < 5">
+              <button ion-button class="Book_btn" (click)="SubCat(i)">BOOK</button>
+            </ion-col>
+          </ion-row>
+
+          <!-- <ion-row class="BookRow">
+            <ion-col col-9 no-padding>
+              <div class="Book_name">Plumbing</div>
+            </ion-col>
+            <ion-col col-3 no-padding>
+              <button ion-button class="Book_btn">BOOK</button>
+            </ion-col>
+          </ion-row>
+          <ion-row class="BookRow">
+            <ion-col col-9 no-padding>
+              <div class="Book_name">Waterproofing</div>
+            </ion-col>
+            <ion-col col-3 no-padding>
+              <button ion-button class="Book_btn">BOOK</button>
+            </ion-col>
+          </ion-row>
+          <ion-row class="BookRow">
+            <ion-col col-9 no-padding>
+              <div class="Book_name">Appliance Repair</div>
+            </ion-col>
+            <ion-col col-3 no-padding>
+              <button ion-button class="Book_btn">BOOK</button>
+            </ion-col>
+          </ion-row>
+          <ion-row class="BookRow">
+            <ion-col col-9 no-padding>
+              <div class="Book_name">Heating & Cooling</div>
+            </ion-col>
+            <ion-col col-3 no-padding>
+              <button ion-button class="Book_btn">BOOK</button>
+            </ion-col>
+          </ion-row> -->
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-card>
+</ion-content>

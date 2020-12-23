@@ -1,0 +1,46 @@
+<ion-header no-border class="header_color">
+    <ion-navbar>
+        <!-- <ion-title>Search</ion-title> -->
+        <ion-buttons right>
+            <button ion-button icon-only (click)="CloseBtn()">
+        <ion-icon name="md-close" class="close_icon"></ion-icon>
+      </button>
+        </ion-buttons>
+    </ion-navbar>
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+</ion-header>
+
+<ion-content class="header_color">
+    <!-- <ion-segment [(ngModel)]="ServicProduc">
+      <ion-segment-button value="service"> Services </ion-segment-button>
+         <ion-segment-button value="product"> Products </ion-segment-button>
+    </ion-segment> -->
+
+    <div [ngSwitch]="ServicProduc">
+        <ion-list no-lines *ngSwitchCase="'service'">
+            <ion-item *ngFor="let catlist of items; let i = index" (click)="SubCat(i)">
+                <ion-row class="border_row">
+                    <ion-col col-2 style="height: 34px">
+                        <img src="{{config.imgs}}{{catlist.icon}}" class="Logo_image" />
+                    </ion-col>
+                    <ion-col col-10 class="vertical_centrC">
+                        <div class="fild_name">{{catlist.name}}</div>
+                    </ion-col>
+                </ion-row>
+            </ion-item>
+        </ion-list>
+
+        <ion-list no-lines *ngSwitchCase="'product'">
+            <ion-item *ngFor="let catlist of items; let i = index" (click)="Productshow(i)">
+                <ion-row class="border_row">
+                    <ion-col col-2 style="height: 34px">
+                        <img src="{{config.imgs}}{{catlist.icon}}" class="Logo_image" />
+                    </ion-col>
+                    <ion-col col-10 class="vertical_centrC">
+                        <div class="fild_name">{{catlist.name}}</div>
+                    </ion-col>
+                </ion-row>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

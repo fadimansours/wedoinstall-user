@@ -1,0 +1,385 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Jobs History</ion-title>
+        <ion-buttons right>
+            <button ion-button icon-only (click)="Chat()">
+        <ion-icon name="md-chatboxes" class="chatboxes_icon"></ion-icon>
+      </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="main_cntaint">
+    <ion-item no-lines>
+        <ion-searchbar placeholder="Search Jobs History" [(ngModel)]="searchName" (ionChange)="search($event)"></ion-searchbar>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-row *ngIf="!ActivShow" class="Jobs_row" (click)="ActiveOpen('1')">
+            <ion-col col-11>
+                <div class="Activ_job">ACTIVE JOBS ({{ActiveLength}})</div>
+            </ion-col>
+            <ion-col col-1>
+                <ion-icon name="ios-arrow-down"></ion-icon>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="ActivShow" class="Jobs_row" (click)="ActiveOpen('0')">
+            <ion-col col-11>
+                <div class="Activ_job">ACTIVE JOBS ({{ActiveLength}})</div>
+            </ion-col>
+            <ion-col col-1>
+                <ion-icon name="ios-arrow-up"></ion-icon>
+            </ion-col>
+        </ion-row>
+    </ion-item>
+
+    <ion-list no-lines *ngIf="ActivShow">
+        <ion-item class="JobList_item">
+            <ion-card *ngFor="let actv of ActivJob; let i = index" (click)="DetailAccep(i)">
+                <ion-row class="View_Progress_row">
+                    <ion-col col-6>
+                        <div class="vertical_centrC">
+                            <ion-icon name="ios-mail" class="Requested_icon"></ion-icon>
+                            <span class="Requested_span" *ngIf="!(actv.accepted_date || actv.accepted_date2)">Requested</span
+              >
+              <span
+                class="Requested_span"
+                *ngIf="(actv.accepted_date || actv.accepted_date2)"
+                >Accepted</span
+              >
+            </div>
+          </ion-col>
+          <ion-col col-2></ion-col>
+          <ion-col col-4>
+            <div class="View_Progress vertical_centrC">
+              <span>View Progress</span>
+                            <ion-icon name="ios-arrow-forward" class="Requested_icon"></ion-icon>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <div class="Services_main_name">{{actv.mainServicename}}</div>
+                <div class="Services_name">{{actv.servicename}}</div>
+
+                <ion-row>
+                    <ion-col col-1>
+                        <ion-icon name="md-calendar"></ion-icon>
+                    </ion-col>
+                    <ion-col col-11>
+                        <div class="Date_time_div">
+                            {{DateSplit(actv.date)}}
+                            <span class="TimeSplit_span">( {{TimeSplit(actv.time)}} )</span>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-1>
+                        <ion-icon name="md-pin"></ion-icon>
+                    </ion-col>
+                    <ion-col col-11>
+                        <div class="Date_time_div dotdot">{{actv.address}}</div>
+                    </ion-col>
+                </ion-row>
+            </ion-card>
+        </ion-item>
+    </ion-list>
+
+    <ion-item no-lines>
+        <ion-row *ngIf="!QuoteShow" class="Jobs_row" (click)="QuoteOpen('1')">
+            <ion-col col-11>
+                <div class="Activ_job">QUOTED JOBS ({{QuoteLength}})</div>
+            </ion-col>
+            <ion-col col-1>
+                <ion-icon name="ios-arrow-down"></ion-icon>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="QuoteShow" class="Jobs_row" (click)="QuoteOpen('0')">
+            <ion-col col-11>
+                <div class="Activ_job">QUOTED JOBS ({{QuoteLength}})</div>
+            </ion-col>
+            <ion-col col-1>
+                <ion-icon name="ios-arrow-up"></ion-icon>
+            </ion-col>
+        </ion-row>
+    </ion-item>
+
+    <ion-list no-lines *ngIf="QuoteShow">
+        <ion-item class="JobList_item" *ngFor="let qutd of QuoteJob; let i = index">
+            <ion-row class="Secon_roePad" (click)="QuoteDetail(i)">
+                <ion-col col-2 no-padding>
+                    <div class="Date_div vertical_centr">{{DateSplitCon(qutd.date)}}</div>
+                </ion-col>
+                <ion-col col-10 class="vertical_centrC">
+                    <div class="Date_day_div">
+                        {{MonthSet(qutd.date)}}<span class="Dayname_span">{{DayNameGet(qutd.date)}}</span
+            >
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-8 no-padding (click)="QuoteDetail(i)">
+          <ion-row class="Time_divv">
+            <ion-col col-1 no-padding class="col_size">
+              <div class="Dot_span_accep"></div>
+            </ion-col>
+            <ion-col col-11 no-padding>
+              <div class="Time_Span">{{TimeSplit(qutd.time)}}</div>
+            </ion-col>
+          </ion-row>
+
+          <div class="Left_boder_accep">
+            <div class="Service_name">{{qutd.servicename}}</div>
+            <ion-row>
+              <ion-col col-1 class="vertical_centrC">
+                <ion-icon name="md-pin" class="Pin_icon"></ion-icon>
+              </ion-col>
+              <ion-col col-11>
+                <div text-wrap class="addres_color">{{qutd.address}}</div>
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-col>
+        <ion-col no-padding col-4 class="vertical_centr" (click)="ShowCoted(i)">
+          <div class="Quote_btn">Show Quotes</div>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+
+  <ion-item no-lines>
+    <ion-row
+      class="Jobs_row"
+      *ngIf="!ComplatShow"
+      class="Jobs_row"
+      (click)="ComplatOpen('1')"
+    >
+      <ion-col col-11>
+        <div class="Activ_job">COMPLETED JOBS ({{CompletLength}})</div>
+      </ion-col>
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-down"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row
+      class="Jobs_row"
+      *ngIf="ComplatShow"
+      class="Jobs_row"
+      (click)="ComplatOpen('0')"
+    >
+      <ion-col col-11>
+        <div class="Activ_job">COMPLETED JOBS ({{CompletLength}})</div>
+      </ion-col>
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-up"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+
+  <ion-list no-lines *ngIf="ComplatShow">
+    <ion-item
+      class="JobList_item"
+      *ngFor="let cmplt of CompletJob; let i = index"
+      (click)="DetailComplat(i)"
+    >
+      <ion-row class="Secon_roePad">
+        <ion-col col-2 no-padding>
+          <div class="Date_div vertical_centr">
+            {{DateSplitCon(cmplt.date)}}
+          </div>
+        </ion-col>
+        <ion-col col-10 class="vertical_centrC">
+          <div class="Date_day_div">
+            {{MonthSet(cmplt.date)}}<span class="Dayname_span"
+              >{{DayNameGet(cmplt.date)}}</span
+            >
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="Time_divv">
+        <ion-col col-1 no-padding class="col_size">
+          <div class="Dot_span_accep"></div>
+        </ion-col>
+        <ion-col col-11 no-padding>
+          <div class="Time_Span">{{TimeSplit(cmplt.time)}}</div>
+        </ion-col>
+      </ion-row>
+
+      <div class="Left_boder_accep">
+        <div class="Service_name">{{cmplt.servicename}}</div>
+        <ion-row>
+          <ion-col col-1 class="vertical_centrC">
+            <ion-icon name="md-pin" class="Pin_icon"></ion-icon>
+          </ion-col>
+          <ion-col col-7>
+            <div text-wrap class="addres_color">{{cmplt.address}}</div>
+          </ion-col>
+          <ion-col col-4>
+            <div class="Accepted_btn">Completed</div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <ion-item no-lines>
+    <ion-row
+      class="Jobs_row"
+      *ngIf="!cancelledShow"
+      class="Jobs_row"
+      (click)="cancelledOpen('1')"
+    >
+      <ion-col col-11>
+        <div class="Activ_job">CANCELLED JOBS ({{cancelledJob.length}})</div>
+      </ion-col>
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-down"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row
+      class="Jobs_row"
+      *ngIf="cancelledShow"
+      class="Jobs_row"
+      (click)="cancelledOpen('0')"
+    >
+      <ion-col col-11>
+        <div class="Activ_job">CANCELLED JOBS ({{cancelledJob.length}})</div>
+      </ion-col>
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-up"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+
+  <ion-list no-lines *ngIf="cancelledShow">
+    <ion-item
+      class="JobList_item"
+      *ngFor="let cmplt of cancelledJob; let i = index"
+    >
+      <ion-row class="Secon_roePad">
+        <ion-col col-2 no-padding>
+          <div class="Date_div vertical_centr">
+            {{DateSplitCon(cmplt.date)}}
+          </div>
+        </ion-col>
+        <ion-col col-10 class="vertical_centrC">
+          <div class="Date_day_div">
+            {{MonthSet(cmplt.date)}}<span class="Dayname_span"
+              >{{DayNameGet(cmplt.date)}}</span
+            >
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="Time_divv">
+        <ion-col col-1 no-padding class="col_size">
+          <div class="Dot_span_accep"></div>
+        </ion-col>
+        <ion-col col-11 no-padding>
+          <div class="Time_Span">{{TimeSplit(cmplt.time)}}</div>
+        </ion-col>
+      </ion-row>
+
+      <div class="Left_boder_accep">
+        <div class="Service_name">{{cmplt.servicename}}</div>
+        <ion-row>
+          <ion-col col-1 class="vertical_centrC">
+            <ion-icon name="md-pin" class="Pin_icon"></ion-icon>
+          </ion-col>
+          <ion-col col-7>
+            <div text-wrap class="addres_color">{{cmplt.address}}</div>
+          </ion-col>
+          <ion-col col-4>
+            <div class="Accepted_btn">cancelled</div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <ion-item no-lines>
+    <ion-row
+      class="Jobs_row"
+      *ngIf="!cancelledQuoteShow"
+      class="Jobs_row"
+      (click)="cancelledQuoteOpen('1')"
+    >
+      <ion-col col-11>
+        <div class="Activ_job">
+          CANCELLED QUOTES ({{cancelledQuote.length}})
+        </div>
+      </ion-col>
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-down"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row
+      class="Jobs_row"
+      *ngIf="cancelledQuoteShow"
+      class="Jobs_row"
+      (click)="cancelledQuoteOpen('0')"
+    >
+      <ion-col col-11>
+        <div class="Activ_job">
+          CANCELLED QUOTES ({{cancelledQuote.length}})
+        </div>
+      </ion-col>
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-up"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+
+  <ion-list no-lines *ngIf="cancelledQuoteShow">
+    <ion-item
+      class="JobList_item"
+      *ngFor="let cmplt of cancelledQuote; let i = index"
+    >
+      <ion-row class="Secon_roePad">
+        <ion-col col-2 no-padding>
+          <div class="Date_div vertical_centr">
+            {{DateSplitCon(cmplt.date)}}
+          </div>
+        </ion-col>
+        <ion-col col-10 class="vertical_centrC">
+          <div class="Date_day_div">
+            {{MonthSet(cmplt.date)}}<span class="Dayname_span"
+              >{{DayNameGet(cmplt.date)}}</span
+            >
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="Time_divv">
+        <ion-col col-1 no-padding class="col_size">
+          <div class="Dot_span_accep"></div>
+        </ion-col>
+        <ion-col col-11 no-padding>
+          <div class="Time_Span">{{TimeSplit(cmplt.time)}}</div>
+        </ion-col>
+      </ion-row>
+
+      <div class="Left_boder_accep">
+        <div class="Service_name">{{cmplt.servicename}}</div>
+        <ion-row>
+          <ion-col col-1 class="vertical_centrC">
+            <ion-icon name="md-pin" class="Pin_icon"></ion-icon>
+          </ion-col>
+          <ion-col col-7>
+            <div text-wrap class="addres_color">{{cmplt.address}}</div>
+          </ion-col>
+          <ion-col col-4>
+            <div class="Accepted_btn">cancelled</div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab bottom end>
+    <button ion-fab mini (click)="AdminChat()">
+      <img src="assets/imgs/fablogo.png" />
+    </button>
+  </ion-fab>
+  <br /><br /><br /><br /><br />
+</ion-content>

@@ -1,0 +1,100 @@
+page-checkout {
+
+    .toolbar-title-md{color: #ffffff;}
+    .toolbar-title-ios{color: #ffffff;}
+    .label-md{margin: 0px;}
+    .item-md.item-block .item-inner{padding: 0px;}
+    .item-md{padding: 0px;}
+    .label-ios{margin: 0px;}
+    .item-ios.item-block .item-inner{padding: 0px;}
+    .item-ios{padding: 0px;}
+    .col{padding: 0px;}
+    .item-block{min-height: 1.4rem;}
+
+    .CheckOut_list{
+        padding: 10px 20px;
+    }
+    .Payable_item{
+        background: transparent;
+    }
+    .Total_Payable{
+        font-size: 16px;
+        font-weight: 500;
+        padding: 10px 0 0 0;
+    }
+    .Total_price{
+        float: right;
+        text-decoration: underline;
+    }
+    .Address_div{
+        font-size: 16px;
+        font-weight: 500;
+        padding: 10px 0 0 0;
+    }
+    .Adress_show{
+        font-size: 14px;
+        padding: 5px 8px;
+        letter-spacing: 0.5px;
+    }
+    .Row_class{
+        background: #ffffff;
+        padding: 5px;
+        border-radius: 5px;
+        margin: 10px 0 5px 0;
+        box-shadow: 0px 0px 5px 0px #d3d3d3;
+    }
+    .Reason_btn{
+        font-size: 13px !important;
+        height: 40px !important;
+        text-transform: none;
+        border: 1px solid #5570da;
+        color: #5570da;
+        border-radius: 50px;
+        margin: 0px;
+        margin-top: 8px;
+        letter-spacing: 0.6px;
+    }
+    .Reason_Select_btn{
+        font-size: 13px !important;
+        height: 40px !important;
+        text-transform: none;
+        border: 1px solid #5570da;
+        color: #ffffff;
+        border-radius: 50px;
+        margin: 0px;
+        margin-top: 8px;
+        background: #5570da;
+        letter-spacing: 0.6px;
+    }
+    .Margin_top{
+        margin: 15px 0 0 0 !important;
+    }
+    .Enter_card_div{
+        padding-left: 4px;
+        font-size: 13px;
+        font-weight: 500;
+        margin-top: 8px;
+    }
+    .Input_fild{
+        width: 100%;
+        border: 0px;
+        border-bottom: 1px solid #2699fb;
+        border-radius: 20px;
+        padding: 5px 8px 5px;
+    }
+    .padding_left_col{
+        padding-left: 7px;
+    }
+    .padding_right_col{
+        padding-right: 7px;
+    }
+    .margi12{
+        margin: 15px 0 10px 0;
+    }
+    .Footer_class{
+        padding: 0 20px;
+    }
+
+
+
+}

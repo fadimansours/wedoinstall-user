@@ -1,0 +1,35 @@
+<ion-header no-border>
+  <ion-navbar>
+    <ion-title></ion-title>
+    <ion-buttons top right>
+      <button ion-button icon-only top (click)="Cart()">
+        <ion-icon name="md-cart" class="chatboxes_icon"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="What_do">What do you need?</div>
+  <div class="vertical_centr Time_hours">
+    <ion-icon name="md-time" class="md_time"></ion-icon> As soon as 2 hours
+  </div>
+  <div class="Searchbar_div">
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  </div>
+
+  <ion-list no-lines class="List_class">
+    <ion-item>
+      <ion-row>
+        <ion-col col-6 class="col_pad" *ngFor="let prolist of items; let i = index">
+          <ion-card class="Card_class" (click)="ProductDetail(i)">
+            <img src="{{config.imgs}}{{prolist.image}}" class="produc_img">
+            <div class="Drywall_div dotdot">{{prolist.name}}</div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

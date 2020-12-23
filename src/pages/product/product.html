@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Product</ion-title>
+    <ion-buttons top right>
+      <button ion-button icon-only top>
+        <ion-icon name="md-cart" class="chatboxes_icon"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list no-lines class="ListClass">
+
+    <ion-item class="Item_class" (click)="ProductDetail()">
+      <ion-row>
+        <ion-col col-3 class="vertical_centr">
+          <img src="assets/imgs/cuplin.jpg" class="imag_class">
+        </ion-col>
+        <ion-col col-8>
+          <div text-wrap class="Pruduct_name">Lesso 2 x 1-1/2 In. ABS Reducing Coupling All Hub</div>
+          <div class="Pruduct_price">$1.72</div>
+          <ion-row>
+            <ion-col col-2 class="vertical_centr Col_border">
+              <ion-icon name="md-remove" class="remove_add"></ion-icon>
+            </ion-col>
+            <ion-col col-2 class="vertical_centr Col_border">
+              <div>1</div>
+            </ion-col>
+            <ion-col col-2 class="vertical_centr Col_border">
+              <ion-icon name="md-add" class="remove_add"></ion-icon>
+            </ion-col>
+            <ion-col col-6 class="CartCol_btn">
+              <button ion-button full class="AddToCart">Add to Cart</button>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col col-1 class="vertical_centr">
+          <ion-icon name="ios-arrow-forward"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+    <ion-item class="Item_class" (click)="ProductDetail()">
+      <ion-row>
+        <ion-col col-3 class="vertical_centr">
+          <img src="assets/imgs/pipe.jpg" class="imag_class">
+        </ion-col>
+        <ion-col col-8>
+          <div text-wrap class="Pruduct_name">ABS PIPE 3 inches x 6 ft CELL CORE</div>
+          <div class="Pruduct_price">$27.17</div>
+          <ion-row>
+            <ion-col col-2 class="vertical_centr Col_border">
+              <ion-icon name="md-remove" class="remove_add"></ion-icon>
+            </ion-col>
+            <ion-col col-2 class="vertical_centr Col_border">
+              <div>1</div>
+            </ion-col>
+            <ion-col col-2 class="vertical_centr Col_border">
+              <ion-icon name="md-add" class="remove_add"></ion-icon>
+            </ion-col>
+            <ion-col col-6 class="CartCol_btn">
+              <button ion-button full class="AddToCart">Add to Cart</button>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col col-1 class="vertical_centr">
+          <ion-icon name="ios-arrow-forward"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
